@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#pdf {
+  height: 1056px;
+  width: 816px;
+  background-color: white;
+}
+
+body {
+  @apply bg-gray-200;
+}

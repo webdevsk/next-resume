@@ -1,10 +1,13 @@
-import React from "react"
+function App() {
+  const url = new URL(window.location.href)
+  const params = new URLSearchParams(url.search)
+  const resumeOnlyMode = params.get("resumeonly")
 
-const App = () => {
   return (
-    <>
-      <h1 className="">Hello world</h1>
-    </>
+    <div className={!resumeOnlyMode ? "flex justify-center" : ""}>
+      {/* {!resumeOnlyMode && <div id="other-body-stuff">Hi stuff goes here</div>} */}
+      <div id="pdf"></div>
+    </div>
   )
 }
 
