@@ -8,12 +8,6 @@
   --body: #23192b;
 }
 
-#pdf {
-  height: 1056px;
-  width: 816px;
-  background-color: white;
-}
-
 @layer base {
   body {
     @apply text-body bg-gray-200;
@@ -61,5 +55,14 @@
 
   small {
     @apply text-xs font-medium antialiased xl:text-sm;
+  }
+}
+
+@layer components {
+  #pdf {
+    height: 1056px;
+    max-width: 816px;
+    width: 100%;
+    @apply bg-white p-20;
   }
 }
