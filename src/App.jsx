@@ -7,8 +7,24 @@ function App() {
   const resumeOnlyMode = params.get("resumeonly")
 
   return (
-    <div className={!resumeOnlyMode ? "flex justify-center py-16" : ""}>
-      {/* {!resumeOnlyMode && <div id="other-body-stuff">Hi stuff goes here</div>} */}
+    <div
+      className={
+        !resumeOnlyMode ? "flex flex-wrap justify-center gap-y-8 py-16" : ""
+      }
+    >
+      {!resumeOnlyMode && (
+        <div className="w-full" id="other-body-stuff">
+          <div className="container">
+            <a
+              className="rounded-sm bg-gray-400 p-4 text-white transition-colors hover:bg-gray-600"
+              href={url + "?resumeonly=true"}
+            >
+              Resume Only Mode
+            </a>
+          </div>
+        </div>
+      )}
+
       <div id="pdf">
         <h1>{data?.firstName}</h1>
         <h1>{data?.lastName}</h1>

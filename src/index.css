@@ -26,19 +26,19 @@
   }
 
   h1 {
-    @apply text-2xl font-semibold antialiased xl:text-3xl;
+    @apply text-2xl font-bold antialiased xl:text-3xl;
   }
 
   h2 {
-    @apply text-xl font-semibold antialiased xl:text-2xl;
+    @apply text-xl font-bold antialiased xl:text-2xl;
   }
 
   h3 {
-    @apply text-lg font-semibold antialiased xl:text-xl;
+    @apply text-lg font-bold antialiased xl:text-xl;
   }
 
   h4 {
-    @apply text-base font-semibold antialiased xl:text-lg;
+    @apply text-base font-bold antialiased xl:text-lg;
   }
 
   h5 {
@@ -55,6 +55,10 @@
 
   small {
     @apply text-xs font-medium antialiased xl:text-sm;
+  }
+
+  span {
+    @apply text-sm font-medium antialiased xl:text-base;
   }
 }
 
