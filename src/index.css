@@ -10,7 +10,7 @@
 
 @layer base {
   body {
-    @apply text-body bg-gray-200;
+    @apply bg-gray-200 text-body;
   }
 
   h1,
@@ -26,39 +26,39 @@
   }
 
   h1 {
-    @apply text-2xl font-bold antialiased xl:text-3xl;
+    @apply text-3xl font-bold antialiased md:text-4xl;
   }
 
   h2 {
-    @apply text-xl font-bold antialiased xl:text-2xl;
+    @apply text-xl font-bold antialiased md:text-2xl;
   }
 
   h3 {
-    @apply text-lg font-bold antialiased xl:text-xl;
+    @apply text-lg font-bold antialiased md:text-xl;
   }
 
   h4 {
-    @apply text-base font-bold antialiased xl:text-lg;
+    @apply text-base font-bold antialiased md:text-lg;
   }
 
   h5 {
-    @apply text-sm font-bold antialiased xl:text-base;
+    @apply text-sm font-bold antialiased md:text-base;
   }
 
   h6 {
-    @apply text-sm font-semibold antialiased xl:text-base;
+    @apply text-xs font-semibold antialiased md:text-sm;
   }
 
   p {
-    @apply text-sm font-medium antialiased xl:text-base;
+    @apply text-xs font-medium antialiased md:text-sm;
   }
 
   small {
-    @apply text-xs font-medium antialiased xl:text-sm;
+    @apply text-xs font-medium antialiased;
   }
 
   span {
-    @apply text-sm font-medium antialiased xl:text-base;
+    @apply text-xs font-medium antialiased md:text-sm;
   }
 }
 
@@ -67,6 +67,28 @@
     height: 1056px;
     max-width: 816px;
     width: 100%;
-    @apply bg-white p-20;
+    @apply bg-white p-8 md:p-20;
+  }
+
+  #heading {
+    @apply flex flex-wrap justify-between gap-4;
+  }
+
+  #photo {
+    @apply aspect-square max-w-full rounded-full object-cover;
+  }
+
+  /* #contact-info */
+
+  #contact-info .row {
+    @apply -mx-2 flex flex-wrap divide-x divide-accent;
+  }
+
+  #contact-info .col {
+    @apply flex gap-1 px-2;
+  }
+
+  #contact-info .title {
+    @apply uppercase;
   }
 }

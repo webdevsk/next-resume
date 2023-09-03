@@ -1,15 +1,16 @@
 const resume = {
   data: {
+    honorifics: "Mohammed",
     firstName: "Salman",
     lastName: "Khan",
     photo: "",
-    title: "Junior Frontend Web Developer",
+    title: "Frontend Web Developer",
     location: "Dhaka, Bangladesh",
     phone: "+880 1305 335 088",
     email: "webdevz.sk@gmail.com",
     telephone: null,
-    github: "webdevzsk",
-    linkedin: "webdevzsk",
+    github: "https://github.com/webdevsk",
+    linkedin: "https://linkedin.com/in/webdevsk",
     twitter: null,
     facebook: null,
     about:
