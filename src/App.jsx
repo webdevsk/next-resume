@@ -1,5 +1,4 @@
-import resume from "./resume"
-const { data } = resume
+import Template1 from "./templates/Template1"
 
 function App() {
   const url = new URL(window.location.href)
@@ -26,8 +25,7 @@ function App() {
       )}
 
       <div id="pdf">
-        <h1>{data?.firstName}</h1>
-        <h1>{data?.lastName}</h1>
+        <Template1 />
       </div>
     </div>
   )

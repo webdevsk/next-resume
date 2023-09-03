@@ -1,6 +1,6 @@
 const resume = {
   data: {
-    firstName: "Mohammed Salman",
+    firstName: "Salman",
     lastName: "Khan",
     photo: "",
     title: "Junior Frontend Web Developer",
