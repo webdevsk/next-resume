@@ -2,12 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --theme: #2a014f;
+  --accent: #242b52;
+  --body: #23192b;
+}
+
 #pdf {
   height: 1056px;
   width: 816px;
   background-color: white;
 }
 
-body {
-  @apply bg-gray-200;
+@layer base {
+  body {
+    @apply text-body bg-gray-200;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply text-theme;
+  }
+
+  h4,
+  h5,
+  h6 {
+    @apply text-accent;
+  }
+
+  h1 {
+    @apply text-2xl font-semibold antialiased xl:text-3xl;
+  }
+
+  h2 {
+    @apply text-xl font-semibold antialiased xl:text-2xl;
+  }
+
+  h3 {
+    @apply text-lg font-semibold antialiased xl:text-xl;
+  }
+
+  h4 {
+    @apply text-base font-semibold antialiased xl:text-lg;
+  }
+
+  h5 {
+    @apply text-sm font-bold antialiased xl:text-base;
+  }
+
+  h6 {
+    @apply text-sm font-semibold antialiased xl:text-base;
+  }
+
+  p {
+    @apply text-sm font-medium antialiased xl:text-base;
+  }
+
+  small {
+    @apply text-xs font-medium antialiased xl:text-sm;
+  }
 }

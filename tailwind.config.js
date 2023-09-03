@@ -9,6 +9,11 @@ export default {
       fontFamily: {
         sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        theme: "var(--theme)",
+        accent: "var(--accent)",
+        body: "var(--body)",
+      },
     },
   },
   plugins: [],
