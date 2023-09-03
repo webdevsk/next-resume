@@ -6,7 +6,7 @@ function App() {
   return (
     <div className={!resumeOnlyMode ? "flex justify-center" : ""}>
       {/* {!resumeOnlyMode && <div id="other-body-stuff">Hi stuff goes here</div>} */}
-      <div id="pdf"></div>
+      <div id="pdf">Hello World</div>
     </div>
   )
 }
