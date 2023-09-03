@@ -18,6 +18,9 @@ export default {
         accent: "var(--accent)",
         body: "var(--body)",
       },
+      spacing: {
+        template: "var(--template-gap)",
+      },
     },
   },
   plugins: [],

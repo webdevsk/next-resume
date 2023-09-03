@@ -18,14 +18,7 @@ const resume = {
     skills: [
       {
         heading: "Frontend",
-        data: [
-          "React",
-          "Vanilla JavaScript",
-          "Tailwind",
-          "Sass",
-          "CSS",
-          "HTML",
-        ],
+        data: ["React", "JavaScript", "Tailwind", "Sass", "CSS", "HTML"],
       },
       {
         heading: "Backend",
@@ -34,7 +27,7 @@ const resume = {
           "Node JS",
           "MongoDB",
           "MySQL",
-          "Serverless Functions",
+          "Serverless",
           "Restful API",
         ],
       },

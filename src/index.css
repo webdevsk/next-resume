@@ -6,6 +6,7 @@
   --theme: #2a014f;
   --accent: #242b52;
   --body: #23192b;
+  --template-gap: 0.75rem;
 }
 
 @layer base {
@@ -70,6 +71,10 @@
     @apply bg-white p-8 md:p-20;
   }
 
+  #template {
+    @apply flex flex-col;
+  }
+
   #heading {
     @apply flex flex-wrap justify-between gap-4;
   }
@@ -79,7 +84,7 @@
   }
 
   #contact-info {
-    /* @apply overflow-hidden; */
+    @apply pb-template overflow-hidden;
   }
 
   #contact-info .row {
@@ -92,5 +97,30 @@
 
   #contact-info .title {
     @apply font-semibold capitalize;
+  }
+
+  #about-me {
+    @apply py-template border-t border-accent;
+  }
+
+  #skills {
+    @apply overflow-hidden;
+  }
+
+  #skills > .row {
+    /* grid-template-columns: repeat(auto-fit, minmax(max-content, 0)); */
+    @apply -mx-4 flex flex-wrap divide-x divide-accent border-accent;
+  }
+
+  #skills .col {
+    @apply py-template grow border-t border-accent px-4;
+  }
+
+  #skills .skillset {
+    @apply grid grid-flow-col grid-rows-3 justify-start gap-x-2 gap-y-1 pt-2 marker:text-xs marker:text-body;
+  }
+
+  #skills .skillset li {
+    @apply inline-flex items-center gap-1 before:content-["•"];
   }
 }

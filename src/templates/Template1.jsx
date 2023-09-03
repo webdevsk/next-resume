@@ -13,7 +13,7 @@ const Template1 = () => {
       const size = nameColRef.current.getBoundingClientRect().height
       imageRef.current.style.height = `${size}px`
     }
-    //At mount
+    //On mount
     handleSize()
 
     addEventListener("resize", handleSize)
@@ -23,7 +23,7 @@ const Template1 = () => {
   }, [])
 
   return (
-    <div className="flex flex-col gap-3">
+    <div id="template">
       {/* heading */}
       <div id="heading">
         <div ref={nameColRef}>
@@ -59,6 +59,28 @@ const Template1 = () => {
             <div key={key} className="col">
               <p className="title">{key}:</p>
               <p>{value}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* about me */}
+      <div id="about-me">{data.about && <p>{data.about}</p>}</div>
+
+      {/* skills */}
+      <div id="skills">
+        <div className="row">
+          {data.skills.map((category) => (
+            <div key={category.heading} className="col">
+              <h6>{category.heading}</h6>
+
+              <ul className="skillset">
+                {category.data.map((skill) => (
+                  <li key={skill}>
+                    <p>{skill}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
