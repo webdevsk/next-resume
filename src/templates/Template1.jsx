@@ -2,16 +2,11 @@ import resume from "../resume"
 const { data } = resume
 import photo from "../assets/photo.png"
 import { useEffect, useRef } from "react"
+import doFilter from "../utils/doFilter"
 
 const Template1 = () => {
   const nameColRef = useRef(null)
   const imageRef = useRef(null)
-
-  const doFilter = (...args) =>
-    Object.entries(data).filter(
-      ([key, value]) =>
-        [...args].includes(key) && value !== null && value !== "",
-    )
 
   useEffect(() => {
     const handleSize = () => {
@@ -28,7 +23,7 @@ const Template1 = () => {
   }, [])
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-3">
       {/* heading */}
       <div id="heading">
         <div ref={nameColRef}>
@@ -46,30 +41,26 @@ const Template1 = () => {
         <div className="row">
           {doFilter("phone", "email", "telephone").map(([key, value]) => (
             <div key={key} className="col">
-              <p className="title">{key}</p>
+              <p className="title">{key}:</p>
               <p>{value}</p>
             </div>
           ))}
         </div>
 
         <div className="row">
-          {doFilter("github", "linkedin").map(([key, value]) => (
+          {doFilter(
+            "github",
+            "linkedin",
+            "facebook",
+            "twitter",
+            "youtube",
+            "instagram",
+          ).map(([key, value]) => (
             <div key={key} className="col">
-              <p className="title">{key}</p>
+              <p className="title">{key}:</p>
               <p>{value}</p>
             </div>
           ))}
-        </div>
-
-        <div className="row">
-          {doFilter("facebook", "twitter", "youtube", "instagram").map(
-            ([key, value]) => (
-              <div key={key} className="col">
-                <p className="title">{key}</p>
-                <p>{value}</p>
-              </div>
-            ),
-          )}
         </div>
       </div>
     </div>

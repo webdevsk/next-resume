@@ -78,7 +78,9 @@
     @apply aspect-square max-w-full rounded-full object-cover;
   }
 
-  /* #contact-info */
+  #contact-info {
+    /* @apply overflow-hidden; */
+  }
 
   #contact-info .row {
     @apply -mx-2 flex flex-wrap divide-x divide-accent;
@@ -89,6 +91,6 @@
   }
 
   #contact-info .title {
-    @apply uppercase;
+    @apply font-semibold capitalize;
   }
 }
