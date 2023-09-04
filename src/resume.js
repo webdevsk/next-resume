@@ -40,7 +40,7 @@ const resume = {
       //   {
       //     title: null,
       //     link: null,
-      //     skills: [],
+      //     skillset: "",
       //     responsibilities: [],
       //   },
     ],
@@ -51,6 +51,7 @@ const resume = {
       //     location: null,
       //     dateFrom: null,
       //     dateTo: null,
+      //     skillset: "",
       //     responsibilities: [],
       //   },
     ],
