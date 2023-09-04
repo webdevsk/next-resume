@@ -3,6 +3,7 @@ const { data } = resume
 import photo from "../assets/photo.png"
 import { useEffect, useRef } from "react"
 import doFilter from "../utils/doFilter"
+import "./Template1.css"
 
 const Template1 = () => {
   const nameColRef = useRef(null)

@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  #template {
+    --theme: #2a014f;
+    --accent: #242b52;
+    --body: #23192b;
+    --template-gap: 0.75rem;
+    @apply flex flex-col text-body;
+  }
+
+  #heading {
+    @apply flex flex-wrap justify-between gap-4;
+  }
+
+  #photo {
+    @apply aspect-square max-w-full rounded-full object-cover;
+  }
+
+  #contact-info {
+    @apply overflow-hidden pb-template;
+  }
+
+  #contact-info .row {
+    @apply -mx-2 flex flex-wrap divide-x divide-accent;
+  }
+
+  #contact-info .col {
+    @apply flex gap-1 px-2;
+  }
+
+  #contact-info .title {
+    @apply font-semibold capitalize;
+  }
+
+  #about-me {
+    @apply border-t border-accent py-template;
+  }
+
+  #skills {
+    @apply overflow-hidden;
+  }
+
+  #skills > .row {
+    /* grid-template-columns: repeat(auto-fit, minmax(max-content, 0)); */
+    @apply -mx-4 flex flex-wrap divide-x divide-accent border-accent;
+  }
+
+  #skills .col {
+    @apply grow border-t border-accent px-4 py-template;
+  }
+
+  #skills .skillset {
+    @apply grid grid-flow-col grid-rows-3 justify-start gap-x-2 gap-y-1 pt-2 marker:text-xs marker:text-body;
+  }
+
+  #skills .skillset li {
+    @apply inline-flex items-center gap-1 before:content-["•"];
+  }
+}

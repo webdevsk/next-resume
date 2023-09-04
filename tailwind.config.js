@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 import defaultTheme from "tailwindcss/defaultTheme"
 
-console.log(defaultTheme)
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     container: {
       centered: true,

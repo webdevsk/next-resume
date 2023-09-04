@@ -23,9 +23,10 @@ function App() {
           </div>
         </div>
       )}
-
-      <div id="pdf">
-        <Template1 />
+      <div id={!resumeOnlyMode && "pdf-container"}>
+        <div id="pdf">
+          <Template1 />
+        </div>
       </div>
     </div>
   )
