@@ -19,7 +19,7 @@ And negate them twice from pdf initial width and height*/
   max-width: 816px;
   padding: 5rem;
   width: 100%;
-  @apply bg-white p-8 md:p-20;
+  @apply border border-theme bg-white p-8 md:p-20;
 }
 
 #pdf {
@@ -31,7 +31,6 @@ And negate them twice from pdf initial width and height*/
 
 @layer base {
   body {
-    @apply bg-gray-200;
   }
 
   h1,
@@ -75,10 +74,14 @@ And negate them twice from pdf initial width and height*/
   }
 
   small {
-    @apply text-xs font-medium antialiased;
+    @apply block text-xs font-medium antialiased;
   }
 
   span {
     @apply text-xs font-medium antialiased md:text-sm;
+  }
+
+  a {
+    @apply hover:underline;
   }
 }

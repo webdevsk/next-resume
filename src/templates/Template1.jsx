@@ -51,7 +51,17 @@ const Template1 = () => {
           {doFilter("phone", "email", "telephone").map(([key, value]) => (
             <div key={key} className="col">
               <p className="title">{key}:</p>
-              <p>{value}</p>
+              <a
+                href={`${
+                  key === "phone" || key === "telephone"
+                    ? "tel:"
+                    : key === "email"
+                    ? "mailto:"
+                    : ""
+                }${value}`}
+              >
+                <p>{value}</p>
+              </a>
             </div>
           ))}
         </div>
@@ -67,13 +77,17 @@ const Template1 = () => {
           ).map(([key, value]) => (
             <div key={key} className="col">
               <p className="title">{key}:</p>
-              <p>{value}</p>
+              <a href={value}>
+                <p>{value}</p>
+              </a>
             </div>
           ))}
         </div>
         <div className="col -ms-2">
           <p className="title">Live Resume Link:</p>
-          <p>{data.liveLink}</p>
+          <a href={data.liveLink}>
+            <p>{data.liveLink}</p>
+          </a>
         </div>
       </div>
 
@@ -147,10 +161,10 @@ const Template1 = () => {
                   </div>
                   <div className="date">
                     {(job.dateFrom || job.dateTo) && (
-                      <h6>
+                      <small>
                         {job.dateFrom} {job.dateFrom && job.dateTo && " - "}
                         {job.dateTo}
-                      </h6>
+                      </small>
                     )}
                     {job.location && <small>{job.location}</small>}
                   </div>
@@ -170,7 +184,10 @@ const Template1 = () => {
                   <ul className="responsibilities bullet-list">
                     {job.responsibilities.map((responsibility) => (
                       <li key={responsibility}>
-                        <p>{responsibility}</p>
+                        <p>
+                          {responsibility}
+                          {responsibility.at(-1) !== "." && "."}
+                        </p>
                       </li>
                     ))}
                   </ul>
