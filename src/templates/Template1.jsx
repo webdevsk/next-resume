@@ -143,8 +143,7 @@ const Template1 = () => {
                     <h6>{job.position}</h6>
                   </div>
                   <div className="company">
-                    {job.company && <h6>{job.company}</h6>}
-                    {job.location && <small>({job.location})</small>}
+                    {job.company && <h5>{job.company}</h5>}
                   </div>
                   <div className="date">
                     {(job.dateFrom || job.dateTo) && (
@@ -153,6 +152,7 @@ const Template1 = () => {
                         {job.dateTo}
                       </h6>
                     )}
+                    {job.location && <small>{job.location}</small>}
                   </div>
                 </div>
                 <div>
