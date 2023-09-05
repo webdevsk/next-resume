@@ -15,7 +15,7 @@ And negate them twice from pdf initial width and height*/
 }
 
 #pdf-container {
-  height: 1056px;
+  /* height: 1056px; */
   max-width: 816px;
   padding: 5rem;
   width: 100%;
@@ -23,7 +23,7 @@ And negate them twice from pdf initial width and height*/
 }
 
 #pdf {
-  height: calc(1056px - 5rem * 2);
+  /* height: calc(1056px - 5rem * 2); */
   max-width: calc(816px - 5rem * 2);
   width: 100%;
   @apply bg-white;

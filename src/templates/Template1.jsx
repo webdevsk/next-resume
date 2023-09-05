@@ -71,6 +71,10 @@ const Template1 = () => {
             </div>
           ))}
         </div>
+        <div className="col -ms-2">
+          <p className="title">Live Resume Link:</p>
+          <p>{data.liveLink}</p>
+        </div>
       </div>
 
       {/* about me */}
@@ -139,13 +143,16 @@ const Template1 = () => {
                     <h6>{job.position}</h6>
                   </div>
                   <div className="company">
-                    <h6>{job.company}</h6>
-                    <small>({job.location})</small>
+                    {job.company && <h6>{job.company}</h6>}
+                    {job.location && <small>({job.location})</small>}
                   </div>
                   <div className="date">
-                    <h6>
-                      {job.dateFrom} - {job.dateTo}
-                    </h6>
+                    {(job.dateFrom || job.dateTo) && (
+                      <h6>
+                        {job.dateFrom} {job.dateFrom && job.dateTo && " - "}
+                        {job.dateTo}
+                      </h6>
+                    )}
                   </div>
                 </div>
                 <div>

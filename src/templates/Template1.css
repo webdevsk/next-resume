@@ -64,10 +64,10 @@
     @apply bg-theme py-1 text-center;
   }
   #experiences .heading > * {
-    @apply text-gray-50;
+    @apply text-white;
   }
   #experiences .content {
-    @apply mt-template flex flex-col gap-y-4;
+    @apply mt-template flex flex-col gap-y-8;
   }
   #experiences .sections {
     @apply flex flex-col gap-y-2;
