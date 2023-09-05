@@ -53,10 +53,46 @@
   }
 
   #skills .skillset {
-    @apply grid grid-flow-row justify-start gap-x-2 gap-y-1 pt-2 marker:text-xs marker:text-body md:grid-flow-col md:grid-rows-3;
+    @apply grid grid-flow-row justify-start gap-x-2 gap-y-1 pt-2 md:grid-flow-col md:grid-rows-3;
   }
 
-  #skills .skillset li {
-    @apply inline-flex items-center gap-1 before:content-["•"];
+  /* projects */
+  #experiences {
+    @apply border-t border-accent;
+  }
+  #experiences .heading {
+    @apply bg-theme py-1 text-center;
+  }
+  #experiences .heading > * {
+    @apply text-gray-50;
+  }
+  #experiences .content {
+    @apply mt-template flex flex-col gap-y-4;
+  }
+  #experiences .sections {
+    @apply flex flex-col gap-y-2;
+  }
+  #experiences .row {
+    @apply grid grid-cols-3 gap-x-2;
+  }
+  #experiences .company {
+    @apply text-center;
+  }
+  #experiences .date {
+    @apply text-end;
+  }
+  #experiences :where(.responsibilities, .soft-skills) {
+  }
+  /* #experiences .soft-skills {
+    @apply flex flex-wrap gap-x-2;
+  }
+  #experiences .soft-skills > * {
+    @apply w-1/4 grow;
+  } */
+}
+
+@layer utilities {
+  .bullet-list > * {
+    @apply flex items-center gap-1 before:leading-3 before:content-["•"];
   }
 }

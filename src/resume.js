@@ -13,6 +13,7 @@ const resume = {
     linkedin: "https://linkedin.com/in/webdevsk",
     twitter: null,
     facebook: null,
+    liveLink: "https://webdevsk.github.io/react-resume/",
     about:
       "I am a Frontend Web Developer creating interactable solutions and solving both technical and design challenges using Vanilla JavaScript and React JS. I have more than 2 years of experience in creating pixel-perfect and mobile responsive Websites that met client requirements. I debug design and functional issues with my deep knowledge on Dev Tools and Search Engines.",
     skills: [
@@ -45,15 +46,30 @@ const resume = {
       //   },
     ],
     experiences: [
-      //   {
-      //     position: null,
-      //     company: null,
-      //     location: null,
-      //     dateFrom: null,
-      //     dateTo: null,
-      //     skillset: "",
-      //     responsibilities: [],
-      //   },
+      {
+        position:
+          "E-commerce Operations, Retail Operations and Inventory Management Associate.",
+        company: "Wadi Groceries",
+        location: "Riyadh, Saudiarabia",
+        dateFrom: "01-4-7",
+        dateTo: "Present",
+        skills: [
+          "Communication skills",
+          "Organizational skills",
+          "Ability to work independently and as part of a team",
+          "Attention to detail",
+          "Problem-solving skills",
+          "Technical skills (MS Excel, Ecommerce Dashboard)",
+          "Ability to learn new technologies quickly",
+        ],
+        responsibilities: [
+          "Process online orders accurately and efficiently",
+          "Assemble and package orders for shipping",
+          "Update shop database using MS Excel and online console inorder to maintain inventory records",
+          "Troubleshoot technical problems",
+          "Stay up-to-date on the latest ecommerce technologies",
+        ],
+      },
     ],
     educations: [
       //   {

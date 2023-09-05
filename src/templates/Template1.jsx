@@ -84,7 +84,7 @@ const Template1 = () => {
               <div key={category.heading} className="col">
                 <h6>{category.heading}</h6>
 
-                <ul className="skillset">
+                <ul className="skillset bullet-list">
                   {category.data.map((skill) => (
                     <li key={skill}>
                       <p>{skill}</p>
@@ -129,27 +129,45 @@ const Template1 = () => {
       {data.experiences.length !== 0 && (
         <div id="experiences">
           <div className="heading">
-            <h4>Work Experience</h4>
+            <h5>Work Experiences</h5>
           </div>
           <ul className="content">
             {data.experiences.map((job) => (
-              <li key={job.title}>
+              <li key={job.position} className="sections">
                 <div className="row">
-                  <h5>{job.title}</h5>
-                  <h5>{job.company}</h5>
-                  <small>{job.location}</small>
-                  <small>{job.dateFrom}</small>
-                  <small>{job.dateTo}</small>
+                  <div className="position">
+                    <h6>{job.position}</h6>
+                  </div>
+                  <div className="company">
+                    <h6>{job.company}</h6>
+                    <small>({job.location})</small>
+                  </div>
+                  <div className="date">
+                    <h6>
+                      {job.dateFrom} - {job.dateTo}
+                    </h6>
+                  </div>
                 </div>
-                <div className="row">
-                  <h5>Soft Skills Acquired:</h5>
-                  <p>{job.skillset}</p>
+                <div>
+                  <h6>Soft Skills Acquired:</h6>
+                  <ul className="soft-skills bullet-list">
+                    {job.skills.map((skill) => (
+                      <li key={skill}>
+                        <p>{skill}</p>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="responsibilities">
-                  {job.responsibilities.map((responsibility) => (
-                    <li key={responsibility}>{responsibility}</li>
-                  ))}
-                </ul>
+                <div>
+                  <h6>Responsibilites:</h6>
+                  <ul className="responsibilities bullet-list">
+                    {job.responsibilities.map((responsibility) => (
+                      <li key={responsibility}>
+                        <p>{responsibility}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </li>
             ))}
           </ul>
