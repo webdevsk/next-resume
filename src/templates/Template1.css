@@ -32,7 +32,7 @@
   }
 
   #contact-info .title {
-    @apply hidden font-semibold capitalize md:block;
+    @apply font-semibold capitalize max-[500px]:hidden;
   }
 
   #about-me {
@@ -52,7 +52,7 @@
   }
 
   #skills .skillset {
-    @apply grid grid-flow-row justify-start gap-x-2 gap-y-1 pt-2 md:grid-flow-col md:grid-rows-3;
+    @apply grid grid-flow-col grid-rows-3 justify-start gap-x-2 gap-y-1 pt-2 max-[500px]:grid-flow-row max-[500px]:grid-rows-none;
   }
 
   /* projects */

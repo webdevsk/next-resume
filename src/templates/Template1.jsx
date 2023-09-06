@@ -8,7 +8,7 @@ import "./Template1.css"
 const Template1 = ({ printMode }) => {
   const nameColRef = useRef(null)
   const imageRef = useRef(null)
-  console.log(printMode)
+
   useEffect(() => {
     const handleSize = () => {
       if (!data.photo && !photo) return

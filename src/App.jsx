@@ -24,7 +24,10 @@ function App() {
         </div>
       )}
       <div id={!printMode ? "pdf-container" : ""}>
-        <div id="pdf">
+        <div
+          id="pdf"
+          className="mx-auto my-4 border border-black p-[--pdf-margin] print:mx-0 print:my-0 print:border-none print:p-0"
+        >
           <Template1 printMode={printMode} />
         </div>
       </div>

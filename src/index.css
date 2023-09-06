@@ -4,33 +4,31 @@
 
 /* pdf.print does not take pdf css margin into account. It will add a margin around the printable area if given inside @page declaration.
 So
-For web: Give padding to parent of pdf
+For web: Give padding to pdf but disable it using @media print
 For print: Give margin inside @page declaration 
-And negate them twice from pdf initial width and height*/
+And negate them twice from pdf initial width*/
 
-@page {
-  size: letter portrait;
-  margin: 5rem;
-  /* @apply  */
+/* @pdf property and values have to be raw static css. So use same margin in both --pdf-margin and @page margin manually */
+:root {
+  --pdf-margin: 3em;
 }
 
-#pdf-container {
-  /* height: 1056px; */
-  max-width: 816px;
-  padding: 5rem;
-  width: 100%;
-  @apply border border-theme bg-white p-8 md:p-20;
+@page {
+  size: A4 portrait;
+  margin: 3em;
 }
 
 #pdf {
-  /* height: calc(1056px - 5rem * 2); */
-  max-width: calc(816px - 5rem * 2);
+  max-width: calc(210mm - 0.2mm - var(--pdf-margin) * 2);
   width: 100%;
   @apply bg-white [&_a:hover]:underline;
 }
 
+/* puppeteer headless chrome's print screen is weird. The viewport is under 600px and media queries wont work. Giving viewport size in puppeteer settings will only take effect in normal browser mode, but not in print mode. So write initial styles for pdf view then use @media(max-width: 500px) or max-[500px]:propery-value in Tailwind for mobile view when browsing. @media 600px or above screen styles will be ineffective in print mode.*/
+
 @layer base {
   body {
+    @apply print:bg-white;
   }
   h1,
   h2,
@@ -63,31 +61,31 @@ And negate them twice from pdf initial width and height*/
   }
 
   h1 {
-    @apply text-3xl md:text-4xl;
+    @apply text-4xl max-[500px]:text-3xl;
   }
 
   h2 {
-    @apply text-xl md:text-2xl;
+    @apply text-2xl max-[500px]:text-xl;
   }
 
   h3 {
-    @apply text-lg md:text-xl;
+    @apply text-xl max-[500px]:text-lg;
   }
 
   h4 {
-    @apply text-base md:text-lg;
+    @apply text-lg max-[500px]:text-base;
   }
 
   h5 {
-    @apply text-sm md:text-base;
+    @apply text-base max-[500px]:text-sm;
   }
 
   h6 {
-    @apply text-xs md:text-sm;
+    @apply text-sm max-[500px]:text-xs;
   }
 
   p {
-    @apply text-xs md:text-sm;
+    @apply text-sm max-[500px]:text-xs;
   }
 
   small {
@@ -95,6 +93,6 @@ And negate them twice from pdf initial width and height*/
   }
 
   span {
-    @apply text-xs md:text-sm;
+    @apply text-sm max-[500px]:text-xs;
   }
 }
