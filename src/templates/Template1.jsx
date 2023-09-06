@@ -86,7 +86,7 @@ const Template1 = ({ printMode }) => {
           ))}
         </div>
         <div className="col -ms-2">
-          <p className="title">Live Resume Link:</p>
+          <p className="title">Resume Live Version:</p>
           <a href={data.liveLink}>
             <p>{data.liveLink}</p>
           </a>

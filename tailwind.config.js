@@ -13,6 +13,9 @@ export default {
       padding: "2rem",
     },
     extend: {
+      screens: {
+        sm: "480px",
+      },
       fontFamily: {
         sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
       },

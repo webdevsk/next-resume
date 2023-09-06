@@ -32,7 +32,7 @@
   }
 
   #contact-info .title {
-    @apply font-semibold capitalize max-[500px]:hidden;
+    @apply hidden font-semibold capitalize sm:block;
   }
 
   #about-me {
@@ -52,7 +52,7 @@
   }
 
   #skills .skillset {
-    @apply grid grid-flow-col grid-rows-3 justify-start gap-x-2 gap-y-1 pt-2 max-[500px]:grid-flow-row max-[500px]:grid-rows-none;
+    @apply grid grid-flow-row justify-start gap-x-3 gap-y-1 pt-2 sm:grid-flow-col sm:grid-rows-3;
   }
 
   /* projects */
@@ -64,19 +64,22 @@
   }
 
   #experiences .content {
-    @apply mt-template flex flex-col gap-y-8;
+    @apply mt-template flex flex-col gap-y-6;
   }
   #experiences .sections {
-    @apply flex flex-col gap-y-4;
+    @apply flex flex-col gap-y-3;
   }
   #experiences .row {
     @apply grid grid-cols-3 gap-x-2;
+  }
+  #experiences .position > * {
+    @apply font-bold text-theme;
   }
   #experiences .company {
     @apply text-center;
   }
   #experiences .date {
-    @apply text-end;
+    @apply text-end text-theme;
   }
 }
 

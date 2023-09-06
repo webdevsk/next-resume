@@ -2,33 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-/* pdf.print does not take pdf css margin into account. It will add a margin around the printable area if given inside @page declaration.
-So
-For web: Give padding to pdf but disable it using @media print
-For print: Give margin inside @page declaration 
-And negate them twice from pdf initial width*/
+/* DO NOT add margin/padding on the print version of the pdf. The Print-screen/puppeteer will add margin based on the @page settings for every single page */
 
-/* @pdf property and values have to be raw static css. So use same margin in both --pdf-margin and @page margin manually */
+/*Substract the expected margin twice from the initial pdf size. For A4 size its 210mm. Substracting 0.2mm for safety measures. */
+
+/* @pdf property and values have to be raw static css. So use same margin value in both --pdf-margin and @page margin respectively. Use the variable anywhere in your project for non print mode if needed */
+
+/* puppeteer print mode is weird regardless of headless mode. It doesn't even respect manually set viewport size in print mode. For this portrait document the viewport seems to be between 480 and 500. Point to note that it depends on pdf margin as well. */
+
+/* Set the lowest viewport size to @media(min-width: 480px) to tackle this issue. For mobile, use initial sizes. For print, use @media(min-width: 480px). With lower margin you can have larger lowest media screen*/
+
+/* As this project has Tailwind, you can set the lowest viewport in tailwind.config.js and use sm:property-styles as base style for printing. */
+
+/* The css mode in puppeteer is set to screen mode. So @media print{} won't work */
+
+/* For example */
+
+.test {
+  /* for mobile browsers */
+  @apply px-4;
+  /* for print and non mobile browsers */
+  @apply sm:px-8;
+}
+
+/* -------------------- main css starts here -------------------- */
 :root {
-  --pdf-margin: 3em;
+  --pdf-margin: 0.75in;
 }
 
 @page {
   size: A4 portrait;
-  margin: 3em;
+  margin: 0.75in;
 }
 
 #pdf {
-  max-width: calc(210mm - 0.2mm - var(--pdf-margin) * 2);
+  max-width: calc(210mm - var(--pdf-margin) * 2);
   width: 100%;
   @apply bg-white [&_a:hover]:underline;
 }
 
-/* puppeteer headless chrome's print screen is weird. The viewport is under 600px and media queries wont work. Giving viewport size in puppeteer settings will only take effect in normal browser mode, but not in print mode. So write initial styles for pdf view then use @media(max-width: 500px) or max-[500px]:propery-value in Tailwind for mobile view when browsing. @media 600px or above screen styles will be ineffective in print mode.*/
+/* for non live version/non print mode */
+.pdf-container {
+  @apply border border-black p-4 md:p-[--pdf-margin];
+}
 
 @layer base {
   body {
-    @apply print:bg-white;
   }
   h1,
   h2,
@@ -61,31 +80,31 @@ And negate them twice from pdf initial width*/
   }
 
   h1 {
-    @apply text-4xl max-[500px]:text-3xl;
+    @apply text-3xl sm:text-4xl;
   }
 
   h2 {
-    @apply text-2xl max-[500px]:text-xl;
+    @apply text-xl sm:text-2xl;
   }
 
   h3 {
-    @apply text-xl max-[500px]:text-lg;
+    @apply text-lg sm:text-xl;
   }
 
   h4 {
-    @apply text-lg max-[500px]:text-base;
+    @apply text-base sm:text-lg;
   }
 
   h5 {
-    @apply text-base max-[500px]:text-sm;
+    @apply text-sm sm:text-base;
   }
 
   h6 {
-    @apply text-sm max-[500px]:text-xs;
+    @apply text-xs sm:text-sm;
   }
 
   p {
-    @apply text-sm max-[500px]:text-xs;
+    @apply text-xs sm:text-sm;
   }
 
   small {
@@ -93,6 +112,6 @@ And negate them twice from pdf initial width*/
   }
 
   span {
-    @apply text-sm max-[500px]:text-xs;
+    @apply text-xs sm:text-sm;
   }
 }
