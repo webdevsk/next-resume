@@ -5,10 +5,10 @@ import { useEffect, useRef } from "react"
 import doFilter from "../utils/doFilter"
 import "./Template1.css"
 
-const Template1 = () => {
+const Template1 = ({ printMode }) => {
   const nameColRef = useRef(null)
   const imageRef = useRef(null)
-
+  console.log(printMode)
   useEffect(() => {
     const handleSize = () => {
       if (!data.photo && !photo) return
@@ -35,12 +35,14 @@ const Template1 = () => {
         </div>
         <div>
           {(data.photo || photo) && (
-            <img
-              id="photo"
-              ref={imageRef}
-              src={data.photo || photo}
-              alt="photo"
-            />
+            <a href={data.github}>
+              <img
+                id="photo"
+                ref={imageRef}
+                src={data.photo || photo}
+                alt="photo"
+              />
+            </a>
           )}
         </div>
       </div>

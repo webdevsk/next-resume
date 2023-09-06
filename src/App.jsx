@@ -3,7 +3,7 @@ import Template1 from "./templates/Template1"
 function App() {
   const url = new URL(window.location.href)
   const params = new URLSearchParams(url.search)
-  const printMode = params.get("printonly")
+  const printMode = params.get("printonly") ? true : false
 
   return (
     <div
@@ -23,9 +23,9 @@ function App() {
           </div>
         </div>
       )}
-      <div id={!printMode && "pdf-container"}>
+      <div id={!printMode ? "pdf-container" : ""}>
         <div id="pdf">
-          <Template1 />
+          <Template1 printMode={printMode} />
         </div>
       </div>
     </div>

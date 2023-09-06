@@ -60,11 +60,9 @@
     @apply border-t border-accent;
   }
   #experiences .heading {
-    @apply bg-theme py-1 text-center;
+    @apply bg-theme py-1 text-center [&>*]:text-white;
   }
-  #experiences .heading > * {
-    @apply text-white;
-  }
+
   #experiences .content {
     @apply mt-template flex flex-col gap-y-8;
   }

@@ -26,11 +26,22 @@ And negate them twice from pdf initial width and height*/
   /* height: calc(1056px - 5rem * 2); */
   max-width: calc(816px - 5rem * 2);
   width: 100%;
-  @apply bg-white;
+  @apply bg-white [&_a:hover]:underline;
 }
 
 @layer base {
   body {
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  small,
+  span {
+    @apply antialiased;
   }
 
   h1,
@@ -38,50 +49,52 @@ And negate them twice from pdf initial width and height*/
   h3,
   h4,
   h5 {
-    @apply text-theme;
+    @apply font-bold text-theme;
   }
 
   h6 {
-    @apply text-accent;
+    @apply font-semibold text-accent;
+  }
+
+  p,
+  small,
+  span {
+    @apply font-medium;
   }
 
   h1 {
-    @apply text-3xl font-bold antialiased md:text-4xl;
+    @apply text-3xl md:text-4xl;
   }
 
   h2 {
-    @apply text-xl font-bold antialiased md:text-2xl;
+    @apply text-xl md:text-2xl;
   }
 
   h3 {
-    @apply text-lg font-bold antialiased md:text-xl;
+    @apply text-lg md:text-xl;
   }
 
   h4 {
-    @apply text-base font-bold antialiased md:text-lg;
+    @apply text-base md:text-lg;
   }
 
   h5 {
-    @apply text-sm font-bold antialiased md:text-base;
+    @apply text-sm md:text-base;
   }
 
   h6 {
-    @apply text-xs font-semibold antialiased md:text-sm;
+    @apply text-xs md:text-sm;
   }
 
   p {
-    @apply text-xs font-medium antialiased md:text-sm;
+    @apply text-xs md:text-sm;
   }
 
   small {
-    @apply block text-xs font-medium antialiased;
+    @apply block text-xs;
   }
 
   span {
-    @apply text-xs font-medium antialiased md:text-sm;
-  }
-
-  a {
-    @apply hover:underline;
+    @apply text-xs md:text-sm;
   }
 }
