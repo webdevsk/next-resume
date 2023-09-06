@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  #template {
-    --theme: #2a014f;
-    --accent: #242b52;
-    --body: #23192b;
-    --template-gap: 0.75rem;
-    @apply flex flex-col text-body;
-  }
+#template {
+  --theme: #2a014f;
+  --accent: #242b52;
+  --body: #23192b;
+  --template-gap: 0.75rem;
+  @apply flex flex-col text-body;
+}
 
+@layer components {
   #heading {
     @apply flex flex-wrap items-start justify-between gap-4;
   }
@@ -21,18 +21,16 @@
 
   #contact-info {
     @apply overflow-hidden pb-template;
-  }
+    .row {
+      @apply -mx-2 flex flex-wrap divide-x divide-accent;
+    }
+    .col {
+      @apply flex gap-1 px-2;
+    }
 
-  #contact-info .row {
-    @apply -mx-2 flex flex-wrap divide-x divide-accent;
-  }
-
-  #contact-info .col {
-    @apply flex gap-1 px-2;
-  }
-
-  #contact-info .title {
-    @apply hidden font-semibold capitalize sm:block;
+    .title {
+      @apply hidden font-semibold capitalize sm:block;
+    }
   }
 
   #about-me {
@@ -41,45 +39,44 @@
 
   #skills {
     @apply overflow-hidden;
+    & > .row {
+      @apply -mx-4 flex flex-wrap divide-x divide-accent border-accent;
+    }
+
+    .col {
+      @apply grow border-t border-accent px-4 py-template;
+    }
+
+    .skillset {
+      @apply grid grid-flow-row justify-start gap-x-3 gap-y-1 pt-2 sm:grid-flow-col sm:grid-rows-3;
+    }
   }
 
-  #skills > .row {
-    @apply -mx-4 flex flex-wrap divide-x divide-accent border-accent;
-  }
-
-  #skills .col {
-    @apply grow border-t border-accent px-4 py-template;
-  }
-
-  #skills .skillset {
-    @apply grid grid-flow-row justify-start gap-x-3 gap-y-1 pt-2 sm:grid-flow-col sm:grid-rows-3;
-  }
-
-  /* projects */
   #experiences {
     @apply border-t border-accent;
-  }
-  #experiences .heading {
-    @apply bg-theme py-1 text-center [&>*]:text-white;
-  }
 
-  #experiences .content {
-    @apply mt-template flex flex-col gap-y-6;
-  }
-  #experiences .sections {
-    @apply flex flex-col gap-y-3;
-  }
-  #experiences .row {
-    @apply grid grid-cols-3 gap-x-2;
-  }
-  #experiences .position > * {
-    @apply font-bold text-theme;
-  }
-  #experiences .company {
-    @apply text-center;
-  }
-  #experiences .date {
-    @apply text-end text-theme;
+    .heading {
+      @apply bg-theme py-1 text-center [&>*]:text-white;
+    }
+
+    .content {
+      @apply mt-template flex flex-col gap-y-6;
+    }
+    .sections {
+      @apply flex flex-col gap-y-3;
+    }
+    .row {
+      @apply grid grid-cols-3 gap-x-2;
+    }
+    .position > * {
+      @apply font-bold text-theme;
+    }
+    .company {
+      @apply text-center;
+    }
+    .date {
+      @apply text-end text-theme;
+    }
   }
 }
 
