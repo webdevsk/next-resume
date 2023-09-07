@@ -104,10 +104,10 @@ const Template1 = ({ printMode }) => {
               <div key={category.heading} className="col">
                 <h6>{category.heading}</h6>
 
-                <ul className="skillset bullet-list">
+                <ul className="skillset">
                   {category.data.map((skill) => (
                     <li key={skill}>
-                      <p>{skill}</p>
+                      <p className="bullet-item">{skill}</p>
                     </li>
                   ))}
                 </ul>
@@ -173,26 +173,53 @@ const Template1 = ({ printMode }) => {
                 </div>
                 <div>
                   <h6>Soft Skills Acquired:</h6>
-                  <ul className="soft-skills bullet-list">
+                  <ul className="soft-skills">
                     {job.skills.map((skill) => (
                       <li key={skill}>
-                        <p>{skill}</p>
+                        <p className="bullet-item">{skill}</p>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div>
                   <h6>Responsibilites:</h6>
-                  <ul className="responsibilities bullet-list">
+                  <ul className="responsibilities">
                     {job.responsibilities.map((responsibility) => (
                       <li key={responsibility}>
-                        <p>
+                        <p className="bullet-item">
                           {responsibility}
                           {responsibility.at(-1) !== "." && "."}
                         </p>
                       </li>
                     ))}
                   </ul>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Education and Certifications */}
+      {data.educations.length !== 0 && (
+        <div id="education">
+          <div className="heading">
+            <h5>Education and Certifications</h5>
+          </div>
+          <ul className="content">
+            {data.educations.map((education) => (
+              <li key={education.title} className="row">
+                <div className="col info">
+                  <small className="bullet-item">
+                    <h6 className="inline">{education.title}</h6>
+                    {education.institute && `, ${education.institute}`}
+                    {education.location && `, ${education.location}`}.
+                  </small>
+                </div>
+                <div className="col date">
+                  <small>
+                    {education.dateFrom} - {education.dateTo}
+                  </small>
                 </div>
               </li>
             ))}

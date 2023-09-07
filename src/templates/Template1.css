@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tailwind has built in Post CSS Nested library which compiles nested styles on build. Linter may show errors here but thats nothing to worry about */
+
 #template {
   --theme: #2a014f;
   --accent: #242b52;
@@ -53,8 +55,7 @@
   }
 
   #experiences {
-    @apply border-t border-accent;
-
+    @apply mb-template;
     .heading {
       @apply bg-theme py-1 text-center [&>*]:text-white;
     }
@@ -66,22 +67,48 @@
       @apply flex flex-col gap-y-3;
     }
     .row {
-      @apply grid grid-cols-3 gap-x-2;
+      @apply grid grid-cols-2 gap-x-2 sm:grid-cols-3;
     }
-    .position > * {
-      @apply font-bold text-theme;
+    .position {
+      @apply row-span-2 sm:row-span-1;
+      & > * {
+        @apply font-bold text-theme max-sm:text-sm;
+      }
     }
     .company {
-      @apply text-center;
+      @apply text-end sm:text-center;
     }
     .date {
-      @apply text-end text-theme;
+      @apply text-end;
+    }
+
+    .soft-skills,
+    .responsibilities {
+      @apply mb-1 mt-1 flex flex-col gap-y-1;
+    }
+  }
+
+  #education {
+    @apply mb-template;
+    .heading {
+      @apply mb-template bg-theme py-1 text-center [&>*]:text-white;
+    }
+
+    .content {
+      @apply flex flex-col gap-y-1;
+    }
+
+    .row {
+      @apply flex-wrap justify-between sm:flex;
     }
   }
 }
 
 @layer utilities {
-  .bullet-list > * {
-    @apply flex gap-1 before:mt-1 before:text-xs before:leading-3 before:text-theme before:content-["◆"];
+  .bullet-item:before {
+    @apply me-1 text-xs leading-3 text-theme content-["◆"];
+  }
+  .date > * {
+    @apply text-theme;
   }
 }
