@@ -6,9 +6,9 @@
 
 #template {
   --theme: #2a014f;
-  --accent: #242b52;
+  --accent: #340ce4;
   --body: #23192b;
-  --template-gap: 0.75rem;
+  --template-gap: 0.5rem;
   @apply flex flex-col text-body;
 }
 
@@ -24,7 +24,7 @@
   #contact-info {
     @apply overflow-hidden pb-template;
     .row {
-      @apply -mx-2 flex flex-wrap divide-x divide-accent;
+      @apply -mx-2 flex flex-wrap divide-x divide-theme;
     }
     .col {
       @apply flex gap-1 px-2;
@@ -36,17 +36,17 @@
   }
 
   #about-me {
-    @apply border-t border-accent py-template;
+    @apply border-t border-theme py-template;
   }
 
   #skills {
     @apply overflow-hidden;
     & > .row {
-      @apply -mx-4 flex flex-wrap divide-x divide-accent border-accent;
+      @apply -mx-4 flex flex-wrap divide-x divide-theme border-theme;
     }
 
     .col {
-      @apply grow border-t border-accent px-4 py-template;
+      @apply grow border-t border-theme px-4 py-template;
     }
 
     .skillset {
@@ -57,25 +57,28 @@
   #projects {
     @apply mb-template;
     .content {
-      @apply flex flex-col gap-y-6;
+      @apply flex flex-col gap-y-4;
     }
     .sections {
-      @apply flex flex-col gap-y-3;
+      @apply flex flex-col gap-y-2;
     }
     .title-section {
       @apply flex flex-wrap justify-between gap-x-2;
+      & h5 {
+        @apply before:me-1 before:text-accent before:content-["▢"];
+      }
     }
     .builders {
       @apply flex flex-wrap items-center gap-1;
       & > *:not(:first-child) {
-        @apply rounded-md border border-current px-2 transition-colors hover:border-theme hover:bg-theme hover:text-white hover:no-underline;
+        @apply rounded-md border border-current px-1 transition-colors hover:border-theme hover:bg-theme hover:text-white hover:no-underline;
       }
     }
     .row > h6 {
       @apply mb-1;
     }
     .features {
-      @apply flex flex-col gap-y-1;
+      /* @apply flex flex-col gap-y-1; */
     }
   }
 
@@ -83,22 +86,25 @@
     @apply mb-template;
 
     .content {
-      @apply mt-template flex flex-col gap-y-6;
+      @apply mt-template flex flex-col gap-y-4;
     }
     .sections {
-      @apply flex flex-col gap-y-3;
+      @apply flex flex-col gap-y-2;
     }
     .row {
       grid-template-columns: minmax(0, 1fr) max-content;
       @apply grid gap-x-2;
     }
+    .position > * {
+      @apply before:me-1 before:text-accent before:content-["◎"];
+    }
     .details {
-      @apply text-end;
+      @apply -mb-8 text-end;
     }
 
     .soft-skills,
     .responsibilities {
-      @apply mb-1 mt-1 flex flex-col gap-y-1;
+      /* @apply mb-1 mt-1 flex flex-col gap-y-1; */
     }
   }
 
@@ -106,7 +112,7 @@
     @apply mb-template;
 
     .content {
-      @apply flex flex-col gap-y-1;
+      /* @apply flex flex-col gap-y-1; */
     }
 
     .row {

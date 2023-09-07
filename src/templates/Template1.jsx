@@ -128,7 +128,7 @@ const Template1 = ({ printMode }) => {
               <li key={project.title} className="sections">
                 <div className="title-section">
                   <a href={project.link}>
-                    <h5 className="inline">{project.title}</h5>
+                    <h5>{project.title}</h5>
                   </a>
                   {project.repo && (
                     <p>
@@ -186,7 +186,9 @@ const Template1 = ({ printMode }) => {
               <li key={job.position} className="sections">
                 <div className="row">
                   <div className="position">
-                    <h5>{job.position}</h5>
+                    {job.position.split(",").map((title) => (
+                      <h5 key={title}>{title.trim()}</h5>
+                    ))}
                   </div>
                   <div className="details">
                     <div className="company">

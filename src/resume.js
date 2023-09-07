@@ -60,7 +60,7 @@ const resume = {
     experiences: [
       {
         position:
-          "E-commerce Operations Associate, Inventory Management Associate.",
+          "E-commerce Operations Associate, Inventory Management Associate",
         company: "Wadi Groceries, Carrefour",
         location: "Riyadh, Saudiarabia",
         dateFrom: "APR 2018",
