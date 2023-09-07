@@ -50,15 +50,12 @@
     }
 
     .skillset {
-      @apply grid grid-flow-row justify-start gap-x-3 gap-y-1 pt-2 sm:grid-flow-col sm:grid-rows-3;
+      @apply grid grid-flow-row justify-start gap-x-3 pt-2 sm:grid-flow-col sm:grid-rows-3;
     }
   }
 
   #experiences {
     @apply mb-template;
-    .heading {
-      @apply bg-theme py-1 text-center [&>*]:text-white;
-    }
 
     .content {
       @apply mt-template flex flex-col gap-y-6;
@@ -90,23 +87,45 @@
 
   #education {
     @apply mb-template;
-    .heading {
-      @apply mb-template bg-theme py-1 text-center [&>*]:text-white;
-    }
 
     .content {
       @apply flex flex-col gap-y-1;
     }
 
     .row {
-      @apply flex-wrap justify-between sm:flex;
+      @apply flex-wrap items-center justify-between sm:flex;
+    }
+  }
+
+  #projects {
+    @apply mb-template;
+    .content {
+      @apply flex flex-col gap-y-6;
+    }
+    .sections {
+      @apply flex flex-col gap-y-1;
+    }
+    .row > h6 {
+      @apply mb-1;
+    }
+    .features {
+      @apply flex flex-col gap-y-1;
     }
   }
 }
 
 @layer utilities {
-  .bullet-item:before {
+  /* .bullet-item:before {
     @apply me-1 text-xs leading-3 text-theme content-["◆"];
+  } */
+  .heading {
+    @apply mb-template bg-theme py-1 text-center uppercase [&>*]:text-white;
+  }
+  .bullet-item {
+    @apply relative ps-4;
+    &:before {
+      @apply absolute inset-0 top-0 text-xs leading-5 text-theme content-["◆"];
+    }
   }
   .date > * {
     @apply text-theme;

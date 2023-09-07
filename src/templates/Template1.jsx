@@ -118,27 +118,44 @@ const Template1 = ({ printMode }) => {
       )}
 
       {/* projects */}
-      {data.projects.length !== 0 && (
+      {data.projects && data.projects.length !== 0 && (
         <div id="projects">
           <div className="heading">
-            <h4>Project Experience</h4>
+            <h5>Project Experience</h5>
           </div>
           <ul className="content">
             {data.projects.map((project) => (
-              <li key={project.title}>
+              <li key={project.title} className="sections">
+                <a href={project.link}>
+                  <p>
+                    <h5 className="inline">{project.title}</h5>
+                    {" – "}
+                    {project.shortDescription}
+                  </p>
+                </a>
+                <p>
+                  <h6 className="inline">Built With: </h6>
+                  {project.builtWith.map(
+                    (item, i, arr) =>
+                      `${item}${i === arr.length - 1 ? "." : ", "}`,
+                  )}
+                </p>
+                {project.repo && (
+                  <p>
+                    <h6 className="inline">Repository: </h6>
+                    <a href={project.repo}>{project.repo}</a>
+                  </p>
+                )}
                 <div className="row">
-                  <h5>{project.title}</h5>
-                  <a className="link">{project.link}</a>
+                  <h6 className="col">Features:</h6>
+                  <ul className="col features">
+                    {project.features.map((feature) => (
+                      <li key={feature}>
+                        <p className="bullet-item">{feature}</p>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="row">
-                  <h5>Skills:</h5>
-                  <p>{project.skillset}</p>
-                </div>
-                <ul className="responsibilities">
-                  {project.features.map((feature) => (
-                    <li key={feature}>{feature}</li>
-                  ))}
-                </ul>
               </li>
             ))}
           </ul>
@@ -146,10 +163,10 @@ const Template1 = ({ printMode }) => {
       )}
 
       {/* work experience */}
-      {data.experiences.length !== 0 && (
+      {data.experiences && data.experiences.length !== 0 && (
         <div id="experiences">
           <div className="heading">
-            <h5>Work Experiences</h5>
+            <h5>Work Experience</h5>
           </div>
           <ul className="content">
             {data.experiences.map((job) => (
@@ -201,7 +218,7 @@ const Template1 = ({ printMode }) => {
       )}
 
       {/* Education and Certifications */}
-      {data.educations.length !== 0 && (
+      {data.educations && data.educations.length !== 0 && (
         <div id="education">
           <div className="heading">
             <h5>Education and Certifications</h5>

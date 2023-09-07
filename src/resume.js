@@ -38,12 +38,26 @@ const resume = {
       },
     ],
     projects: [
-      //   {
-      //     title: null,
-      //     link: null,
-      //     skillset: "",
-      //     responsibilities: [],
-      //   },
+      {
+        title: "React TODO App",
+        shortDescription: "A TODO APP built with React JS.",
+        link: "https://celadon-cactus-42acbb.netlify.app/",
+        repo: "https://github.com/webdevsk/react-todo-app",
+        builtWith: [
+          "React",
+          "React-Router",
+          "TailwindCSS",
+          "Material-Tailwind",
+        ],
+        features: [
+          "Users can create, check, pin or delete the tasks.",
+          "I built it with handheld device accessibility in mind. The Task input field is at the bottom. Other items, interactions are implemented accordingly.",
+          "Users can create dynamic categories either from within the APP or from their browser URL directly. I implemented it using the React Router library.",
+          "Light, Dark and Auto theme. The auto theme follows system preferences.",
+          "Side Drawer Menu can stay either Shown or Hidden based on user's preference. It will be force hidden on mobile devices.",
+          "Users can bulk check and remove completed tasks.",
+        ],
+      },
     ],
     experiences: [
       {
