@@ -54,6 +54,31 @@
     }
   }
 
+  #projects {
+    @apply mb-template;
+    .content {
+      @apply flex flex-col gap-y-6;
+    }
+    .sections {
+      @apply flex flex-col gap-y-3;
+    }
+    .title-section {
+      @apply flex flex-wrap justify-between gap-x-2;
+    }
+    .builders {
+      @apply flex flex-wrap items-center gap-1;
+      & > *:not(:first-child) {
+        @apply rounded-md border border-current px-2 transition-colors hover:border-theme hover:bg-theme hover:text-white hover:no-underline;
+      }
+    }
+    .row > h6 {
+      @apply mb-1;
+    }
+    .features {
+      @apply flex flex-col gap-y-1;
+    }
+  }
+
   #experiences {
     @apply mb-template;
 
@@ -64,18 +89,10 @@
       @apply flex flex-col gap-y-3;
     }
     .row {
-      @apply grid grid-cols-2 gap-x-2 sm:grid-cols-3;
+      grid-template-columns: minmax(0, 1fr) max-content;
+      @apply grid gap-x-2;
     }
-    .position {
-      @apply row-span-2 sm:row-span-1;
-      & > * {
-        @apply font-bold text-theme max-sm:text-sm;
-      }
-    }
-    .company {
-      @apply text-end sm:text-center;
-    }
-    .date {
+    .details {
       @apply text-end;
     }
 
@@ -96,22 +113,6 @@
       @apply flex-wrap items-center justify-between sm:flex;
     }
   }
-
-  #projects {
-    @apply mb-template;
-    .content {
-      @apply flex flex-col gap-y-6;
-    }
-    .sections {
-      @apply flex flex-col gap-y-1;
-    }
-    .row > h6 {
-      @apply mb-1;
-    }
-    .features {
-      @apply flex flex-col gap-y-1;
-    }
-  }
 }
 
 @layer utilities {
@@ -124,7 +125,7 @@
   .bullet-item {
     @apply relative ps-4;
     &:before {
-      @apply absolute inset-0 top-0 text-xs leading-5 text-theme content-["◆"];
+      @apply absolute inset-0 top-0 text-xs leading-4 text-theme content-["◆"] sm:leading-5;
     }
   }
   .date > * {

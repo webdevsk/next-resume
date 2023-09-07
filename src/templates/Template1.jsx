@@ -126,32 +126,45 @@ const Template1 = ({ printMode }) => {
           <ul className="content">
             {data.projects.map((project) => (
               <li key={project.title} className="sections">
-                <a href={project.link}>
-                  <p>
+                <div className="title-section">
+                  <a href={project.link}>
                     <h5 className="inline">{project.title}</h5>
-                    {" – "}
-                    {project.shortDescription}
-                  </p>
-                </a>
-                <p>
-                  <h6 className="inline">Built With: </h6>
-                  {project.builtWith.map(
-                    (item, i, arr) =>
-                      `${item}${i === arr.length - 1 ? "." : ", "}`,
+                  </a>
+                  {project.repo && (
+                    <p>
+                      {/* <h6 className="inline">Repository: </h6> */}
+                      <a className="date" href={project.repo}>
+                        <small className="leading-5">{project.repo}</small>
+                      </a>
+                    </p>
                   )}
-                </p>
-                {project.repo && (
-                  <p>
-                    <h6 className="inline">Repository: </h6>
-                    <a href={project.repo}>{project.repo}</a>
-                  </p>
-                )}
+                  <h6 className="w-full">({project.shortDescription})</h6>
+                </div>
+
+                <div className="builders">
+                  <h6 className="">Built With: </h6>
+                  {project.builtWith.map((item, i, arr) => (
+                    // `${item}${i === arr.length - 1 ? "." : ", "}`,
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href={`https://www.google.com/search?q=${item}`}
+                      key={item}
+                    >
+                      <p>{item}</p>
+                    </a>
+                  ))}
+                </div>
+
                 <div className="row">
                   <h6 className="col">Features:</h6>
                   <ul className="col features">
                     {project.features.map((feature) => (
                       <li key={feature}>
-                        <p className="bullet-item">{feature}</p>
+                        <p className="bullet-item">
+                          {feature}
+                          {feature.at(-1) === "." ? "" : "."}
+                        </p>
                       </li>
                     ))}
                   </ul>
@@ -173,18 +186,20 @@ const Template1 = ({ printMode }) => {
               <li key={job.position} className="sections">
                 <div className="row">
                   <div className="position">
-                    <h6>{job.position}</h6>
+                    <h5>{job.position}</h5>
                   </div>
-                  <div className="company">
-                    {job.company && <h5>{job.company}</h5>}
-                  </div>
-                  <div className="date">
-                    {(job.dateFrom || job.dateTo) && (
-                      <small>
-                        {job.dateFrom} {job.dateFrom && job.dateTo && " - "}
-                        {job.dateTo}
-                      </small>
-                    )}
+                  <div className="details">
+                    <div className="company">
+                      {job.company && <h6>{job.company}</h6>}
+                    </div>
+                    <div className="date">
+                      {(job.dateFrom || job.dateTo) && (
+                        <small>
+                          {job.dateFrom} {job.dateFrom && job.dateTo && " - "}
+                          {job.dateTo}
+                        </small>
+                      )}
+                    </div>
                     {job.location && <small>{job.location}</small>}
                   </div>
                 </div>
