@@ -43,10 +43,6 @@
 
 /* for non live version/non print mode */
 .pdf-container {
-  @apply px-2;
-}
-
-.pdf-container #pdf {
   @apply border border-black p-4 md:p-[--pdf-margin];
 }
 
