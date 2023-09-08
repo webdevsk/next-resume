@@ -68,6 +68,9 @@
         @apply before:me-1 before:text-accent before:content-["▢"];
       }
     }
+    .date > * {
+      @apply leading-6;
+    }
     .builders {
       @apply flex flex-wrap items-center gap-1;
       & > *:not(:first-child) {
@@ -96,10 +99,13 @@
       @apply grid gap-x-2;
     }
     .position > * {
-      @apply before:me-1 before:text-accent before:content-["◎"];
+      @apply before:me-1 before:text-accent before:content-["▢"];
     }
     .details {
       @apply -mb-8 text-end;
+      h5 {
+        @apply leading-6;
+      }
     }
 
     .soft-skills,
@@ -131,7 +137,7 @@
   .bullet-item {
     @apply relative ps-4;
     &:before {
-      @apply absolute inset-0 top-0 text-xs leading-4 text-theme content-["◆"] sm:leading-5;
+      @apply absolute inset-0 text-xs leading-4 text-theme content-["◆"] sm:leading-5;
     }
   }
   .date > * {

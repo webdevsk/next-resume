@@ -138,7 +138,9 @@ const Template1 = ({ printMode }) => {
                       </a>
                     </p>
                   )}
-                  <h6 className="w-full">({project.shortDescription})</h6>
+                  <p className="w-full">
+                    {"=>"} {project.shortDescription}
+                  </p>
                 </div>
 
                 <div className="builders">
@@ -148,7 +150,10 @@ const Template1 = ({ printMode }) => {
                     <a
                       target="_blank"
                       rel="noreferrer"
-                      href={`https://www.google.com/search?q=${item}`}
+                      className={printMode && "pointer-events-none"}
+                      href={
+                        !printMode && `https://www.google.com/search?q=${item}`
+                      }
                       key={item}
                     >
                       <p>{item}</p>

@@ -111,4 +111,8 @@
   span {
     @apply text-xs sm:text-sm;
   }
+
+  li p {
+    @apply cursor-text;
+  }
 }

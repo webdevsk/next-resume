@@ -50,12 +50,34 @@ const resume = {
           "Material-Tailwind",
         ],
         features: [
-          "Create, mark, pin or delete the tasks. Bulk check and remove completed tasks.",
+          "Create, mark, pin or delete tasks. Bulk check and remove completed tasks.",
           "Handheld device accessible. Bottom input field improves reachability.",
           "Create dynamic categories either from within the APP or from browser URL directly",
-          "Side Drawer Menu can stay either Shown or Hidden based on user's preference and forcefully hidden on mobile devices.",
+          "Side Menu visibility state is dynamically managed based on device orientation and viewport.",
         ],
       },
+      {
+        title: "Random Task Today",
+        shortDescription:
+          "Generate a random task to do today and see a refreshing photo related to it.",
+        link: "https://splendid-narwhal-4770fd.netlify.app/",
+        repo: "https://github.com/webdevsk/Random-task-today",
+        builtWith: ["React", "TailwindCSS", "Netlify Serverless Functions"],
+        features: [
+          "Fetches a Random task from Bored API then fetches a related Photo from Unsplash API.",
+          "Preloading, loading and status states are managed based on async functions.",
+          "Implemented Netlify Serverless Functions (Lambda) to handle the backend.",
+          "All API calls are made from the backend functions, keeping API credentials secret.",
+        ],
+      },
+      // {
+      //   title: null,
+      //   shortDescription: null,
+      //   link: null,
+      //   repo: null,
+      //   builtWith: [],
+      //   features: [],
+      // },
     ],
     experiences: [
       {
@@ -116,25 +138,25 @@ const resume = {
           "Kept the warehouse clean and organized",
         ],
       },
-      {
-        position: "Flyer Distributor (Part time)",
-        company: "Moneygram Financial Service",
-        location: "Riyadh, Saudiarabia",
-        dateFrom: "JUL 2017",
-        dateTo: "FEB 2018",
-        skills: [
-          "Persuasion skills",
-          "Communication skills (verbal and written)",
-          "Interpersonal skills",
-          "Flexibility",
-        ],
-        responsibilities: [
-          "Distributed flyers to targeted areas generating on average of 150-200 leads per day.",
-          "Built relationships with potential leads",
-          "I convinced and persuaded leads into trying the company's services",
-          "I had to maintain a positive attitude and demeanor to win over potential customers",
-        ],
-      },
+      // {
+      //   position: "Flyer Distributor (Part time)",
+      //   company: "Moneygram Financial Service",
+      //   location: "Riyadh, Saudiarabia",
+      //   dateFrom: "JUL 2017",
+      //   dateTo: "FEB 2018",
+      //   skills: [
+      //     "Persuasion skills",
+      //     "Communication skills (verbal and written)",
+      //     "Interpersonal skills",
+      //     "Flexibility",
+      //   ],
+      //   responsibilities: [
+      //     "Distributed flyers to targeted areas generating on average of 150-200 leads per day.",
+      //     "Built relationships with potential leads",
+      //     "I convinced and persuaded leads into trying the company's services",
+      //     "I had to maintain a positive attitude and demeanor to win over potential customers",
+      //   ],
+      // },
     ],
     educations: [
       {
