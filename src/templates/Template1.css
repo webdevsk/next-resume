@@ -9,7 +9,7 @@
   --accent: #340ce4;
   --body: #23192b;
   --template-gap: 0.5rem;
-  @apply flex flex-col text-body;
+  @apply flex flex-col text-body [&_a:hover]:underline;
 }
 
 @layer components {
