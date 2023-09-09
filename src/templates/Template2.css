@@ -10,7 +10,7 @@
   --body: #23192b;
   /* --color1: #f9fafb; */
   --color1: theme(colors.gray.50);
-  --color2: #00000;
+  --color2: theme(colors.slate.100);
   --color3: #00000;
   --color4: #00000;
   --color5: #00000;
@@ -20,7 +20,7 @@
 
 @layer components {
   #heading {
-    @apply flex flex-wrap items-start justify-between gap-4;
+    @apply mb-1 flex flex-wrap items-start justify-between gap-4;
   }
 
   #photo {
@@ -28,15 +28,28 @@
   }
 
   #contact-info {
+    @apply flex flex-col items-start gap-y-1;
     .row {
-      @apply flex flex-wrap gap-x-3;
+      @apply flex flex-wrap gap-1;
     }
     .col {
-      @apply flex gap-1;
+      @apply inline-flex gap-1 rounded-full bg-color2 pe-2 shadow-sm transition-colors;
+      &:has(a:hover) {
+        @apply bg-accent text-white;
+      }
+      a {
+        @apply hover:no-underline;
+      }
     }
 
-    .title {
-      @apply hidden font-semibold capitalize sm:block [&_svg]:text-accent;
+    .title:not(.resume-title) {
+      @apply inline-grid w-5 place-items-center rounded-full bg-accent text-white;
+    }
+    .resume-title {
+      @apply px-2;
+    }
+    svg {
+      @apply text-xs;
     }
   }
 
@@ -46,11 +59,11 @@
 
   #skills {
     & > .row {
-      @apply flex flex-wrap gap-2;
+      @apply flex flex-wrap gap-2 px-1;
     }
 
     .col {
-      @apply bg-color1 grow rounded-lg px-4 py-template shadow-md;
+      @apply grow rounded-lg bg-color1 px-4 py-template shadow-md;
     }
 
     .skillset {
@@ -60,10 +73,10 @@
 
   #projects {
     .content {
-      @apply flex flex-col gap-y-4;
+      @apply flex flex-col gap-y-3 px-1;
     }
     .sections {
-      @apply bg-color1 flex flex-col gap-y-2 rounded-lg p-4 shadow-md;
+      @apply flex flex-col gap-y-1 rounded-lg bg-color1 p-4 shadow-md;
     }
     .title-section {
       @apply flex flex-wrap justify-between gap-x-2;
@@ -74,14 +87,14 @@
     .date > * {
       @apply leading-6;
     }
+    .date svg {
+      @apply text-accent;
+    }
     .builders {
       @apply flex flex-wrap items-center justify-center gap-1;
       & > * {
-        @apply block rounded-md bg-slate-400 px-1 text-white transition-colors hover:no-underline hover:drop-shadow-md;
+        @apply block rounded-md border border-accent px-1  transition-colors hover:bg-accent hover:text-white hover:no-underline;
       }
-    }
-    .row > h6 {
-      @apply mb-1;
     }
     .features {
       /* @apply flex flex-col gap-y-1; */
@@ -90,10 +103,10 @@
 
   #experiences {
     .content {
-      @apply flex flex-col gap-y-4;
+      @apply flex flex-col gap-y-3 px-1;
     }
     .sections {
-      @apply bg-color1 flex flex-col gap-y-2 rounded-lg p-4 shadow-md;
+      @apply flex flex-col gap-y-1 rounded-lg bg-color1 p-4 shadow-md;
     }
     .row {
       grid-template-columns: minmax(0, 1fr) max-content;
@@ -104,7 +117,7 @@
     }
     .details {
       @apply -mb-8 text-end;
-      h5 {
+      h6 {
         @apply leading-6;
       }
     }
@@ -118,11 +131,17 @@
   #education {
     .content {
       /* @apply flex flex-col gap-y-1; */
-      @apply bg-color1 rounded-lg p-4 shadow-md;
+      @apply mx-1 rounded-lg bg-color1 p-4 shadow-md;
     }
 
     .row {
-      @apply flex-wrap items-center justify-between sm:flex;
+      @apply flex justify-between gap-x-1;
+      .info {
+        @apply shrink;
+      }
+      .date > * {
+        @apply w-max leading-5;
+      }
     }
   }
 }
@@ -137,7 +156,7 @@
   .bullet-item {
     @apply relative ps-4;
     &:before {
-      @apply absolute inset-0 text-base leading-4 text-[--rand-color] content-["●"] sm:leading-5;
+      @apply absolute inset-0 text-base leading-4 text-[--rand-color] content-["●"] sm:leading-4;
     }
   }
   .date > * {

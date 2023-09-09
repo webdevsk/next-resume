@@ -102,9 +102,7 @@ const Template2 = ({ printMode }) => {
               <p className="title">
                 <FontAwesomeIcon icon="fa-solid fa-location-dot" />
               </p>
-              <a href={`mailto:${data.location}`}>
-                <p>{data.location}</p>
-              </a>
+              <p>{data.location}</p>
             </div>
           )}
         </div>
@@ -129,7 +127,7 @@ const Template2 = ({ printMode }) => {
           ))}
         </div>
         <div className="col">
-          <p className="title">Resume Live Version:</p>
+          <p className="resume-title title">Resume Live Version:</p>
           <a href={data.liveLink}>
             <p>{data.liveLink}</p>
           </a>
@@ -143,7 +141,7 @@ const Template2 = ({ printMode }) => {
       {data.skills && (
         <div id="skills">
           <div className="heading">
-            <h5>Technology Stack</h5>
+            <h5>Language and Frameworks</h5>
           </div>
           <div className="row">
             {data.skills.map((category) => (
@@ -179,7 +177,11 @@ const Template2 = ({ printMode }) => {
                   {project.repo && (
                     <p>
                       <a className="date" href={project.repo}>
-                        <small className="leading-5">{project.repo}</small>
+                        <small>
+                          <FontAwesomeIcon icon="fa-brands fa-github" />{" "}
+                          <span className="max-sm:hidden">{project.repo}</span>
+                          <span className="sm:hidden">Github</span>
+                        </small>
                       </a>
                     </p>
                   )}

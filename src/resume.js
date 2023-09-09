@@ -132,7 +132,7 @@ const resume = {
           "Technical skills (scanning, data entry)",
         ],
         responsibilities: [
-          "I scanned returned items and updated inventory records (average of 600-700 items per day)",
+          "I scanned returned items, updated inventory records (average of 600-700 items per day)",
           "Inspected returned items for damage",
           "Processed returns according to company policy",
           "Kept the warehouse clean and organized",
