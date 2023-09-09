@@ -8,7 +8,8 @@
   --theme: rgb(79, 27, 125);
   --accent: #3c269d;
   --body: #23192b;
-  --color1: #00000;
+  /* --color1: #f9fafb; */
+  --color1: theme(colors.gray.50);
   --color2: #00000;
   --color3: #00000;
   --color4: #00000;
@@ -49,7 +50,7 @@
     }
 
     .col {
-      @apply grow rounded-lg bg-gray-50 px-4 py-template shadow-md;
+      @apply bg-color1 grow rounded-lg px-4 py-template shadow-md;
     }
 
     .skillset {
@@ -63,7 +64,7 @@
       @apply flex flex-col gap-y-4;
     }
     .sections {
-      @apply flex flex-col gap-y-2 rounded-lg bg-gray-50 p-4 shadow-md;
+      @apply bg-color1 flex flex-col gap-y-2 rounded-lg p-4 shadow-md;
     }
     .title-section {
       @apply flex flex-wrap justify-between gap-x-2;
@@ -95,7 +96,7 @@
       @apply mt-template flex flex-col gap-y-4;
     }
     .sections {
-      @apply flex flex-col gap-y-2 rounded-lg bg-gray-50 p-4 shadow-md;
+      @apply bg-color1 flex flex-col gap-y-2 rounded-lg p-4 shadow-md;
     }
     .row {
       grid-template-columns: minmax(0, 1fr) max-content;
@@ -122,7 +123,7 @@
 
     .content {
       /* @apply flex flex-col gap-y-1; */
-      @apply rounded-lg bg-gray-50 p-4 shadow-md;
+      @apply bg-color1 rounded-lg p-4 shadow-md;
     }
 
     .row {
@@ -141,7 +142,7 @@
   .bullet-item {
     @apply relative ps-4;
     &:before {
-      @apply absolute inset-0 text-base leading-4 text-[--randColor,inherit] content-["●"] sm:leading-5;
+      @apply absolute inset-0 text-base leading-4 text-[--rand-color] content-["●"] sm:leading-5;
     }
   }
   .date > * {
