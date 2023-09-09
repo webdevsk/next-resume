@@ -6,7 +6,7 @@
 
 #template {
   --theme: rgb(79, 27, 125);
-  --accent: #3c269d;
+  --accent: #5a2082;
   --body: #23192b;
   /* --color1: #f9fafb; */
   --color1: theme(colors.gray.50);
@@ -29,14 +29,14 @@
 
   #contact-info {
     .row {
-      @apply flex flex-wrap;
+      @apply flex flex-wrap gap-x-3;
     }
     .col {
       @apply flex gap-1;
     }
 
     .title {
-      @apply hidden font-semibold capitalize sm:block;
+      @apply hidden font-semibold capitalize sm:block [&_svg]:text-accent;
     }
   }
 
@@ -90,7 +90,7 @@
 
   #experiences {
     .content {
-      @apply mt-template flex flex-col gap-y-4;
+      @apply flex flex-col gap-y-4;
     }
     .sections {
       @apply bg-color1 flex flex-col gap-y-2 rounded-lg p-4 shadow-md;

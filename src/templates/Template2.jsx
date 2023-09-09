@@ -2,9 +2,25 @@ import resume from "../resume"
 const { data } = resume
 import photo from "../assets/photo.png"
 import { useEffect, useRef } from "react"
-import doFilter from "../utils/doFilter"
 import "./Template2.css"
+
+// Loop through Resume keys and return a map-able array from them
+import doFilter from "../utils/doFilter"
+
+// Get random colors from Tailwind colors. Pass Tailwind color variant number as parameter. ex: randColor(900) / randColor(50) / randColor(500)
 import randColor from "../utils/randColor"
+
+// FontAwesome global import - Only Brands
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import {
+  faPhone,
+  faEnvelope,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons"
+// import { faPhone } from ""
+library.add(fab, faPhone, faEnvelope, faLocationDot)
 
 const Template2 = ({ printMode }) => {
   const nameColRef = useRef(null)
@@ -51,22 +67,46 @@ const Template2 = ({ printMode }) => {
       {/* contact info */}
       <div id="contact-info">
         <div className="row">
-          {doFilter("phone", "email", "telephone").map(([key, value]) => (
-            <div key={key} className="col">
-              <p className="title">{key}:</p>
-              <a
-                href={`${
-                  key === "phone" || key === "telephone"
-                    ? "tel:"
-                    : key === "email"
-                    ? "mailto:"
-                    : ""
-                }${value}`}
-              >
-                <p>{value}</p>
+          {data.phone && (
+            <div className="col">
+              <p className="title">
+                <FontAwesomeIcon icon={`fa-solid fa-phone`} />
+              </p>
+              <a href={`tel:${data.phone}`}>
+                <p>{data.phone}</p>
               </a>
             </div>
-          ))}
+          )}
+          {data.telephone && (
+            <div className="col">
+              <p className="title">
+                <FontAwesomeIcon icon={`fa-solid fa-phone`} />
+              </p>
+              <a href={`tel:${data.telephone}`}>
+                <p>{data.telephone}</p>
+              </a>
+            </div>
+          )}
+          {data.email && (
+            <div className="col">
+              <p className="title">
+                <FontAwesomeIcon icon={`fa-solid fa-envelope`} />
+              </p>
+              <a href={`mailto:${data.email}`}>
+                <p>{data.email}</p>
+              </a>
+            </div>
+          )}
+          {data.location && (
+            <div className="col">
+              <p className="title">
+                <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+              </p>
+              <a href={`mailto:${data.location}`}>
+                <p>{data.location}</p>
+              </a>
+            </div>
+          )}
         </div>
 
         <div className="row">
@@ -79,7 +119,9 @@ const Template2 = ({ printMode }) => {
             "instagram",
           ).map(([key, value]) => (
             <div key={key} className="col">
-              <p className="title">{key}:</p>
+              <p className="title">
+                <FontAwesomeIcon icon={`fa-brands fa-${key.toLowerCase()}`} />
+              </p>
               <a href={value}>
                 <p>{value}</p>
               </a>
@@ -136,15 +178,12 @@ const Template2 = ({ printMode }) => {
                   </a>
                   {project.repo && (
                     <p>
-                      {/* <h6 className="inline">Repository: </h6> */}
                       <a className="date" href={project.repo}>
                         <small className="leading-5">{project.repo}</small>
                       </a>
                     </p>
                   )}
-                  <p className="w-full">
-                    {"=>"} {project.shortDescription}
-                  </p>
+                  <p className="w-full">{project.shortDescription}</p>
                 </div>
 
                 <div className="builders">
