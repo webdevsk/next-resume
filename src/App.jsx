@@ -1,4 +1,4 @@
-import Template1 from "./templates/Template1"
+import Template2 from "./templates/Template2"
 
 function App() {
   const url = new URL(window.location.href)
@@ -29,7 +29,7 @@ function App() {
           className={printMode ? "mx-auto" : ""}
           // className="mx-auto my-4 border border-black p-[--pdf-margin] print:mx-0 print:my-0 print:border-none print:p-0"
         >
-          <Template1 printMode={printMode} />
+          <Template2 printMode={printMode} />
         </div>
       </div>
     </div>

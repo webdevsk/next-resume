@@ -5,8 +5,8 @@
 /* Tailwind has built in Post CSS Nested library which compiles nested styles on build. Linter may show errors here but thats nothing to worry about */
 
 #template {
-  --theme: #2a014f;
-  --accent: #340ce4;
+  --theme: rgb(79, 27, 125);
+  --accent: #3c269d;
   --body: #23192b;
   --color1: #00000;
   --color2: #00000;
@@ -27,12 +27,11 @@
   }
 
   #contact-info {
-    @apply overflow-hidden pb-template;
     .row {
-      @apply -mx-2 flex flex-wrap divide-x divide-theme;
+      @apply flex flex-wrap;
     }
     .col {
-      @apply flex gap-1 px-2;
+      @apply flex gap-1;
     }
 
     .title {
@@ -41,17 +40,16 @@
   }
 
   #about-me {
-    @apply border-t border-theme py-template;
+    @apply py-template;
   }
 
   #skills {
-    @apply overflow-hidden;
     & > .row {
-      @apply -mx-4 flex flex-wrap divide-x divide-theme border-theme;
+      @apply flex flex-wrap gap-2;
     }
 
     .col {
-      @apply grow border-t border-theme px-4 py-template;
+      @apply grow rounded-lg bg-gray-50 px-4 py-template shadow-md;
     }
 
     .skillset {
@@ -65,7 +63,7 @@
       @apply flex flex-col gap-y-4;
     }
     .sections {
-      @apply flex flex-col gap-y-2;
+      @apply flex flex-col gap-y-2 rounded-lg bg-gray-50 p-4 shadow-md;
     }
     .title-section {
       @apply flex flex-wrap justify-between gap-x-2;
@@ -77,9 +75,9 @@
       @apply leading-6;
     }
     .builders {
-      @apply flex flex-wrap items-center gap-1;
-      & > *:not(:first-child) {
-        @apply rounded-md border border-current px-1 transition-colors hover:border-theme hover:bg-theme hover:text-white hover:no-underline;
+      @apply flex flex-wrap items-center justify-center gap-1;
+      & > * {
+        @apply block rounded-md bg-slate-400 px-1 text-white transition-colors hover:no-underline hover:drop-shadow-md;
       }
     }
     .row > h6 {
@@ -97,7 +95,7 @@
       @apply mt-template flex flex-col gap-y-4;
     }
     .sections {
-      @apply flex flex-col gap-y-2;
+      @apply flex flex-col gap-y-2 rounded-lg bg-gray-50 p-4 shadow-md;
     }
     .row {
       grid-template-columns: minmax(0, 1fr) max-content;
@@ -124,6 +122,7 @@
 
     .content {
       /* @apply flex flex-col gap-y-1; */
+      @apply rounded-lg bg-gray-50 p-4 shadow-md;
     }
 
     .row {
@@ -137,12 +136,12 @@
     @apply me-1 text-xs leading-3 text-theme content-["◆"];
   } */
   .heading {
-    @apply mb-template bg-theme py-1 text-center uppercase [&>*]:text-white;
+    @apply py-2 text-center uppercase [&>*]:text-theme;
   }
   .bullet-item {
     @apply relative ps-4;
     &:before {
-      @apply absolute inset-0 text-xs leading-4 text-theme content-["◆"] sm:leading-5;
+      @apply absolute inset-0 text-base leading-4 text-[--randColor,inherit] content-["●"] sm:leading-5;
     }
   }
   .date > * {

@@ -3,9 +3,10 @@ const { data } = resume
 import photo from "../assets/photo.png"
 import { useEffect, useRef } from "react"
 import doFilter from "../utils/doFilter"
-import "./Template1.css"
+import "./Template2.css"
+import randColor from "../utils/randColor"
 
-const Template1 = ({ printMode }) => {
+const Template2 = ({ printMode }) => {
   const nameColRef = useRef(null)
   const imageRef = useRef(null)
 
@@ -85,7 +86,7 @@ const Template1 = ({ printMode }) => {
             </div>
           ))}
         </div>
-        <div className="col -ms-2">
+        <div className="col">
           <p className="title">Resume Live Version:</p>
           <a href={data.liveLink}>
             <p>{data.liveLink}</p>
@@ -99,6 +100,9 @@ const Template1 = ({ printMode }) => {
       {/* skills */}
       {data.skills && (
         <div id="skills">
+          <div className="heading">
+            <h5>Technology Stack</h5>
+          </div>
           <div className="row">
             {data.skills.map((category) => (
               <div key={category.heading} className="col">
@@ -106,7 +110,7 @@ const Template1 = ({ printMode }) => {
 
                 <ul className="skillset">
                   {category.data.map((skill) => (
-                    <li key={skill}>
+                    <li key={skill} style={{ "--randColor": randColor() }}>
                       <p className="bullet-item">{skill}</p>
                     </li>
                   ))}
@@ -144,7 +148,6 @@ const Template1 = ({ printMode }) => {
                 </div>
 
                 <div className="builders">
-                  <h6 className="">Built With: </h6>
                   {project.builtWith.map((item, i, arr) => (
                     // `${item}${i === arr.length - 1 ? "." : ", "}`,
                     <a
@@ -152,9 +155,12 @@ const Template1 = ({ printMode }) => {
                       rel="noreferrer"
                       className={printMode ? "pointer-events-none" : undefined}
                       href={
-                        !printMode && `https://www.google.com/search?q=${item}`
+                        !printMode
+                          ? `https://www.google.com/search?q=${item}`
+                          : undefined
                       }
                       key={item}
+                      style={{ "--randColor": randColor() }}
                     >
                       <p>{item}</p>
                     </a>
@@ -165,7 +171,7 @@ const Template1 = ({ printMode }) => {
                   <h6 className="col">Features:</h6>
                   <ul className="col features">
                     {project.features.map((feature) => (
-                      <li key={feature}>
+                      <li key={feature} style={{ "--randColor": randColor() }}>
                         <p className="bullet-item">
                           {feature}
                           {feature.at(-1) === "." ? "" : "."}
@@ -214,7 +220,7 @@ const Template1 = ({ printMode }) => {
                   <h6>Soft Skills Acquired:</h6>
                   <ul className="soft-skills">
                     {job.skills.map((skill) => (
-                      <li key={skill}>
+                      <li key={skill} style={{ "--randColor": randColor() }}>
                         <p className="bullet-item">{skill}</p>
                       </li>
                     ))}
@@ -224,7 +230,10 @@ const Template1 = ({ printMode }) => {
                   <h6>Responsibilites:</h6>
                   <ul className="responsibilities">
                     {job.responsibilities.map((responsibility) => (
-                      <li key={responsibility}>
+                      <li
+                        key={responsibility}
+                        style={{ "--randColor": randColor() }}
+                      >
                         <p className="bullet-item">
                           {responsibility}
                           {responsibility.at(-1) !== "." && "."}
@@ -247,7 +256,11 @@ const Template1 = ({ printMode }) => {
           </div>
           <ul className="content">
             {data.educations.map((education) => (
-              <li key={education.title} className="row">
+              <li
+                key={education.title}
+                className="row"
+                style={{ "--randColor": randColor() }}
+              >
                 <div className="col info">
                   <small className="bullet-item">
                     <h6 className="inline">{education.title}</h6>
@@ -269,4 +282,4 @@ const Template1 = ({ printMode }) => {
   )
 }
 
-export default Template1
+export default Template2
