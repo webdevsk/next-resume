@@ -126,11 +126,13 @@ const Template2 = ({ printMode }) => {
             </div>
           ))}
         </div>
-        <div className="col">
-          <p className="resume-title title">Resume Live Version:</p>
-          <a href={data.liveLink}>
-            <p>{data.liveLink}</p>
-          </a>
+        <div className="row">
+          <div className="col">
+            <p className="resume-title title">Resume Live Version:</p>
+            <a href={data.liveLink}>
+              <p>{data.liveLink}</p>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -141,7 +143,7 @@ const Template2 = ({ printMode }) => {
       {data.skills && (
         <div id="skills">
           <div className="heading">
-            <h5>Language and Frameworks</h5>
+            <h5>Language and Libraries</h5>
           </div>
           <div className="row">
             {data.skills.map((category) => (
@@ -179,7 +181,9 @@ const Template2 = ({ printMode }) => {
                       <a className="date" href={project.repo}>
                         <small>
                           <FontAwesomeIcon icon="fa-brands fa-github" />{" "}
-                          <span className="max-sm:hidden">{project.repo}</span>
+                          <span className="max-sm:hidden">
+                            {project.repo.replace("https://github.com/", "")}
+                          </span>
                           <span className="sm:hidden">Github</span>
                         </small>
                       </a>
@@ -323,6 +327,24 @@ const Template2 = ({ printMode }) => {
               </li>
             ))}
           </ul>
+        </div>
+      )}
+      {data.spokenLanguages && data.spokenLanguages.length && (
+        <div id="spoken-languages">
+          <h5 className="heading">Spoken Languages</h5>
+          <div className="content">
+            <ul className="langs">
+              {data.spokenLanguages.map((lang) => (
+                <li
+                  key={lang}
+                  className="bullet-item"
+                  style={{ "--rand-color": randColor(500) }}
+                >
+                  <p>{lang}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       )}
     </div>

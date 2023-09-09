@@ -15,7 +15,7 @@ const resume = {
     facebook: null,
     liveLink: "https://webdevsk.github.io/react-resume/",
     about:
-      "I am a Frontend Web Developer creating interactable solutions and solving both technical and design challenges using Vanilla JavaScript and React JS. I have more than 2 years of experience in creating pixel-perfect and mobile responsive Websites that met client requirements. I debug design and functional issues with my deep knowledge on Dev Tools and Search Engines.",
+      "I am a Frontend Web Developer creating interactable solutions and solving both technical and design challenges using React and Vanilla JS. I have more than 2 years of experience in creating pixel-perfect and mobile responsive Websites that met client requirements. I debug design and functional issues with my intermediate knowledge on Dev Tools and Search Engines.",
     skills: [
       {
         heading: "Frontend",
@@ -53,7 +53,7 @@ const resume = {
           "Create, mark, pin or delete tasks. Bulk check and remove completed tasks.",
           "Handheld device accessible. Bottom input field improves reachability.",
           "Create dynamic categories either from within the APP or from browser URL directly",
-          "Side Menu visibility state is dynamically managed based on device orientation and viewport.",
+          "Side Menu visibility is dynamically managed based on device orientation and viewport.",
         ],
       },
       {
@@ -99,7 +99,7 @@ const resume = {
         responsibilities: [
           "Pocessed on average 50-70 online orders each day accurately and efficiently",
           "Assembled and packaged orders for shipping",
-          "After promotion I used to update shop database using MS Excel and their ecommerce online console inorder to maintain inventory records",
+          "Updated database using Excel and Ecommerce console to maintain inventory records",
           "Troubleshooted technical problems",
           "Thrived to stay up-to-date on the latest ecommerce technologies",
         ],
@@ -132,7 +132,7 @@ const resume = {
           "Technical skills (scanning, data entry)",
         ],
         responsibilities: [
-          "I scanned returned items, updated inventory records (average of 600-700 items per day)",
+          "Scanned returned items, updated inventory records (average of 700 items per day)",
           "Inspected returned items for damage",
           "Processed returns according to company policy",
           "Kept the warehouse clean and organized",
@@ -194,6 +194,13 @@ const resume = {
         dateFrom: "2009",
         dateTo: "2010",
       },
+    ],
+    spokenLanguages: [
+      "English (Fluent)",
+      "Bangla (Fluent)",
+      "Hindi (Fluent)",
+      "Urdu (Fluent)",
+      "Arabic (Basic)",
     ],
   },
 }

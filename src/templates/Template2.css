@@ -88,16 +88,13 @@
       @apply leading-6;
     }
     .date svg {
-      @apply text-accent;
+      @apply text-sm text-accent;
     }
     .builders {
       @apply flex flex-wrap items-center justify-center gap-1;
       & > * {
         @apply block rounded-md border border-accent px-1  transition-colors hover:bg-accent hover:text-white hover:no-underline;
       }
-    }
-    .features {
-      /* @apply flex flex-col gap-y-1; */
     }
   }
 
@@ -121,16 +118,10 @@
         @apply leading-6;
       }
     }
-
-    .soft-skills,
-    .responsibilities {
-      /* @apply mb-1 mt-1 flex flex-col gap-y-1; */
-    }
   }
 
   #education {
     .content {
-      /* @apply flex flex-col gap-y-1; */
       @apply mx-1 rounded-lg bg-color1 p-4 shadow-md;
     }
 
@@ -144,12 +135,18 @@
       }
     }
   }
+
+  #spoken-languages {
+    .content {
+      @apply mx-1 rounded-lg bg-color1 p-4 shadow-md;
+      .langs {
+        @apply flex flex-wrap items-center gap-x-3 gap-y-1;
+      }
+    }
+  }
 }
 
 @layer utilities {
-  /* .bullet-item:before {
-    @apply me-1 text-xs leading-3 text-theme content-["◆"];
-  } */
   .heading {
     @apply py-template text-center uppercase [&>*]:text-theme;
   }
