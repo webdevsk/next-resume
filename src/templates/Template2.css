@@ -14,7 +14,7 @@
   --color3: #00000;
   --color4: #00000;
   --color5: #00000;
-  --template-gap: 0.5rem;
+  --template-gap: 0.75rem;
   @apply flex flex-col text-body [&_a:hover]:underline;
 }
 
@@ -41,7 +41,7 @@
   }
 
   #about-me {
-    @apply py-template;
+    @apply mt-template;
   }
 
   #skills {
@@ -59,7 +59,6 @@
   }
 
   #projects {
-    @apply mb-template;
     .content {
       @apply flex flex-col gap-y-4;
     }
@@ -90,8 +89,6 @@
   }
 
   #experiences {
-    @apply mb-template;
-
     .content {
       @apply mt-template flex flex-col gap-y-4;
     }
@@ -119,8 +116,6 @@
   }
 
   #education {
-    @apply mb-template;
-
     .content {
       /* @apply flex flex-col gap-y-1; */
       @apply bg-color1 rounded-lg p-4 shadow-md;
@@ -137,7 +132,7 @@
     @apply me-1 text-xs leading-3 text-theme content-["◆"];
   } */
   .heading {
-    @apply py-2 text-center uppercase [&>*]:text-theme;
+    @apply py-template text-center uppercase [&>*]:text-theme;
   }
   .bullet-item {
     @apply relative ps-4;

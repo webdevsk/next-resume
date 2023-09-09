@@ -110,7 +110,7 @@ const Template2 = ({ printMode }) => {
 
                 <ul className="skillset">
                   {category.data.map((skill) => (
-                    <li key={skill} style={{ "--rand-color": randColor() }}>
+                    <li key={skill} style={{ "--rand-color": randColor(400) }}>
                       <p className="bullet-item">{skill}</p>
                     </li>
                   ))}
@@ -160,7 +160,7 @@ const Template2 = ({ printMode }) => {
                           : undefined
                       }
                       key={item}
-                      style={{ "--rand-color": randColor() }}
+                      style={{ "--rand-color": randColor(400) }}
                     >
                       <p>{item}</p>
                     </a>
@@ -171,7 +171,10 @@ const Template2 = ({ printMode }) => {
                   <h6 className="col">Features:</h6>
                   <ul className="col features">
                     {project.features.map((feature) => (
-                      <li key={feature} style={{ "--rand-color": randColor() }}>
+                      <li
+                        key={feature}
+                        style={{ "--rand-color": randColor(400) }}
+                      >
                         <p className="bullet-item">
                           {feature}
                           {feature.at(-1) === "." ? "" : "."}
@@ -220,7 +223,10 @@ const Template2 = ({ printMode }) => {
                   <h6>Soft Skills Acquired:</h6>
                   <ul className="soft-skills">
                     {job.skills.map((skill) => (
-                      <li key={skill} style={{ "--rand-color": randColor() }}>
+                      <li
+                        key={skill}
+                        style={{ "--rand-color": randColor(400) }}
+                      >
                         <p className="bullet-item">{skill}</p>
                       </li>
                     ))}
@@ -232,7 +238,7 @@ const Template2 = ({ printMode }) => {
                     {job.responsibilities.map((responsibility) => (
                       <li
                         key={responsibility}
-                        style={{ "--rand-color": randColor() }}
+                        style={{ "--rand-color": randColor(400) }}
                       >
                         <p className="bullet-item">
                           {responsibility}
@@ -259,7 +265,7 @@ const Template2 = ({ printMode }) => {
               <li
                 key={education.title}
                 className="row"
-                style={{ "--rand-color": randColor() }}
+                style={{ "--rand-color": randColor(400) }}
               >
                 <div className="col info">
                   <small className="bullet-item">

@@ -1,7 +1,6 @@
-import { useRef } from "react"
 import colors from "tailwindcss/colors"
 const colorArr = Object.entries(colors)
-console.log(colorArr)
+
 // exclude inherit, current, transparent, black, white
 const min = 5
 // exclude warmGray trueGray coolGray blueGray
