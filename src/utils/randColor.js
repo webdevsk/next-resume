@@ -15,7 +15,7 @@ const getRandValue = (contrast) => {
   return colorArr[randInt][1][contrast]
 }
 
-export default (contrast = 400) => {
+export default (contrast = 500) => {
   let randValue = getRandValue(contrast)
   while (randValue === lastValue) {
     randValue = getRandValue(contrast)

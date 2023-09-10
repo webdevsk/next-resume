@@ -18,6 +18,11 @@
 }
 
 @layer components {
+  /* Avoid breaking into two pages */
+  #experiences {
+    @apply break-inside-avoid;
+  }
+
   #heading {
     @apply flex flex-wrap items-start justify-between gap-4;
   }
@@ -36,7 +41,7 @@
     }
 
     .title {
-      @apply xs:block hidden font-semibold capitalize;
+      @apply hidden font-semibold capitalize xs:block;
     }
   }
 
@@ -55,7 +60,7 @@
     }
 
     .skillset {
-      @apply xs:grid-flow-col xs:grid-rows-3 grid grid-flow-row justify-start gap-x-3 pt-2;
+      @apply grid grid-flow-row justify-start gap-x-3 pt-2 xs:grid-flow-col xs:grid-rows-3;
     }
   }
 
@@ -127,7 +132,7 @@
     }
 
     .row {
-      @apply xs:flex flex-wrap items-center justify-between;
+      @apply flex-wrap items-center justify-between xs:flex;
     }
   }
 }
@@ -142,7 +147,7 @@
   .bullet-item {
     @apply relative ps-4;
     &:before {
-      @apply xs:leading-5 absolute inset-0 text-xs leading-4 text-theme content-["◆"];
+      @apply absolute inset-0 text-xs leading-4 text-theme content-["◆"] xs:leading-5;
     }
   }
   .date > * {
