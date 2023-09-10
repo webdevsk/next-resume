@@ -1,6 +1,6 @@
 import resume from "../resume"
 const { data } = resume
-import photo from "../assets/photo.png"
+import photo from "../public/images/photo.png"
 import { useEffect, useRef } from "react"
 import doFilter from "../utils/doFilter"
 import "./Template1.css"
@@ -263,6 +263,23 @@ const Template = ({ printMode }) => {
               </li>
             ))}
           </ul>
+        </div>
+      )}
+
+      {data.spokenLanguages && data.spokenLanguages.length && (
+        <div id="spoken-languages">
+          <div className="heading">
+            <h5>Spoken Languages</h5>
+          </div>
+          <div className="content">
+            <ul className="langs">
+              {data.spokenLanguages.map((lang) => (
+                <li key={lang} className="bullet-item">
+                  <p>{lang}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       )}
     </div>

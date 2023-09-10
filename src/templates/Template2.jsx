@@ -1,6 +1,6 @@
 import resume from "../resume"
 const { data } = resume
-import photo from "../assets/photo.png"
+import photo from "../public/images/photo.png"
 import { useEffect, useRef } from "react"
 import "./Template2.css"
 
@@ -331,7 +331,9 @@ const Template = ({ printMode }) => {
       )}
       {data.spokenLanguages && data.spokenLanguages.length && (
         <div id="spoken-languages">
-          <h5 className="heading">Spoken Languages</h5>
+          <div className="heading">
+            <h5>Spoken Languages</h5>
+          </div>
           <div className="content">
             <ul className="langs">
               {data.spokenLanguages.map((lang) => (

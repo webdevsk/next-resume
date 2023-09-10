@@ -1,10 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Tailwind has built in Post CSS Nested library which compiles nested styles on build. Linter may show errors here but thats nothing to worry about */
 
-#template {
+:root {
   --theme: theme(colors.cherry-pie.900);
   --accent: theme(colors.cherry-pie.800);
   --body: theme(colors.cherry-pie.950);
@@ -15,148 +11,220 @@
   --color4: #00000;
   --color5: #00000;
   --template-gap: 0.75rem;
-  @apply flex flex-col text-body [&_a:hover]:underline;
 }
 
-@layer components {
-  #heading {
-    @apply mb-1 flex flex-wrap items-start justify-between gap-4;
+html {
+  font-family: "Inter Variable", theme(fontFamily.sans);
+  @apply text-body;
+}
+
+#template a {
+  @apply hover:underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small,
+span {
+  @apply antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold text-theme;
+}
+
+p,
+small,
+span {
+  @apply font-medium;
+}
+
+h1 {
+  @apply text-3xl xs:text-4xl;
+}
+
+h2 {
+  @apply text-xl xs:text-2xl;
+}
+
+h3 {
+  @apply text-lg xs:text-xl;
+}
+
+h4 {
+  @apply text-base xs:text-lg;
+}
+
+h5 {
+  @apply text-sm xs:text-base;
+}
+
+h6 {
+  @apply text-xs xs:text-sm;
+}
+
+p {
+  @apply text-xs xs:text-sm;
+}
+
+small {
+  @apply block text-xs;
+}
+
+span {
+  @apply text-xs xs:text-sm;
+}
+
+/* Avoid breaking into two pages */
+#experiences {
+  @apply break-inside-avoid;
+}
+
+#heading {
+  @apply mb-1 flex flex-wrap items-start justify-between gap-4;
+}
+
+#photo {
+  @apply aspect-square max-w-full rounded-full object-cover;
+}
+
+#contact-info {
+  @apply flex flex-col items-start gap-y-1;
+  .row {
+    @apply flex flex-wrap gap-1;
+  }
+  .col {
+    @apply inline-flex gap-1 rounded-full bg-color2 pe-2 shadow-sm transition-colors;
+    &:has(a:hover) {
+      @apply bg-accent text-white;
+    }
+    a {
+      @apply hover:no-underline;
+    }
   }
 
-  #photo {
-    @apply aspect-square max-w-full rounded-full object-cover;
+  .title:not(.resume-title) {
+    @apply inline-grid w-5 place-items-center rounded-full bg-accent text-white;
+  }
+  .resume-title {
+    @apply px-2;
+  }
+  svg {
+    @apply text-xs;
+  }
+}
+
+#about-me {
+  @apply mt-template;
+}
+
+#skills {
+  & > .row {
+    @apply flex flex-wrap gap-2 px-1;
   }
 
-  #contact-info {
-    @apply flex flex-col items-start gap-y-1;
-    .row {
-      @apply flex flex-wrap gap-1;
-    }
-    .col {
-      @apply inline-flex gap-1 rounded-full bg-color2 pe-2 shadow-sm transition-colors;
-      &:has(a:hover) {
-        @apply bg-accent text-white;
-      }
-      a {
-        @apply hover:no-underline;
-      }
-    }
-
-    .title:not(.resume-title) {
-      @apply inline-grid w-5 place-items-center rounded-full bg-accent text-white;
-    }
-    .resume-title {
-      @apply px-2;
-    }
-    svg {
-      @apply text-xs;
-    }
+  .col {
+    @apply grow rounded-lg bg-color1 px-4 py-template shadow-md;
   }
 
-  #about-me {
-    @apply mt-template;
+  .skillset {
+    @apply grid grid-flow-row justify-start gap-x-3 pt-2 xs:grid-flow-col xs:grid-rows-3;
   }
+}
 
-  #skills {
-    & > .row {
-      @apply flex flex-wrap gap-2 px-1;
-    }
-
-    .col {
-      @apply grow rounded-lg bg-color1 px-4 py-template shadow-md;
-    }
-
-    .skillset {
-      @apply xs:grid-flow-col xs:grid-rows-3 grid grid-flow-row justify-start gap-x-3 pt-2;
-    }
+#projects {
+  .content {
+    @apply flex flex-col gap-y-3 px-1;
   }
-
-  #projects {
-    .content {
-      @apply flex flex-col gap-y-3 px-1;
-    }
-    .sections {
-      @apply flex flex-col gap-y-1 rounded-lg bg-color1 p-4 shadow-md;
-    }
-    .title-section {
-      @apply flex flex-wrap justify-between gap-x-2;
-      & h5 {
-        @apply before:me-1 before:text-accent before:content-["▢"];
-      }
-    }
-    .date > * {
-      @apply leading-6;
-    }
-    .date svg {
-      @apply text-sm text-accent;
-    }
-    .builders {
-      @apply flex flex-wrap justify-center gap-1;
-      & > * {
-        @apply block rounded-md border border-dashed border-accent px-1 transition-colors hover:bg-accent hover:text-white hover:no-underline;
-      }
-    }
+  .sections {
+    @apply flex flex-col gap-y-1 rounded-lg bg-color1 p-4 shadow-md;
   }
-
-  #experiences {
-    .content {
-      @apply flex flex-col gap-y-3 px-1;
-    }
-    .sections {
-      @apply flex flex-col gap-y-1 rounded-lg bg-color1 p-4 shadow-md;
-    }
-    .row {
-      grid-template-columns: minmax(0, 1fr) max-content;
-      @apply grid gap-x-2;
-    }
-    .position > * {
+  .title-section {
+    @apply flex flex-wrap justify-between gap-x-2;
+    & h5 {
       @apply before:me-1 before:text-accent before:content-["▢"];
-    }
-    .details {
-      @apply -mb-8 text-end;
-      h6 {
-        @apply leading-6;
-      }
-    }
-  }
-
-  #education {
-    .content {
-      @apply mx-1 rounded-lg bg-color1 p-4 shadow-md;
-    }
-
-    .row {
-      @apply flex justify-between gap-x-1;
-      .info {
-        @apply shrink;
-      }
-      .date > * {
-        @apply w-max leading-5;
-      }
-    }
-  }
-
-  #spoken-languages {
-    .content {
-      @apply mx-1 rounded-lg bg-color1 p-4 shadow-md;
-      .langs {
-        @apply flex flex-wrap items-center gap-x-3 gap-y-1;
-      }
-    }
-  }
-}
-
-@layer utilities {
-  .heading {
-    @apply py-template text-center uppercase [&>*]:text-theme;
-  }
-  .bullet-item {
-    @apply relative ps-4;
-    &:before {
-      @apply xs:leading-4 absolute inset-0 text-base leading-4 text-[--rand-color] content-["●"];
     }
   }
   .date > * {
-    @apply text-theme;
+    @apply leading-6;
   }
+  .date svg {
+    @apply text-sm text-accent;
+  }
+  .builders {
+    @apply flex flex-wrap justify-center gap-1;
+    & > * {
+      @apply block rounded-md border border-dashed border-accent px-1 transition-colors hover:bg-accent hover:text-white hover:no-underline;
+    }
+  }
+}
+
+#experiences {
+  .content {
+    @apply flex flex-col gap-y-3 px-1;
+  }
+  .sections {
+    @apply flex flex-col gap-y-1 rounded-lg bg-color1 p-4 shadow-md;
+  }
+  .row {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    @apply grid gap-x-2;
+  }
+  .position > * {
+    @apply before:me-1 before:text-accent before:content-["▢"];
+  }
+  .details {
+    @apply -mb-8 text-end;
+    h6 {
+      @apply leading-6;
+    }
+  }
+}
+
+#education {
+  .content {
+    @apply mx-1 rounded-lg bg-color1 p-4 shadow-md;
+  }
+
+  .row {
+    @apply flex justify-between gap-x-1;
+    .info {
+      @apply shrink;
+    }
+    .date > * {
+      @apply w-max leading-5;
+    }
+  }
+}
+
+#spoken-languages {
+  .content {
+    @apply mx-1 rounded-lg bg-color1 p-4 shadow-md;
+    .langs {
+      @apply flex flex-wrap items-center gap-x-3 gap-y-1;
+    }
+  }
+}
+
+.heading {
+  @apply py-template text-center uppercase [&>*]:text-theme;
+}
+.bullet-item {
+  @apply relative ps-4;
+  &:before {
+    @apply absolute inset-0 text-base leading-4 text-[--rand-color] content-["●"] xs:leading-4;
+  }
+}
+.date > * {
+  @apply text-theme;
 }

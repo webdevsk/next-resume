@@ -1,10 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Tailwind has built in Post CSS Nested library which compiles nested styles on build. Linter may show errors here but thats nothing to worry about */
 
-#template {
+:root {
   --theme: #2a014f;
   --accent: #340ce4;
   --body: #23192b;
@@ -14,143 +10,217 @@
   --color4: #00000;
   --color5: #00000;
   --template-gap: 0.5rem;
-  @apply flex flex-col text-body [&_a:hover]:underline;
 }
 
-@layer components {
-  /* Avoid breaking into two pages */
-  #experiences {
-    @apply break-inside-avoid;
+html {
+  font-family: "Inter Variable", theme(fontFamily.sans);
+  @apply text-body;
+}
+
+#template a {
+  @apply hover:underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small,
+span {
+  @apply antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold text-theme;
+}
+
+p,
+small,
+span {
+  @apply font-medium;
+}
+
+h1 {
+  @apply text-3xl xs:text-4xl;
+}
+
+h2 {
+  @apply text-xl xs:text-2xl;
+}
+
+h3 {
+  @apply text-lg xs:text-xl;
+}
+
+h4 {
+  @apply text-base xs:text-lg;
+}
+
+h5 {
+  @apply text-sm xs:text-base;
+}
+
+h6 {
+  @apply text-xs xs:text-sm;
+}
+
+p {
+  @apply text-xs xs:text-sm;
+}
+
+small {
+  @apply block text-xs;
+}
+
+span {
+  @apply text-xs xs:text-sm;
+}
+
+/* Avoid breaking into two pages */
+#experiences {
+  @apply break-inside-avoid;
+}
+
+#heading {
+  @apply flex flex-wrap items-start justify-between gap-4;
+}
+
+#photo {
+  @apply aspect-square max-w-full rounded-full object-cover;
+}
+
+#contact-info {
+  @apply overflow-hidden pb-template;
+  .row {
+    @apply -mx-2 flex flex-wrap divide-x divide-theme;
+  }
+  .col {
+    @apply flex gap-1 px-2;
   }
 
-  #heading {
-    @apply flex flex-wrap items-start justify-between gap-4;
+  .title {
+    @apply hidden font-semibold capitalize xs:block;
+  }
+}
+
+#about-me {
+  @apply border-t border-theme py-template;
+}
+
+#skills {
+  @apply overflow-hidden;
+  & > .row {
+    @apply -mx-4 flex flex-wrap divide-x divide-theme border-theme;
   }
 
-  #photo {
-    @apply aspect-square max-w-full rounded-full object-cover;
+  .col {
+    @apply grow border-t border-theme px-4 py-template;
   }
 
-  #contact-info {
-    @apply overflow-hidden pb-template;
-    .row {
-      @apply -mx-2 flex flex-wrap divide-x divide-theme;
-    }
-    .col {
-      @apply flex gap-1 px-2;
-    }
-
-    .title {
-      @apply hidden font-semibold capitalize xs:block;
-    }
+  .skillset {
+    @apply grid grid-flow-row justify-start gap-x-3 pt-2 xs:grid-flow-col xs:grid-rows-3;
   }
+}
 
-  #about-me {
-    @apply border-t border-theme py-template;
+#projects {
+  @apply mb-template;
+  .content {
+    @apply flex flex-col gap-y-4;
   }
-
-  #skills {
-    @apply overflow-hidden;
-    & > .row {
-      @apply -mx-4 flex flex-wrap divide-x divide-theme border-theme;
-    }
-
-    .col {
-      @apply grow border-t border-theme px-4 py-template;
-    }
-
-    .skillset {
-      @apply grid grid-flow-row justify-start gap-x-3 pt-2 xs:grid-flow-col xs:grid-rows-3;
-    }
+  .sections {
+    @apply flex flex-col gap-y-2;
   }
-
-  #projects {
-    @apply mb-template;
-    .content {
-      @apply flex flex-col gap-y-4;
-    }
-    .sections {
-      @apply flex flex-col gap-y-2;
-    }
-    .title-section {
-      @apply flex flex-wrap justify-between gap-x-2;
-      & h5 {
-        @apply before:me-1 before:text-accent before:content-["▢"];
-      }
-    }
-    .date > * {
-      @apply leading-6;
-    }
-    .builders {
-      @apply flex flex-wrap items-center gap-1;
-      & > *:not(:first-child) {
-        @apply rounded-md border border-current px-1 transition-colors hover:border-theme hover:bg-theme hover:text-white hover:no-underline;
-      }
-    }
-    .row > h6 {
-      @apply mb-1;
-    }
-    .features {
-      /* @apply flex flex-col gap-y-1; */
-    }
-  }
-
-  #experiences {
-    @apply mb-template;
-
-    .content {
-      @apply mt-template flex flex-col gap-y-4;
-    }
-    .sections {
-      @apply flex flex-col gap-y-2;
-    }
-    .row {
-      grid-template-columns: minmax(0, 1fr) max-content;
-      @apply grid gap-x-2;
-    }
-    .position > * {
+  .title-section {
+    @apply flex flex-wrap justify-between gap-x-2;
+    & h5 {
       @apply before:me-1 before:text-accent before:content-["▢"];
-    }
-    .details {
-      @apply -mb-8 text-end;
-      h5 {
-        @apply leading-6;
-      }
-    }
-
-    .soft-skills,
-    .responsibilities {
-      /* @apply mb-1 mt-1 flex flex-col gap-y-1; */
-    }
-  }
-
-  #education {
-    @apply mb-template;
-
-    .content {
-      /* @apply flex flex-col gap-y-1; */
-    }
-
-    .row {
-      @apply flex-wrap items-center justify-between xs:flex;
-    }
-  }
-}
-
-@layer utilities {
-  /* .bullet-item:before {
-    @apply me-1 text-xs leading-3 text-theme content-["◆"];
-  } */
-  .heading {
-    @apply mb-template bg-theme py-1 text-center uppercase [&>*]:text-white;
-  }
-  .bullet-item {
-    @apply relative ps-4;
-    &:before {
-      @apply absolute inset-0 text-xs leading-4 text-theme content-["◆"] xs:leading-5;
     }
   }
   .date > * {
-    @apply text-theme;
+    @apply leading-6;
   }
+  .builders {
+    @apply flex flex-wrap items-center gap-1;
+    & > *:not(:first-child) {
+      @apply rounded-md border border-current px-1 transition-colors hover:border-theme hover:bg-theme hover:text-white hover:no-underline;
+    }
+  }
+  .row > h6 {
+    @apply mb-1;
+  }
+  .features {
+    /* @apply flex flex-col gap-y-1; */
+  }
+}
+
+#experiences {
+  @apply mb-template break-inside-avoid;
+
+  .content {
+    @apply mt-template flex flex-col gap-y-4;
+  }
+  .sections {
+    @apply flex break-inside-avoid flex-col gap-y-2;
+  }
+  .row {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    @apply grid gap-x-2;
+  }
+  .position > * {
+    @apply before:me-1 before:text-accent before:content-["▢"];
+  }
+  .details {
+    @apply -mb-8 text-end;
+    h5 {
+      @apply leading-6;
+    }
+  }
+
+  .soft-skills,
+  .responsibilities {
+    /* @apply mb-1 mt-1 flex flex-col gap-y-1; */
+  }
+}
+
+#education {
+  @apply mb-template;
+
+  .content {
+    /* @apply flex flex-col gap-y-1; */
+  }
+
+  .row {
+    @apply flex-wrap items-center justify-between xs:flex;
+  }
+}
+
+#spoken-languages {
+  @apply mb-template;
+  .langs {
+    @apply flex flex-wrap gap-x-3 gap-y-1;
+  }
+}
+
+/* .bullet-item:before {
+    @apply me-1 text-xs leading-3 text-theme content-["◆"];
+  } */
+.heading {
+  @apply mb-template bg-theme py-1 text-center uppercase [&>*]:text-white;
+}
+.bullet-item {
+  @apply relative ps-4;
+  &:before {
+    @apply absolute inset-0 text-xs leading-4 text-theme content-["◆"] xs:leading-5;
+  }
+}
+.date > * {
+  @apply text-theme;
 }

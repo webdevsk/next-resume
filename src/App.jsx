@@ -1,19 +1,22 @@
-import Template2 from "./templates/Template2"
+import { Suspense, lazy } from "react"
+const defaultTemplate = "Template2"
+const loadComponent = (name) =>
+  lazy(() => import(/* @vite-ignore */ `./templates/${name}.jsx`))
 
 function App() {
   const url = new URL(window.location.href)
   const params = new URLSearchParams(url.search)
-  const printMode = params.get("printonly") ? true : false
+  const printMode = params.get("printonly") ?? false
+  const template = params.get("template") ?? defaultTemplate
+  const Template = loadComponent(template)
 
   return (
     <>
       <div className={!printMode ? "pdf-container" : ""}>
-        <div
-          id="pdf"
-          className={printMode ? "mx-auto" : ""}
-          // className="mx-auto my-4 border border-black p-[--pdf-margin] print:mx-0 print:my-0 print:border-none print:p-0"
-        >
-          <Template2 printMode={printMode} />
+        <div id="pdf" className={printMode ? "mx-auto" : ""}>
+          <Suspense fallback={<div>Loading</div>}>
+            <Template printMode={printMode} />
+          </Suspense>
         </div>
       </div>
 
@@ -21,10 +24,10 @@ function App() {
         <div className="container" id="other-body-stuff">
           <div className="my-4 text-center">
             <a
-              className="underline transition-colors hover:text-blue-500"
-              href={url + "?printonly=true"}
+              className="text-lg font-bold  underline transition-colors hover:text-sky-500"
+              href={"?printonly=true" + "&template=" + template}
             >
-              <h5>Print Mode</h5>
+              Print Mode
             </a>
           </div>
         </div>

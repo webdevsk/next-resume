@@ -21,9 +21,6 @@ export default {
         xs: "520px",
         ...defaultTheme.screens,
       },
-      fontFamily: {
-        sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
-      },
       colors: {
         theme: "var(--theme)",
         accent: "var(--accent)",
