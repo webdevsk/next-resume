@@ -3,6 +3,7 @@ const defaultTemplate = "Template2"
 const loadComponent = (name) =>
   lazy(() => import(/* @vite-ignore */ `./templates/${name}.jsx`))
 
+const resumeTemplates = ["Template1", "Template2"]
 function App() {
   const url = new URL(window.location.href)
   const params = new URLSearchParams(url.search)
@@ -12,6 +13,18 @@ function App() {
 
   return (
     <>
+      {!printMode && (
+        <div className="container my-8">
+          <div className="flex flex-wrap items-center justify-center gap-4 [&_a:hover]:underline">
+            <h5>Choose Template: </h5>
+            {resumeTemplates.map((template) => (
+              <a key={template} href={`?template=${template}`}>
+                {template}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
       <div className={!printMode ? "pdf-container" : ""}>
         <div id="pdf" className={printMode ? "mx-auto" : ""}>
           <Suspense fallback={<div>Loading</div>}>
