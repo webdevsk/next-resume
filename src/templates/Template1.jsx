@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react"
 import doFilter from "../utils/doFilter"
 import "./Template1.css"
 
-const Template1 = ({ printMode }) => {
+const Template = ({ printMode }) => {
   const nameColRef = useRef(null)
   const imageRef = useRef(null)
 
@@ -269,4 +269,4 @@ const Template1 = ({ printMode }) => {
   )
 }
 
-export default Template1
+export default Template

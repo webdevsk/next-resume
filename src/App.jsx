@@ -6,23 +6,7 @@ function App() {
   const printMode = params.get("printonly") ? true : false
 
   return (
-    <div
-      className={
-        !printMode ? "flex flex-wrap justify-center gap-y-8 py-16" : ""
-      }
-    >
-      {!printMode && (
-        <div className="w-full" id="other-body-stuff">
-          <div className="container">
-            <a
-              className="rounded-sm bg-gray-400 p-4 text-white transition-colors hover:bg-gray-600"
-              href={url + "?printonly=true"}
-            >
-              Print Mode
-            </a>
-          </div>
-        </div>
-      )}
+    <div className={!printMode ? "container" : ""}>
       <div className={!printMode ? "pdf-container" : ""}>
         <div
           id="pdf"
@@ -32,6 +16,17 @@ function App() {
           <Template2 printMode={printMode} />
         </div>
       </div>
+
+      {!printMode && (
+        <div className="container" id="other-body-stuff">
+          <a
+            className="ms-auto rounded-sm bg-gray-600 px-4 py-2 text-white transition-colors hover:bg-gray-600"
+            href={url + "?printonly=true"}
+          >
+            Print Mode
+          </a>
+        </div>
+      )}
     </div>
   )
 }

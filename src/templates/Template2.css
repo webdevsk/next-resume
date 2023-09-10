@@ -5,12 +5,12 @@
 /* Tailwind has built in Post CSS Nested library which compiles nested styles on build. Linter may show errors here but thats nothing to worry about */
 
 #template {
-  --theme: rgb(79, 27, 125);
-  --accent: #5a2082;
-  --body: #23192b;
+  --theme: theme(colors.cherry-pie.900);
+  --accent: theme(colors.cherry-pie.800);
+  --body: theme(colors.cherry-pie.950);
   /* --color1: #f9fafb; */
-  --color1: theme(colors.gray.50);
-  --color2: theme(colors.slate.100);
+  --color1: theme(colors.neutral.50);
+  --color2: theme(colors.cherry-pie.50);
   --color3: #00000;
   --color4: #00000;
   --color5: #00000;
@@ -91,9 +91,9 @@
       @apply text-sm text-accent;
     }
     .builders {
-      @apply flex flex-wrap items-center justify-center gap-1;
+      @apply flex flex-wrap justify-center gap-1;
       & > * {
-        @apply block rounded-md border border-accent px-1  transition-colors hover:bg-accent hover:text-white hover:no-underline;
+        @apply block rounded-md border border-dashed border-accent px-1 transition-colors hover:bg-accent hover:text-white hover:no-underline;
       }
     }
   }

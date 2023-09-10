@@ -1,4 +1,6 @@
 import colors from "tailwindcss/colors"
+
+//Ignore the TailwindCSS warning
 const colorArr = Object.entries(colors)
 
 // exclude inherit, current, transparent, black, white

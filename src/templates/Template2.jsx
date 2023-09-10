@@ -22,7 +22,7 @@ import {
 // import { faPhone } from ""
 library.add(fab, faPhone, faEnvelope, faLocationDot)
 
-const Template2 = ({ printMode }) => {
+const Template = ({ printMode }) => {
   const nameColRef = useRef(null)
   const imageRef = useRef(null)
 
@@ -126,7 +126,7 @@ const Template2 = ({ printMode }) => {
             </div>
           ))}
         </div>
-        <div className="row">
+        <div className={`row  ${!printMode ? "!hidden" : ""}`}>
           <div className="col">
             <p className="resume-title title">Resume Live Version:</p>
             <a href={data.liveLink}>
@@ -351,4 +351,4 @@ const Template2 = ({ printMode }) => {
   )
 }
 
-export default Template2
+export default Template

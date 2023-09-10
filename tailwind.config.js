@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import defaultTheme from "tailwindcss/defaultTheme"
+// cherry-pie color was created based on my photo background. You can create yours from here https://uicolors.app/create
 
 export default {
   content: [
@@ -9,12 +10,15 @@ export default {
   ],
   theme: {
     container: {
-      centered: true,
-      padding: "2rem",
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+      },
     },
     extend: {
       screens: {
-        sm: "480px",
+        sm: "520px",
       },
       fontFamily: {
         sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
@@ -28,6 +32,19 @@ export default {
         color3: "var(--color3)",
         color4: "var(--color4)",
         color5: "var(--color5)",
+        "cherry-pie": {
+          50: "#faf4ff",
+          100: "#f2e7ff",
+          200: "#e7d2ff",
+          300: "#d5afff",
+          400: "#bc7dff",
+          500: "#a24bff",
+          600: "#8d28f5",
+          700: "#7918d8",
+          800: "#6719b0",
+          900: "#55158e",
+          950: "#2a014f",
+        },
       },
       spacing: {
         template: "var(--template-gap)",

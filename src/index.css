@@ -12,7 +12,7 @@
 
 /* Set the lowest viewport size to @media(min-width: 480px) to tackle this issue. For mobile, use initial sizes. For print, use @media(min-width: 480px). If you decrease the pdf margin, you can crank up the lowest viewport slightly if you want. Though you have to test it the hard way */
 
-/* How to test: Style an element with an obvious difference in mobile and non mobile view. Something like className="text-red-500 sm:text-blue-500". Then crank up the lowest viewport 480 to a little like 500. Generate pdf using puppeteer and see if it chose the mobile version or non mobile version. If it chose the non mobile one (text is blue) you are good to go */
+/* How to test: Style an element with an obvious difference in mobile and non mobile view. Something like className="text-red-500 sm:text-blue-500". Then crank up the lowest viewport by 20. Generate pdf using puppeteer and see if it chose the mobile version or non mobile version. If it chose the non mobile one (text is blue) you are good to go */
 
 /* As this project has Tailwind, you can set the lowest viewport in tailwind.config.js and use sm:property-styles as base style for printing. */
 
@@ -31,14 +31,14 @@
 
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /* DO NOT ALTER ANYTHING IN THIS BLOCK UNLESS YOU CAN DO THE CALCULATIONS AND TESTS YOURSELF.*/
-/* The only exception is margin. You can only DECREASE it without any tests. The ideal margin for A4 page is 0.75inch and set as such. */
+/* The only exception is margin. You can only DECREASE it without any tests. The minimum required margin for A4 page is 0.5inch and set as such. */
 :root {
-  --pdf-margin: 0.75in;
+  --pdf-margin: 0.5in;
 }
 
 @page {
   size: A4 portrait;
-  margin: 0.75in;
+  margin: 0.5in;
 }
 
 #pdf {
@@ -49,7 +49,7 @@
 
 /* for non live version/non print mode */
 .pdf-container {
-  @apply border border-black p-4 md:p-[--pdf-margin];
+  @apply mx-auto mt-16 w-full max-w-max border border-black p-4 md:p-[--pdf-margin];
 }
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 
