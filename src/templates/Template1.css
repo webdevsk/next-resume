@@ -36,7 +36,7 @@
     }
 
     .title {
-      @apply hidden font-semibold capitalize sm:block;
+      @apply xs:block hidden font-semibold capitalize;
     }
   }
 
@@ -55,7 +55,7 @@
     }
 
     .skillset {
-      @apply grid grid-flow-row justify-start gap-x-3 pt-2 sm:grid-flow-col sm:grid-rows-3;
+      @apply xs:grid-flow-col xs:grid-rows-3 grid grid-flow-row justify-start gap-x-3 pt-2;
     }
   }
 
@@ -127,7 +127,7 @@
     }
 
     .row {
-      @apply flex-wrap items-center justify-between sm:flex;
+      @apply xs:flex flex-wrap items-center justify-between;
     }
   }
 }
@@ -142,7 +142,7 @@
   .bullet-item {
     @apply relative ps-4;
     &:before {
-      @apply absolute inset-0 text-xs leading-4 text-theme content-["◆"] sm:leading-5;
+      @apply xs:leading-5 absolute inset-0 text-xs leading-4 text-theme content-["◆"];
     }
   }
   .date > * {

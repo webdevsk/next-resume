@@ -6,7 +6,7 @@ function App() {
   const printMode = params.get("printonly") ? true : false
 
   return (
-    <div className={!printMode ? "container" : ""}>
+    <>
       <div className={!printMode ? "pdf-container" : ""}>
         <div
           id="pdf"
@@ -19,15 +19,17 @@ function App() {
 
       {!printMode && (
         <div className="container" id="other-body-stuff">
-          <a
-            className="ms-auto rounded-sm bg-gray-600 px-4 py-2 text-white transition-colors hover:bg-gray-600"
-            href={url + "?printonly=true"}
-          >
-            Print Mode
-          </a>
+          <div className="my-4 text-center">
+            <a
+              className="underline transition-colors hover:text-blue-500"
+              href={url + "?printonly=true"}
+            >
+              <h5>Print Mode</h5>
+            </a>
+          </div>
         </div>
       )}
-    </div>
+    </>
   )
 }
 

@@ -13,12 +13,13 @@ export default {
       center: true,
       padding: {
         DEFAULT: "1rem",
-        sm: "2rem",
+        xs: "2rem",
       },
     },
     extend: {
       screens: {
-        sm: "520px",
+        xs: "520px",
+        ...defaultTheme.screens,
       },
       fontFamily: {
         sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],

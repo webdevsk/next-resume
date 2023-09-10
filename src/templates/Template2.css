@@ -67,7 +67,7 @@
     }
 
     .skillset {
-      @apply grid grid-flow-row justify-start gap-x-3 pt-2 sm:grid-flow-col sm:grid-rows-3;
+      @apply xs:grid-flow-col xs:grid-rows-3 grid grid-flow-row justify-start gap-x-3 pt-2;
     }
   }
 
@@ -153,7 +153,7 @@
   .bullet-item {
     @apply relative ps-4;
     &:before {
-      @apply absolute inset-0 text-base leading-4 text-[--rand-color] content-["●"] sm:leading-4;
+      @apply xs:leading-4 absolute inset-0 text-base leading-4 text-[--rand-color] content-["●"];
     }
   }
   .date > * {

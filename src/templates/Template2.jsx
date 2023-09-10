@@ -181,10 +181,10 @@ const Template = ({ printMode }) => {
                       <a className="date" href={project.repo}>
                         <small>
                           <FontAwesomeIcon icon="fa-brands fa-github" />{" "}
-                          <span className="max-sm:hidden">
+                          <span className="max-xs:hidden">
                             {project.repo.replace("https://github.com/", "")}
                           </span>
-                          <span className="sm:hidden">Github</span>
+                          <span className="xs:hidden">Github</span>
                         </small>
                       </a>
                     </p>

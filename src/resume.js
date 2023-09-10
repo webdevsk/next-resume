@@ -1,12 +1,12 @@
 const resume = {
   data: {
-    honorifics: "Mohammed",
+    honorific: "Mohammed",
     firstName: "Salman",
     lastName: "Khan",
     photo: null,
     title: "Frontend Web Developer",
     location: "Dhaka, Bangladesh",
-    phone: "+880 1305 335 088",
+    phone: "+880 1305 335088",
     email: "webdevz.sk@gmail.com",
     telephone: null,
     github: "https://github.com/webdevsk",
@@ -15,7 +15,7 @@ const resume = {
     facebook: null,
     liveLink: "https://webdevsk.github.io/react-resume/",
     about:
-      "I am a Frontend Web Developer creating interactable solutions and solving both technical and design challenges using React and Vanilla JS. I have more than 2 years of experience in creating pixel-perfect and mobile responsive Websites that met client requirements. I debug design and functional issues with my intermediate knowledge on Dev Tools and Search Engines.",
+      "I am a Frontend Web Developer skilled in creating interactable solutions and solving technical and design problems using React and Vanilla JS. I have more than 2 years of experience in creating pixel-perfect and mobile responsive Websites that meet client requirements. I debug design and functional issues with my intermediate knowledge of Dev Tools, Search Engines and ChatGPT.",
     skills: [
       {
         heading: "Frontend",
@@ -34,40 +34,40 @@ const resume = {
       },
       {
         heading: "Technologies",
-        data: ["Git", "GitHub", "WordPress", "Adobe Xd", "Figma"],
+        data: ["Git", "GitHub", "WordPress", "Adobe Xd", "Figma", "ChatGPT"],
       },
     ],
     projects: [
       {
         title: "React TODO App",
-        shortDescription: "A TODO APP built with React JS.",
+        shortDescription: "A TODO APP built with React JS",
         link: "https://celadon-cactus-42acbb.netlify.app/",
         repo: "https://github.com/webdevsk/react-todo-app",
         builtWith: [
           "React",
           "React-Router",
           "TailwindCSS",
-          "Material-Tailwind",
+          "Material-Tailwind UI",
         ],
         features: [
           "Create, mark, pin or delete tasks. Bulk check and remove completed tasks.",
-          "Handheld device accessible. Bottom input field improves reachability.",
-          "Create dynamic categories either from within the APP or from browser URL directly",
-          "Side Menu visibility is dynamically managed based on device orientation and viewport.",
+          "Handheld device accessibility. Bottom input field improves reachability.",
+          "Create dynamic categories either from within the app or from the browser URL directly",
+          "Side Menu visibility state is dynamically managed based on device orientation and viewport",
         ],
       },
       {
         title: "Random Task Today",
         shortDescription:
-          "Generate a random task to do today and see a refreshing photo related to it.",
+          "Generate a random task to do today and see a refreshing photo related to it",
         link: "https://splendid-narwhal-4770fd.netlify.app/",
         repo: "https://github.com/webdevsk/Random-task-today",
         builtWith: ["React", "TailwindCSS", "Netlify Serverless Functions"],
         features: [
-          "Fetches a Random task from Bored API then fetches a related Photo from Unsplash API.",
-          "Preloading, loading and status states are managed based on async functions.",
+          "Fetches a random task from Bored API and then fetches a related photo from Unsplash API",
+          "Preloading, loading, and status states are managed using asynchronous functions",
           "Implemented Netlify Serverless Functions (Lambda) to handle the backend.",
-          "All API calls are made from the backend functions, keeping API credentials secret.",
+          "All API calls are made from the backend functions, keeping API credentials secret",
         ],
       },
       // {
