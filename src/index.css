@@ -49,6 +49,6 @@
 
 /* for non live version/non print mode */
 .pdf-container {
-  @apply mx-auto mt-12 w-full max-w-max border border-black p-4 md:p-[--pdf-margin];
+  @apply mx-auto mt-4 w-full max-w-max border border-black bg-white p-4 md:p-[--pdf-margin];
 }
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */

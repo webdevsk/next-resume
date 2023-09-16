@@ -1,25 +1,33 @@
 import { Suspense, lazy } from "react"
 const defaultTemplate = "Template2"
-const loadComponent = (name) =>
-  lazy(() => import(/* @vite-ignore */ `./templates/${name}.jsx`))
+const loadComponent = (name) => lazy(() => import(`./templates/${name}.jsx`))
 
-const resumeTemplates = ["Template1", "Template2"]
+const resumeTemplates = [
+  ["Classic", "Template1"],
+  ["Modern", "Template2"],
+]
+
 function App() {
   const url = new URL(window.location.href)
   const params = new URLSearchParams(url.search)
   const printMode = params.get("printonly") ?? false
   const template = params.get("template") ?? defaultTemplate
   const Template = loadComponent(template)
+  document.body.classList.toggle("bg-slate-200", !printMode)
 
   return (
     <>
       {!printMode && (
-        <div className="container my-8">
+        <div className="container mt-12">
           <div className="flex flex-wrap items-center justify-center gap-4 [&_a:hover]:underline">
             <h5>Choose Template: </h5>
             {resumeTemplates.map((template) => (
-              <a key={template} href={`?template=${template}`}>
-                {template}
+              <a
+                key={template[1]}
+                href={`?template=${template[1]}`}
+                className={`text-base font-semibold`}
+              >
+                {template[0]}
               </a>
             ))}
           </div>
