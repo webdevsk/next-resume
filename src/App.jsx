@@ -1,18 +1,18 @@
 import { Suspense, lazy } from "react"
-const defaultTemplate = "Template2"
 const loadComponent = (name) => lazy(() => import(`./templates/${name}.jsx`))
 
 const resumeTemplates = [
   ["Classic", "Template1"],
   ["Modern", "Template2"],
 ]
+const defaultTemplate = resumeTemplates[1][1]
 
 function App() {
   const url = new URL(window.location.href)
   const params = new URLSearchParams(url.search)
   const printMode = params.get("printonly") ?? false
-  const template = params.get("template") ?? defaultTemplate
-  const Template = loadComponent(template)
+  const currentTemplate = params.get("template") ?? defaultTemplate
+  const Template = loadComponent(currentTemplate)
   document.body.classList.toggle("bg-slate-200", !printMode)
 
   return (
@@ -25,7 +25,11 @@ function App() {
               <a
                 key={template[1]}
                 href={`?template=${template[1]}`}
-                className={`text-base font-semibold`}
+                className={`text-base font-semibold ${
+                  template[1] === currentTemplate
+                    ? "pointer-events-none text-gray-600"
+                    : ""
+                }`}
               >
                 {template[0]}
               </a>
@@ -46,7 +50,7 @@ function App() {
           <div className="my-4 text-center">
             <a
               className="text-lg font-bold  underline transition-colors hover:text-sky-500"
-              href={"?printonly=true" + "&template=" + template}
+              href={"?printonly=true" + "&template=" + currentTemplate}
             >
               Print Mode
             </a>
