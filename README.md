@@ -49,8 +49,8 @@
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Features](#features)
+  - [Hosting the live version](#hosting-the-live-version)
+  - [Generating PDF file](#generating-pdf-file)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -83,28 +83,34 @@
 </div>
 <br/>
 
-#project_description
+If you have any prior experience creating your Resume/CV using visual tools then you know how complicated things can be. As,
+
+- You can't change the fonts globally
+- Change of design requires that you fill in your details again
+- Content and column alignment calculations have to be done manually
+
+As a programmer, I like to solve my problems programmatically. So I created this React App to generate it dynamically. It features:
+
+- A single Object to hold and manage all the information
+- Ability to create multiple templates without the need of refilling the information
+- Change font family and font sizes from Template.css file
+- Loop through information and render them accordingly
+- Use React conditional rendering to render content only on given information
+- Create expandable columns with the help of CSS Grid and Flex-box
+- Can host a Live interactive version of my resume for Desktops and Mobile devices
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
 [![React][React]][React-url]  
-[![React-router][React-router]][React-router-url]  
-[![TailwindCSS][TailwindCSS]][Tailwind-url]  
-[![MUI][MUI]][MUI-url]
+[![TailwindCSS][TailwindCSS]][Tailwind-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## Getting Started
-
-🌐 The site is already live at: [https://webdevsk.github.io/react-resume/](https://webdevsk.github.io/react-resume/)
-
-OR
-
-🖥️ You can test it on your local machine by following the steps below.
 
 ### Prerequisites
 
@@ -116,7 +122,7 @@ OR
    npm install npm@latest -g
    ```
 
-### Installation
+### Hosting the live version
 
 <!-- 1. Get a free API Key at [https://example.com](https://example.com) -->
 
@@ -132,21 +138,67 @@ OR
    npm install
    ```
 
-1. Fill in a `.env.local` file following the patterns of `envSample.txt`
-
 1. Run Dev server
 
    ```js
    npm run dev
    ```
 
+### Generating PDF file
+
+There are two ways in which you can generate a PDF file from the hosted live version. The differences are:
+
+|                  | Browser Print to PDF            | Puppeteer PDF Method       |
+| ---------------- | ------------------------------- | -------------------------- |
+| Difficulty       | Easy                            | Hard                       |
+| Method           | Snapshot (image)                | Generates from HTML markup |
+| OCR              | No (Requires post OCR)          | Yes                        |
+| Foreign language | Post-OCR may not recognise them | Supported                  |
+| HyperLinks       | Not supported                   | Supported                  |
+
+<details>
+<summary>
+<h3>Browser Print to PDF</h3>
+</summary>
+
+1. Open your preferred browser and navigate to <a href="localhost:3000">localhost:3000</a>
+1. Choose any template and press "**Print Mode**" below
+1. Press **CTRL + P** on your keyboard to launch print mode
+1. Choose "**Print as PDF**" and set margin to **Default**
+1. Hit **Save** and you are done
+
+</details>
+
+<details>
+<summary>
+<h3>Puppeteer PDF Method</h3>
+</summary>
+
+1. Choose a different project folder in your system and clone my Puppeteer project script tailored for this scenario
+
+   ```sh
+   git clone https://github.com/webdevsk/puppeteer-to-pdf.git
+   ```
+
+1. Run the script
+
+   ```sh
+   npm start
+   ```
+
+1. Get a freshly baked Resume/CV PDF file from the **output** directory
+
+\*\*_You are advised not to change anything in the script without prior knowledge of Puppeteer. I have adjusted and tested the script solely for this project._\*\*
+
+</details>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 
-## Features
+<!-- ## Features
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- ROADMAP -->
 <!-- ## Roadmap
