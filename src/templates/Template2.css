@@ -147,7 +147,7 @@ span {
     @apply flex flex-col gap-y-3 px-1;
   }
   .sections {
-    @apply flex flex-col gap-y-1 rounded-lg bg-color1 p-4 shadow-md;
+    @apply flex break-inside-avoid flex-col gap-y-1 rounded-lg bg-color1 p-4 shadow-md;
   }
   .title-section {
     @apply flex flex-wrap justify-between gap-x-2;
@@ -174,7 +174,7 @@ span {
     @apply flex flex-col gap-y-3 px-1;
   }
   .sections {
-    @apply flex flex-col gap-y-1 rounded-lg bg-color1 p-4 shadow-md;
+    @apply flex break-inside-avoid flex-col gap-y-1 rounded-lg bg-color1 p-4 shadow-md;
   }
   .row {
     grid-template-columns: minmax(0, 1fr) max-content;

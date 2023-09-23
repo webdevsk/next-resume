@@ -136,7 +136,7 @@ span {
     @apply flex flex-col gap-y-4;
   }
   .sections {
-    @apply flex flex-col gap-y-2;
+    @apply flex break-inside-avoid flex-col gap-y-2;
   }
   .title-section {
     @apply flex flex-wrap justify-between gap-x-2;
@@ -162,7 +162,7 @@ span {
 }
 
 #experiences {
-  @apply mb-template break-inside-avoid;
+  @apply mb-template;
 
   .content {
     @apply mt-template flex flex-col gap-y-4;

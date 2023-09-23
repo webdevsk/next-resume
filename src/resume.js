@@ -34,7 +34,14 @@ const resume = {
       },
       {
         heading: "Technologies",
-        data: ["Git", "GitHub", "WordPress", "Adobe Xd", "Figma", "ChatGPT"],
+        data: [
+          "Git",
+          "GitHub",
+          "WordPress",
+          "Adobe Xd",
+          "Figma",
+          "Google Search",
+        ],
       },
     ],
     projects: [
@@ -70,6 +77,20 @@ const resume = {
           "All API calls are made from the backend functions, keeping API credentials secret",
         ],
       },
+      {
+        title: "Banco Pan",
+        shortDescription: "Figma to HTML Convertion",
+        link: "https://webdevsk.github.io/Banco-Pan/",
+        repo: "https://github.com/webdevsk/Banco-Pan",
+        builtWith: ["HTML", "CSS", "SASS", "Bootstrap", "JavaScript", "Figma"],
+        features: [
+          "Completed client-requested Figma to HTML conversion",
+          "Delivered 7 pages of responsive, pixel-perfect designs",
+          "Overrode Bootstrap design using SASS",
+          "Integrated JS libraries and custom Javascript scripts for interactive features",
+        ],
+      },
+
       // {
       //   title: null,
       //   shortDescription: null,
@@ -88,8 +109,7 @@ const resume = {
         dateFrom: "APR 2018",
         dateTo: "MAR 2019",
         skills: [
-          "Communication skills",
-          "Organizational skills",
+          "Communication and Organizational skills",
           "Ability to work independently and as part of a team",
           "Attention to detail",
           "Problem-solving skills",
@@ -119,25 +139,25 @@ const resume = {
       //     "Communicate with customers regarding order status",
       //   ],
       // },
-      {
-        position: "Returns Processor",
-        company: "JollyChik Warehouse SA",
-        location: "Riyadh, Saudiarabia",
-        dateFrom: "FEB 2018",
-        dateTo: "APR 2018",
-        skills: [
-          "Attention to detail",
-          "Accuracy",
-          "Ability to work independently and as part of a team",
-          "Technical skills (scanning, data entry)",
-        ],
-        responsibilities: [
-          "Scanned returned items, updated inventory records (average of 700 items per day)",
-          "Inspected returned items for damage",
-          "Processed returns according to company policy",
-          "Kept the warehouse clean and organized",
-        ],
-      },
+      // {
+      //   position: "Returns Processor",
+      //   company: "JollyChik Warehouse SA",
+      //   location: "Riyadh, Saudiarabia",
+      //   dateFrom: "FEB 2018",
+      //   dateTo: "APR 2018",
+      //   skills: [
+      //     "Attention to detail",
+      //     "Accuracy",
+      //     "Ability to work independently and as part of a team",
+      //     "Technical skills (scanning, data entry)",
+      //   ],
+      //   responsibilities: [
+      //     "Scanned returned items, updated inventory records (average of 700 items per day)",
+      //     "Inspected returned items for damage",
+      //     "Processed returns according to company policy",
+      //     "Kept the warehouse clean and organized",
+      //   ],
+      // },
       // {
       //   position: "Flyer Distributor (Part time)",
       //   company: "Moneygram Financial Service",
