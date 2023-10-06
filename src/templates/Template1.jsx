@@ -124,58 +124,64 @@ const Template = ({ printMode }) => {
             <h5>Project Experience</h5>
           </div>
           <ul className="content">
-            {data.projects.map((project) => (
-              <li key={project.title} className="sections">
-                <div className="title-section">
-                  <a href={project.link}>
-                    <h5>{project.title}</h5>
-                  </a>
-                  {project.repo && (
-                    <p>
-                      {/* <h6 className="inline">Repository: </h6> */}
-                      <a className="date" href={project.repo}>
-                        <small className="leading-5">{project.repo}</small>
+            {data.projects.map(
+              (project) =>
+                project.enabled && (
+                  <li key={project.title} className="sections">
+                    <div className="title-section">
+                      <a href={project.link}>
+                        <h5>{project.title}</h5>
                       </a>
-                    </p>
-                  )}
-                  <p className="w-full">
-                    {"=>"} {project.shortDescription}
-                  </p>
-                </div>
-
-                <div className="builders">
-                  <h6 className="">Built With: </h6>
-                  {project.builtWith.map((item, i, arr) => (
-                    // `${item}${i === arr.length - 1 ? "." : ", "}`,
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      className={printMode ? "pointer-events-none" : undefined}
-                      href={
-                        !printMode && `https://www.google.com/search?q=${item}`
-                      }
-                      key={item}
-                    >
-                      <p>{item}</p>
-                    </a>
-                  ))}
-                </div>
-
-                <div className="row">
-                  <h6 className="col">Features:</h6>
-                  <ul className="col features">
-                    {project.features.map((feature) => (
-                      <li key={feature}>
-                        <p className="bullet-item">
-                          {feature}
-                          {feature.at(-1) === "." ? "" : "."}
+                      {project.repo && (
+                        <p>
+                          {/* <h6 className="inline">Repository: </h6> */}
+                          <a className="date" href={project.repo}>
+                            <small className="leading-5">{project.repo}</small>
+                          </a>
                         </p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-            ))}
+                      )}
+                      <p className="w-full">
+                        {"=>"} {project.shortDescription}
+                      </p>
+                    </div>
+
+                    <div className="builders">
+                      <h6 className="">Built With: </h6>
+                      {project.builtWith.map((item, i, arr) => (
+                        // `${item}${i === arr.length - 1 ? "." : ", "}`,
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          className={
+                            printMode ? "pointer-events-none" : undefined
+                          }
+                          href={
+                            !printMode &&
+                            `https://www.google.com/search?q=${item}`
+                          }
+                          key={item}
+                        >
+                          <p>{item}</p>
+                        </a>
+                      ))}
+                    </div>
+
+                    <div className="row">
+                      <h6 className="col">Features:</h6>
+                      <ul className="col features">
+                        {project.features.map((feature) => (
+                          <li key={feature}>
+                            <p className="bullet-item">
+                              {feature}
+                              {feature.at(-1) === "." ? "" : "."}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </li>
+                ),
+            )}
           </ul>
         </div>
       )}
@@ -187,54 +193,58 @@ const Template = ({ printMode }) => {
             <h5>Work Experience</h5>
           </div>
           <ul className="content">
-            {data.experiences.map((job) => (
-              <li key={job.position} className="sections">
-                <div className="row">
-                  <div className="position">
-                    {job.position.split(",").map((title) => (
-                      <h5 key={title}>{title.trim()}</h5>
-                    ))}
-                  </div>
-                  <div className="details">
-                    <div className="company">
-                      {job.company && <h6>{job.company}</h6>}
+            {data.experiences.map(
+              (job) =>
+                job.enabled && (
+                  <li key={job.position} className="sections">
+                    <div className="row">
+                      <div className="position">
+                        {job.position.split(",").map((title) => (
+                          <h5 key={title}>{title.trim()}</h5>
+                        ))}
+                      </div>
+                      <div className="details">
+                        <div className="company">
+                          {job.company && <h6>{job.company}</h6>}
+                        </div>
+                        <div className="date">
+                          {(job.dateFrom || job.dateTo) && (
+                            <small>
+                              {job.dateFrom}{" "}
+                              {job.dateFrom && job.dateTo && " - "}
+                              {job.dateTo}
+                            </small>
+                          )}
+                        </div>
+                        {job.location && <small>{job.location}</small>}
+                      </div>
                     </div>
-                    <div className="date">
-                      {(job.dateFrom || job.dateTo) && (
-                        <small>
-                          {job.dateFrom} {job.dateFrom && job.dateTo && " - "}
-                          {job.dateTo}
-                        </small>
-                      )}
+                    <div>
+                      <h6>Soft Skills Acquired:</h6>
+                      <ul className="soft-skills">
+                        {job.skills.map((skill) => (
+                          <li key={skill}>
+                            <p className="bullet-item">{skill}</p>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    {job.location && <small>{job.location}</small>}
-                  </div>
-                </div>
-                <div>
-                  <h6>Soft Skills Acquired:</h6>
-                  <ul className="soft-skills">
-                    {job.skills.map((skill) => (
-                      <li key={skill}>
-                        <p className="bullet-item">{skill}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h6>Responsibilites:</h6>
-                  <ul className="responsibilities">
-                    {job.responsibilities.map((responsibility) => (
-                      <li key={responsibility}>
-                        <p className="bullet-item">
-                          {responsibility}
-                          {responsibility.at(-1) !== "." && "."}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-            ))}
+                    <div>
+                      <h6>Responsibilites:</h6>
+                      <ul className="responsibilities">
+                        {job.responsibilities.map((responsibility) => (
+                          <li key={responsibility}>
+                            <p className="bullet-item">
+                              {responsibility}
+                              {responsibility.at(-1) !== "." && "."}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </li>
+                ),
+            )}
           </ul>
         </div>
       )}

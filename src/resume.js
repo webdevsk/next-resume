@@ -46,6 +46,20 @@ const resume = {
     ],
     projects: [
       {
+        enabled: true,
+        title: "Costefficient",
+        shortDescription: "Payment Processor Services (Client Project - Work in Progress)",
+        link: "https://costefficient.co.uk/",
+        repo: "https://costefficient.co.uk/",
+        builtWith: ["WordPress", "Elementor Pro", "Elementor Flexbox", "JavaScript"],
+        features: [
+          "6 pages WordPress website being built from scratch with Elementor Pro.",
+          "Improve upon source website design using the latest Flex-box and Elementor Beta features.",
+          "Elementor Form improved with custom logic using hand-written JavaScript script."
+        ],
+      },
+      {
+        enabled: true,
         title: "React TODO App",
         shortDescription: "A TODO APP built with React JS",
         link: "https://celadon-cactus-42acbb.netlify.app/",
@@ -64,6 +78,7 @@ const resume = {
         ],
       },
       {
+        enabled: false,
         title: "Random Task Today",
         shortDescription:
           "Generate a random task to do today and see a refreshing photo related to it",
@@ -78,6 +93,7 @@ const resume = {
         ],
       },
       {
+        enabled: true,
         title: "Banco Pan",
         shortDescription: "Figma to HTML Convertion",
         link: "https://webdevsk.github.io/Banco-Pan/",
@@ -102,6 +118,7 @@ const resume = {
     ],
     experiences: [
       {
+        enabled: true,
         position:
           "E-commerce Operations Associate, Inventory Management Associate",
         company: "Wadi Groceries, Carrefour",
@@ -124,59 +141,62 @@ const resume = {
           "Thrived to stay up-to-date on the latest ecommerce technologies",
         ],
       },
-      // {
-      //   position: "Freelance Food Delivery Driver",
-      //   company: "",
-      //   location: "",
-      //   dateFrom: "JUNE 2019",
-      //   dateTo: "OCT 2019",
-      //   skills: ["Time management", "Customer service", "Communication"],
-      //   responsibilities: [
-      //     "Receive orders on phone",
-      //     "Pick up and deliver food on time",
-      //     "Maintain a clean and organized car",
-      //     "Follow safety procedures",
-      //     "Communicate with customers regarding order status",
-      //   ],
-      // },
-      // {
-      //   position: "Returns Processor",
-      //   company: "JollyChik Warehouse SA",
-      //   location: "Riyadh, Saudiarabia",
-      //   dateFrom: "FEB 2018",
-      //   dateTo: "APR 2018",
-      //   skills: [
-      //     "Attention to detail",
-      //     "Accuracy",
-      //     "Ability to work independently and as part of a team",
-      //     "Technical skills (scanning, data entry)",
-      //   ],
-      //   responsibilities: [
-      //     "Scanned returned items, updated inventory records (average of 700 items per day)",
-      //     "Inspected returned items for damage",
-      //     "Processed returns according to company policy",
-      //     "Kept the warehouse clean and organized",
-      //   ],
-      // },
-      // {
-      //   position: "Flyer Distributor (Part time)",
-      //   company: "Moneygram Financial Service",
-      //   location: "Riyadh, Saudiarabia",
-      //   dateFrom: "JUL 2017",
-      //   dateTo: "FEB 2018",
-      //   skills: [
-      //     "Persuasion skills",
-      //     "Communication skills (verbal and written)",
-      //     "Interpersonal skills",
-      //     "Flexibility",
-      //   ],
-      //   responsibilities: [
-      //     "Distributed flyers to targeted areas generating on average of 150-200 leads per day.",
-      //     "Built relationships with potential leads",
-      //     "I convinced and persuaded leads into trying the company's services",
-      //     "I had to maintain a positive attitude and demeanor to win over potential customers",
-      //   ],
-      // },
+      {
+        enabled: false,
+        position: "Freelance Food Delivery Driver",
+        company: "",
+        location: "",
+        dateFrom: "JUNE 2019",
+        dateTo: "OCT 2019",
+        skills: ["Time management", "Customer service", "Communication"],
+        responsibilities: [
+          "Receive orders on phone",
+          "Pick up and deliver food on time",
+          "Maintain a clean and organized car",
+          "Follow safety procedures",
+          "Communicate with customers regarding order status",
+        ],
+      },
+      {
+        enabled: false,
+        position: "Returns Processor",
+        company: "JollyChik Warehouse SA",
+        location: "Riyadh, Saudiarabia",
+        dateFrom: "FEB 2018",
+        dateTo: "APR 2018",
+        skills: [
+          "Attention to detail",
+          "Accuracy",
+          "Ability to work independently and as part of a team",
+          "Technical skills (scanning, data entry)",
+        ],
+        responsibilities: [
+          "Scanned returned items, updated inventory records (average of 700 items per day)",
+          "Inspected returned items for damage",
+          "Processed returns according to company policy",
+          "Kept the warehouse clean and organized",
+        ],
+      },
+      {
+        enabled: false,
+        position: "Flyer Distributor (Part time)",
+        company: "Moneygram Financial Service",
+        location: "Riyadh, Saudiarabia",
+        dateFrom: "JUL 2017",
+        dateTo: "FEB 2018",
+        skills: [
+          "Persuasion skills",
+          "Communication skills (verbal and written)",
+          "Interpersonal skills",
+          "Flexibility",
+        ],
+        responsibilities: [
+          "Distributed flyers to targeted areas generating on average of 150-200 leads per day.",
+          "Built relationships with potential leads",
+          "I convinced and persuaded leads into trying the company's services",
+          "I had to maintain a positive attitude and demeanor to win over potential customers",
+        ],
+      },
     ],
     educations: [
       {
