@@ -45,19 +45,7 @@ const resume = {
       },
     ],
     projects: [
-      {
-        enabled: true,
-        title: "Costefficient",
-        shortDescription: "Payment Processor Services (Client Project - Work in Progress)",
-        link: "https://costefficient.co.uk/",
-        repo: "https://costefficient.co.uk/",
-        builtWith: ["WordPress", "Elementor Pro", "Elementor Flexbox", "JavaScript"],
-        features: [
-          "6 pages WordPress website being built from scratch with Elementor Pro.",
-          "Improve upon source website design using the latest Flex-box and Elementor Beta features.",
-          "Elementor Form improved with custom logic using hand-written JavaScript script."
-        ],
-      },
+
       {
         enabled: true,
         title: "React TODO App",
@@ -78,7 +66,7 @@ const resume = {
         ],
       },
       {
-        enabled: false,
+        enabled: true,
         title: "Random Task Today",
         shortDescription:
           "Generate a random task to do today and see a refreshing photo related to it",
@@ -90,6 +78,19 @@ const resume = {
           "Preloading, loading, and status states are managed using asynchronous functions",
           "Implemented Netlify Serverless Functions (Lambda) to handle the backend.",
           "All API calls are made from the backend functions, keeping API credentials secret",
+        ],
+      },
+      {
+        enabled: true,
+        title: "Costefficient",
+        shortDescription: "Payment Processor Services (Client Project - Work in Progress)",
+        link: "https://costefficient.co.uk/",
+        repo: "https://costefficient.co.uk/",
+        builtWith: ["WordPress", "Elementor Pro", "Elementor Flexbox", "JavaScript"],
+        features: [
+          "6 pages WordPress website being built from scratch with Elementor Pro.",
+          "Improve upon source website design using the latest Flex-box and Elementor Beta features.",
+          "Elementor Form improved with custom logic using hand-written JavaScript script."
         ],
       },
       {
