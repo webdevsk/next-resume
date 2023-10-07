@@ -113,12 +113,10 @@ span {
     }
   }
 
-  .title:not(.resume-title) {
+  .title {
     @apply inline-grid w-5 place-items-center rounded-full bg-accent text-white;
   }
-  .resume-title {
-    @apply px-2;
-  }
+
   svg {
     @apply text-xs;
   }

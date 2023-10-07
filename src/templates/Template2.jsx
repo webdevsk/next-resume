@@ -18,9 +18,10 @@ import {
   faPhone,
   faEnvelope,
   faLocationDot,
+  faGlobe,
 } from "@fortawesome/free-solid-svg-icons"
 // import { faPhone } from ""
-library.add(fab, faPhone, faEnvelope, faLocationDot)
+library.add(fab, faPhone, faEnvelope, faLocationDot, faGlobe)
 
 const Template = ({ printMode }) => {
   const nameColRef = useRef(null)
@@ -125,12 +126,12 @@ const Template = ({ printMode }) => {
               </a>
             </div>
           ))}
-        </div>
-        <div className={`row  ${!printMode ? "!hidden" : ""}`}>
           <div className="col">
-            <p className="resume-title title">Resume Live Version:</p>
+            <p className="title">
+              <FontAwesomeIcon icon={`fa-solid fa-globe`} />
+            </p>
             <a href={data.liveLink}>
-              <p>{data.liveLink}</p>
+              <p>Resume Live Version: {data.liveLink}</p>
             </a>
           </div>
         </div>
