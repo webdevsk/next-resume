@@ -136,7 +136,7 @@ span {
   }
 
   .skillset {
-    @apply grid grid-flow-row justify-start gap-x-3 pt-2 xs:grid-flow-col xs:grid-rows-3;
+    @apply grid grid-flow-row justify-start gap-x-3 pt-2 xs:grid-flow-col xs:grid-rows-4;
   }
 }
 
