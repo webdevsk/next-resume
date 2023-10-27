@@ -81,7 +81,7 @@ const resume = {
         ],
       },
       {
-        enabled: true,
+        enabled: false,
         title: "Costefficient",
         shortDescription: "Payment Processor Services (Client Project - Work in Progress)",
         link: "https://costefficient.co.uk/",
