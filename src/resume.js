@@ -19,17 +19,19 @@ const resume = {
     skills: [
       {
         heading: "Frontend",
-        data: ["React", "Redux", "JavaScript", "Tailwind", "Sass", "CSS", "HTML"],
+        data: ["React", "Redux", "RTK Query", "JavaScript", "Tailwind", "Sass", "CSS", "HTML"],
       },
       {
         heading: "Backend",
         data: [
-          "Express JS",
           "Node JS",
+          "Express JS",
+          "Prisma",
           "MongoDB",
           "MySQL",
           "Serverless",
           "Restful API",
+          "PHP"
         ],
       },
       {
@@ -45,6 +47,35 @@ const resume = {
       },
     ],
     projects: [
+      {
+        enabled: true,
+        title: "BestBuy Clone (Work in Progress)",
+        shortDescription: "BestBuy but built using React JS",
+        link: "https://bestbuy-clone-d99b5f.netlify.app/",
+        repo: "https://github.com/webdevsk/bestbuy-clone",
+        builtWith: [
+          "React",
+          "React-Router",
+          "TailwindCSS",
+          "Redux Toolkit",
+          "RTK Query",
+          "Auth0",
+          "Headlessui-float",
+          "SwiperJS",
+          "ExpressJS",
+          "Prisma",
+          "MongoDB",
+          "React-toastify"
+        ],
+        features: [
+          "User authentication using Auth0. Global State management using Redux Toolkit.",
+          "Efficiently Fetch, Mutate, Cache Products and Cart api endpoints using RTK Query.",
+          "Prisma library for seamless and efficient execution of Database operations.",
+          "Optimistic Updates simulating Cart mutations. Rollback and Toast notify when fails.",
+          "Custom built Sticky Header, Search box and Menu which changes layout device-wise.",
+          "(More features to be added upon completion)"
+        ],
+      },
 
       {
         enabled: true,

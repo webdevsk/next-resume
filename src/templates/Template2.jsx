@@ -165,7 +165,7 @@ const Template = ({ printMode }) => {
       )}
 
       {/* projects */}
-      {data.projects && data.projects.length !== 0 && (
+      {data.projects && data.projects.some((proj) => proj.enabled) && (
         <div id="projects">
           <div className="heading">
             <h5>Project Experience</h5>
@@ -246,7 +246,7 @@ const Template = ({ printMode }) => {
       )}
 
       {/* work experience */}
-      {data.experiences && data.experiences.length !== 0 && (
+      {data.experiences && data.experiences.some((exp) => exp.enabled) && (
         <div id="experiences">
           <div className="heading">
             <h5>Work Experience</h5>
@@ -278,7 +278,7 @@ const Template = ({ printMode }) => {
                         {job.location && <small>{job.location}</small>}
                       </div>
                     </div>
-                    <div>
+                    {/* <div>
                       <h6>Soft Skills Acquired:</h6>
                       <ul className="soft-skills">
                         {job.skills.map((skill) => (
@@ -290,7 +290,7 @@ const Template = ({ printMode }) => {
                           </li>
                         ))}
                       </ul>
-                    </div>
+                    </div> */}
                     <div>
                       <h6>Responsibilites:</h6>
                       <ul className="responsibilities">
