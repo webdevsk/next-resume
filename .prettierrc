@@ -1,5 +1,8 @@
 {
   "semi": false,
-  "arrowParens": "always",
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "singleAttributePerLine": true,
+  "trailingComma": "es5",
   "plugins": ["prettier-plugin-tailwindcss"]
 }
