@@ -149,16 +149,39 @@ export default function Template1({ searchParams }) {
                         {job.location && <small>{job.location}</small>}
                       </div>
                     </div>
-                    {/* <div>
-                      <h6>Soft Skills Acquired:</h6>
+
+                    <div className="tech-stack">
+                      <h6 className="">Tech Stack: </h6>
+                      {!!job.techStack?.length &&
+                        job.techStack.map(item => (
+                          // `${item}${i === arr.length - 1 ? "." : ", "}`,
+                          <a
+                            target="_blank"
+                            rel="noreferrer"
+                            className={
+                              printMode ? "pointer-events-none" : undefined
+                            }
+                            href={
+                              !printMode &&
+                              `https://www.google.com/search?q=${item}`
+                            }
+                            key={item}
+                          >
+                            <p>{item}</p>
+                          </a>
+                        ))}
+                    </div>
+
+                    <div>
+                      <h6>Skills:</h6>
                       <ul className="soft-skills">
-                        {job.skills.map((skill) => (
+                        {job.skills.map(skill => (
                           <li key={skill}>
                             <p className="bullet-item">{skill}</p>
                           </li>
                         ))}
                       </ul>
-                    </div> */}
+                    </div>
                     <div>
                       <h6>Responsibilites:</h6>
                       <ul className="responsibilities">

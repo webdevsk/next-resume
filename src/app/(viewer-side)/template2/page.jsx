@@ -193,6 +193,42 @@ export default function Template2({ searchParams }) {
                         {job.location && <small>{job.location}</small>}
                       </div>
                     </div>
+                    <div className="tech-stack">
+                      {!!job.techStack?.length &&
+                        job.techStack.map((item, i, arr) => (
+                          // `${item}${i === arr.length - 1 ? "." : ", "}`,
+                          <a
+                            target="_blank"
+                            rel="noreferrer"
+                            className={
+                              printMode ? "pointer-events-none" : undefined
+                            }
+                            href={
+                              !printMode
+                                ? `https://www.google.com/search?q=${item}`
+                                : undefined
+                            }
+                            key={item}
+                            style={{ "--rand-color": randColor(400) }}
+                          >
+                            <p>{item}</p>
+                          </a>
+                        ))}
+                    </div>
+
+                    <div>
+                      <h6>Skills:</h6>
+                      <ul className="soft-skills">
+                        {job.skills.map(skill => (
+                          <li
+                            key={skill}
+                            style={{ "--rand-color": randColor(400) }}
+                          >
+                            <p className="bullet-item">{skill}</p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                     {/* <div>
                       <h6>Soft Skills Acquired:</h6>
                       <ul className="soft-skills">

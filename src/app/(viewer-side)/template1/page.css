@@ -188,6 +188,13 @@
     .responsibilities {
       /* @apply mb-1 mt-1 flex flex-col gap-y-1; */
     }
+
+    .tech-stack {
+      @apply flex w-3/4 flex-wrap items-center gap-1;
+      & > *:not(:first-child) {
+        @apply rounded-md border border-current px-1 transition-colors hover:border-theme hover:bg-theme hover:text-white hover:no-underline;
+      }
+    }
   }
 
   #education {

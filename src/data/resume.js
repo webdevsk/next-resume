@@ -5,7 +5,7 @@ const resume = {
     lastName: "Khan",
     photo: null,
     title: "Frontend Web Developer",
-    location: "Dhaka, Bangladesh",
+    location: "Dohar, Dhaka, Bangladesh",
     phone: "+880 1305 335088",
     email: "webdevz.sk@gmail.com",
     telephone: null,
@@ -13,13 +13,13 @@ const resume = {
     linkedin: "https://linkedin.com/in/webdevsk",
     twitter: null,
     facebook: null,
-    liveLink: "https://webdevsk.github.io/react-resume/",
+    liveLink: "https://resume-zeta-green-59.vercel.app/",
     about:
       "I am a Frontend Web Developer skilled in creating interactable solutions and solving technical and design problems using React and Vanilla JS. I have more than 2 years of experience in creating pixel-perfect and mobile responsive Websites that meet client requirements. I debug design and functional issues with my intermediate knowledge of Dev Tools, Search Engines and ChatGPT.",
     skills: [
       {
         heading: "Frontend",
-        data: ["React", "Redux", "RTK Query", "JavaScript", "Tailwind", "Sass", "CSS", "HTML"],
+        data: ["Next JS 14", "React", "Redux", "JavaScript", "Tailwind", "Sass", "CSS", "HTML"],
       },
       {
         heading: "Backend",
@@ -31,7 +31,6 @@ const resume = {
           "MySQL",
           "Serverless",
           "Restful API",
-          "PHP"
         ],
       },
       {
@@ -49,7 +48,7 @@ const resume = {
     projects: [
       {
         enabled: true,
-        title: "BestBuy Clone (Work in Progress)",
+        title: "BestBuy Clone",
         shortDescription: "BestBuy but built using React JS",
         link: "https://bestbuy-clone-d99b5f.netlify.app/",
         repo: "https://github.com/webdevsk/bestbuy-clone",
@@ -97,7 +96,7 @@ const resume = {
         ],
       },
       {
-        enabled: true,
+        enabled: false,
         title: "Random Task Today",
         shortDescription:
           "Generate a random task to do today and see a refreshing photo related to it",
@@ -151,6 +150,31 @@ const resume = {
     experiences: [
       {
         enabled: true,
+        position:
+          "Jr. Frontend Web Developer",
+        company: "Ezam Tech Solutions Int.",
+        location: "Keraniganj, Dhaka, Bangladesh",
+        dateFrom: "JAN 2024",
+        dateTo: "Present",
+        techStack: [
+          "Next JS 14 (App Router)", "Tailwind CSS", "Redux Toolkit"
+        ],
+        skills: [
+          "Proficient in Next.js for building scalable server-side rendered applications.",
+          "Proven ability to translate technical requirements into actionable development task.",
+          "Effective communicator with experience in liaising between UI/UX teams and management.",
+          "Demonstrated leadership as the lead developer, guiding project direction and team collaboration.",
+          "Familiarity with e-commerce platform development, focusing on user experience and performance.",
+          "Ability to adapt to changing requirements and prioritize tasks to meet tight deadlines.",
+        ],
+        responsibilities: [
+          "Lead Frontend Dev developing the next big E-Commerce Store (https://www.ezammart.com).",
+          "Lead Frontend Dev and maintainer of the company website (https://www.ezam-tech.com/).",
+          "Direct communication with UI/UX designers and management to help achieve Company`s goal.",
+        ],
+      },
+      {
+        enabled: false,
         position:
           "E-commerce Operations Associate, Inventory Management Associate",
         company: "Wadi Groceries, Carrefour",
