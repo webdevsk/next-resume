@@ -31,7 +31,7 @@
 
 [**Explore the docs »**](https://github.com/webdevsk/next-resume)
 
-[View Demo](https://webdevsk.github.io/next-resume/)
+[View Demo](https://resume-webdevsk.vercel.app/)
 · [Report Bug](https://github.com/webdevsk/next-resume/issues)
 · [Request Feature](https://github.com/webdevsk/next-resume/issues)
 

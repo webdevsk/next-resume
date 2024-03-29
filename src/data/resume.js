@@ -13,7 +13,7 @@ const resume = {
     linkedin: "https://linkedin.com/in/webdevsk",
     twitter: null,
     facebook: null,
-    liveLink: "https://resume-zeta-green-59.vercel.app/",
+    liveLink: "https://resume-webdevsk.vercel.app/",
     about:
       "I am a Frontend Web Developer skilled in creating interactable solutions and solving technical and design problems using React and Vanilla JS. I have more than 2 years of experience in creating pixel-perfect and mobile responsive Websites that meet client requirements. I debug design and functional issues with my intermediate knowledge of Dev Tools, Search Engines and ChatGPT.",
     skills: [
