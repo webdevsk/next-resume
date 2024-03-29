@@ -19,21 +19,21 @@
 <br />
 
 <div align="center">
-  <a href="https://github.com/webdevsk/react-resume">
+  <a href="https://github.com/webdevsk/next-resume">
     <img src="github_assets/logo.png" alt="Logo" width="100" height="100">
   </a>
 
-<h3 align="center">React Resume</h3>
+<h3 align="center">Next Resume</h3>
 
   <p align="center">
     Build Resume/CV with React JS
     <br />
 
-[**Explore the docs »**](https://github.com/webdevsk/react-resume)
+[**Explore the docs »**](https://github.com/webdevsk/next-resume)
 
-[View Demo](https://webdevsk.github.io/react-resume/)
-· [Report Bug](https://github.com/webdevsk/react-resume/issues)
-· [Request Feature](https://github.com/webdevsk/react-resume/issues)
+[View Demo](https://webdevsk.github.io/next-resume/)
+· [Report Bug](https://github.com/webdevsk/next-resume/issues)
+· [Request Feature](https://github.com/webdevsk/next-resume/issues)
 
   </p>
 </div>
@@ -129,13 +129,13 @@ As a programmer, I like to solve my problems programmatically. So I created this
 1. Clone the repo
 
    ```sh
-   git clone https://github.com/webdevsk/react-resume.git
+   git clone https://github.com/webdevsk/next-resume.git
    ```
 
 1. Install NPM packages
 
    ```sh
-   npm install
+   npm i --legacy-peer-deps
    ```
 
 1. Run Dev server
@@ -244,7 +244,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [![Follow on GitHub][GitHub]](https://github.com/webdevsk)
 [![Follow on Linkedin][Linkedin]][Linkedin-url]
 
-Project Link: [https://github.com/webdevsk/react-resume](https://github.com/webdevsk/react-resume)
+Project Link: [https://github.com/webdevsk/next-resume](https://github.com/webdevsk/next-resume)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -265,16 +265,16 @@ Project Link: [https://github.com/webdevsk/react-resume](https://github.com/webd
 [Linkedin-url]: https://linkedin.com/in/webdevsk
 [GitHub]: https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white
 [Linkedin]: https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white
-[contributors-shield]: https://img.shields.io/github/contributors/webdevsk/react-resume.svg?style=for-the-badge
-[contributors-url]: https://github.com/webdevsk/react-resume/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/webdevsk/react-resume.svg?style=for-the-badge
-[forks-url]: https://github.com/webdevsk/react-resume/network/members
-[stars-shield]: https://img.shields.io/github/stars/webdevsk/react-resume.svg?style=for-the-badge
-[stars-url]: https://github.com/webdevsk/react-resume/stargazers
-[issues-shield]: https://img.shields.io/github/issues/webdevsk/react-resume.svg?style=for-the-badge
-[issues-url]: https://github.com/webdevsk/react-resume/issues
-[license-shield]: https://img.shields.io/github/license/webdevsk/react-resume.svg?style=for-the-badge
-[license-url]: https://github.com/webdevsk/react-resume/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/webdevsk/next-resume.svg?style=for-the-badge
+[contributors-url]: https://github.com/webdevsk/next-resume/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/webdevsk/next-resume.svg?style=for-the-badge
+[forks-url]: https://github.com/webdevsk/next-resume/network/members
+[stars-shield]: https://img.shields.io/github/stars/webdevsk/next-resume.svg?style=for-the-badge
+[stars-url]: https://github.com/webdevsk/next-resume/stargazers
+[issues-shield]: https://img.shields.io/github/issues/webdevsk/next-resume.svg?style=for-the-badge
+[issues-url]: https://github.com/webdevsk/next-resume/issues
+[license-shield]: https://img.shields.io/github/license/webdevsk/next-resume.svg?style=for-the-badge
+[license-url]: https://github.com/webdevsk/next-resume/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [Next-url]: https://nextjs.org/
 [React]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
