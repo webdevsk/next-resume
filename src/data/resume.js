@@ -48,6 +48,30 @@ const resume = {
     projects: [
       {
         enabled: true,
+        title: "EzamMart Online Store",
+        shortDescription: "Daily online sports shopping mall for all sports shoppers",
+        link: "https://www.ezammart.com/",
+        repo: "",
+        builtWith: [
+          "Next JS 14",
+          "Tailwind",
+          "App Router",
+          "Server Side Rendering (SSR)",
+          "SWR",
+          "Server Actions",
+          "Headless Ui",
+          "Radix Ui",
+          "Swiper",
+          "React inner image zoom"
+        ],
+        features: [
+          "Actively contribute to the development of dynamic web applications using next.js, react.js, tailwind css, radix ui, and framer-motion, focusing on clean, efficient code and intuitive user interfaces.",
+          "Implemented Next.js server-side rendering capabilities to optimize SEO performance and ensure exceptional loading times, enhancing user experience and search engine visibility.",
+          "Foster a culture of effective communication and collaboration by working closely with design and back-end teams to seamlessly integrate front-end components and achieve project goals.",
+        ],
+      },
+      {
+        enabled: true,
         title: "BestBuy Clone",
         shortDescription: "BestBuy but built using React JS",
         link: "https://bestbuy-clone-d99b5f.netlify.app/",
