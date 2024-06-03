@@ -19,7 +19,7 @@ const resume = {
     skills: [
       {
         heading: "Frontend",
-        data: ["Next JS 14", "React", "Redux", "JavaScript", "Tailwind", "Sass", "CSS", "HTML"],
+        data: ["Next JS 14", "React", "Redux", "JavaScript", "Tailwind", "Sass", "Vue JS", "CSS", "HTML"],
       },
       {
         heading: "Backend",
@@ -42,6 +42,7 @@ const resume = {
           "Adobe Xd",
           "Figma",
           "Google Search",
+          "Chat GPT"
         ],
       },
     ],
@@ -65,9 +66,8 @@ const resume = {
           "React inner image zoom"
         ],
         features: [
-          "Actively contribute to the development of dynamic web applications using next.js, react.js, tailwind css, radix ui, and framer-motion, focusing on clean, efficient code and intuitive user interfaces.",
           "Implemented Next.js server-side rendering capabilities to optimize SEO performance and ensure exceptional loading times, enhancing user experience and search engine visibility.",
-          "Foster a culture of effective communication and collaboration by working closely with design and back-end teams to seamlessly integrate front-end components and achieve project goals.",
+          "State management using SearchParams and Cookies without the need for state management libraries.",
         ],
       },
       {
