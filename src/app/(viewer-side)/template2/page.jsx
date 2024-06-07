@@ -304,6 +304,23 @@ export default function Template2({ searchParams }) {
                           </a>
                         </p>
                       )}
+                      {!project.repo && (
+                        <p>
+                          <a
+                            className="date"
+                            href={project.link}
+                          >
+                            <small>
+                                <FontAwesomeIcon icon="fa-solid fa-globe" />{" "}
+                              <span className="max-xs:hidden">
+                                {project.link}
+                              </span>
+                              
+                              <span className="xs:hidden">URL</span>
+                            </small>
+                          </a>
+                        </p>
+                      )}
                       <p className="w-full">{project.shortDescription}</p>
                     </div>
 

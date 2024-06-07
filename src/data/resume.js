@@ -191,7 +191,7 @@ const resume = {
         ],
       },
       {
-        enabled: true,
+        enabled: false,
         title: "Banco Pan",
         shortDescription: "Figma to HTML Convertion",
         link: "https://webdevsk.github.io/Banco-Pan/",
