@@ -19,7 +19,7 @@ const resume = {
     skills: [
       {
         heading: "Frontend",
-        data: ["Next JS 14", "React", "Redux", "JavaScript", "Tailwind", "Sass", "Vue JS", "CSS", "HTML"],
+        data: ["Next JS 14", "React", "Redux", "JavaScript", "Tailwind", "Sass", "Vue JS", "CSS"],
       },
       {
         heading: "Backend",
@@ -63,15 +63,58 @@ const resume = {
           "Headless Ui",
           "Radix Ui",
           "Swiper",
-          "React inner image zoom"
+          "React inner image zoom",
         ],
         features: [
-          "Implemented Next.js server-side rendering capabilities to optimize SEO performance and ensure exceptional loading times, enhancing user experience and search engine visibility.",
-          "State management using SearchParams and Cookies without the need for state management libraries.",
+          "Utilized Next.js 14's SSR to enhance SEO performance and loading times.",
+          "State management using SearchParams and Cookies without state management libraries.",
+          "Simplified data mutations with Server Actions for efficient state management.",
+          "Implemented dynamic loading of large components for optimal site speed.",
+          "Utilized my expertise in CSS to create custom layouts on top of headless UI and Radix."
         ],
       },
       {
         enabled: true,
+        title: "EzamMart Android App and Website",
+        shortDescription: "Daily online sports shopping mall for all sports shoppers",
+        link: "https://m.ezammart.com",
+        repo: "",
+        builtWith: [
+          "Vue 2",
+          "SASS",
+          "Uni-App",
+        ],
+        features: [
+          "Utilized my expertise in JavaScript to implement new features and enhancements to the legacy codebase.",
+          "Ensured introduced changes were compatible with Vue.js 2 architecture, minimizing disruptions.",
+          "Effectively utilized Vue.js 2 lifecycle hooks to manage the application's state and behavior.",
+          "Leveraged automated refactoring tools (ESLint, Prettier) to maintain code quality and best practices."
+        ],
+      },
+      {
+        enabled: true,
+        title: "Ezam Tech Solutions",
+        shortDescription: "Ecommerce, Software, Web, and Erp System development and It Services Provider Company.",
+        link: "https://www.ezam-tech.com/",
+        repo: "",
+        builtWith: [
+          "Next JS 14",
+          "Tailwind",
+          "App Router",
+          "Server Side Rendering (SSR)",
+          "Swiper",
+          "Framer Motion",
+        ],
+        features: [
+          "Built a fully responsive website using Next.js 14 and Tailwind CSS.",
+          "Implemented dynamic loading for large components to optimize site speed.",
+          "Leveraged CSS expertise to create custom layouts with Headless UI and Radix.",
+          "Integrated Framer Motion for smooth and responsive animations.",
+          "Used Swiper.js to create smooth sliders for showcasing important information."
+        ],
+      },
+      {
+        enabled: false,
         title: "BestBuy Clone",
         shortDescription: "BestBuy but built using React JS",
         link: "https://bestbuy-clone-d99b5f.netlify.app/",
