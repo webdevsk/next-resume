@@ -144,7 +144,7 @@ const resume = {
       },
 
       {
-        enabled: true,
+        enabled: false,
         title: "React TODO App",
         shortDescription: "A TODO APP built with React JS",
         link: "https://celadon-cactus-42acbb.netlify.app/",
