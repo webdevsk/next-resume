@@ -220,17 +220,15 @@ export default function Template1({ searchParams }) {
                       <a href={project.link}>
                         <h5>{project.title}</h5>
                       </a>
-                      {project.repo && (
                         <p>
                           {/* <h6 className="inline">Repository: </h6> */}
                           <a
                             className="date"
-                            href={project.repo}
+                            href={project.repo || project.link}
                           >
-                            <small className="leading-5">{project.repo}</small>
+                            <small className="leading-5">{project.repo||project.link}</small>
                           </a>
                         </p>
-                      )}
                       <p className="w-full">
                         {"=>"} {project.shortDescription}
                       </p>
