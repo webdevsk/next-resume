@@ -16,9 +16,10 @@ import {
   faEnvelope,
   faLocationDot,
   faGlobe,
+  faCircleInfo,
 } from "@fortawesome/free-solid-svg-icons?url"
 // import { faPhone } from ""
-library.add(fab, faPhone, faEnvelope, faLocationDot, faGlobe)
+library.add(fab, faPhone, faEnvelope, faLocationDot, faGlobe, faCircleInfo)
 
 export default function Template2({ searchParams }) {
   const { data } = resume
@@ -311,11 +312,10 @@ export default function Template2({ searchParams }) {
                             href={project.link}
                           >
                             <small>
-                                <FontAwesomeIcon icon="fa-solid fa-globe" />{" "}
+                              <FontAwesomeIcon icon="fa-solid fa-globe" />{" "}
                               <span className="max-xs:hidden">
                                 {project.link}
                               </span>
-                              
                               <span className="xs:hidden">URL</span>
                             </small>
                           </a>
@@ -399,6 +399,63 @@ export default function Template2({ searchParams }) {
           </ul>
         </div>
       )}
+
+      {/* Contributions */}
+      {data.contributions && data.contributions.length && (
+        <div id="contributions">
+          <div className="heading">
+            <h5>Contributions</h5>
+          </div>
+          <ul className="content">
+            {data.contributions.map(contribution => (
+              <li
+                key={contribution.title}
+                className="type"
+              >
+                <div className="row">
+                  <h5>{contribution.title}</h5>
+                  <small>{contribution.description}</small>
+                </div>
+                <div className="projects">
+                  {contribution.projects.map(project => (
+                    <div
+                      key={project.title}
+                      className="row"
+                      style={{ "--rand-color": randColor(400) }}
+                    >
+                      <div className="col title">
+                        <p className="bullet-item">
+                          <a
+                            target="_blank"
+                            href={project.url}
+                          >
+                            {project.title}
+                          </a>
+                        </p>
+                      </div>
+                      <div className="col installs">
+                        <small>{project.installs} installs</small>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <small className="footnote">
+            <FontAwesomeIcon icon="fa-solid fa-circle-info" /> Learn more about
+            them on my{" "}
+            <a
+              target="_blank"
+              href={data.github}
+            >
+              Github Profile
+            </a>
+          </small>
+        </div>
+      )}
+
       {data.spokenLanguages && data.spokenLanguages.length && (
         <div id="spoken-languages">
           <div className="heading">

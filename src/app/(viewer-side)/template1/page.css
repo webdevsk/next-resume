@@ -216,7 +216,7 @@
     .footnote {
       @apply mt-template;
       svg {
-        @apply inline aspect-square w-3 align-baseline text-theme;
+        @apply mb-0.5 inline aspect-square w-3 align-middle text-theme;
       }
       a {
         @apply font-semibold;
