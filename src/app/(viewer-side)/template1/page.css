@@ -197,6 +197,33 @@
     }
   }
 
+  #contributions {
+    @apply mb-template;
+
+    .content {
+      @apply mt-template flex flex-col gap-y-4;
+    }
+
+    .row {
+      grid-template-columns: minmax(0, 1fr) max-content;
+      @apply grid items-baseline gap-x-2;
+    }
+
+    .installs {
+      @apply text-theme;
+    }
+
+    .footnote {
+      @apply mt-template;
+      svg {
+        @apply inline aspect-square w-3 align-baseline text-theme;
+      }
+      a {
+        @apply font-semibold;
+      }
+    }
+  }
+
   #education {
     @apply mb-template;
 
@@ -225,7 +252,7 @@
   .bullet-item {
     @apply relative ps-4;
     &:before {
-      @apply absolute inset-0 text-xs leading-4 text-theme content-["◆"] xs:leading-5;
+      @apply pointer-events-none absolute inset-0 text-xs leading-4 text-theme content-["◆"] xs:leading-5;
     }
   }
   .date > * {

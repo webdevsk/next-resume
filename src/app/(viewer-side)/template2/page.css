@@ -233,7 +233,7 @@
   .bullet-item {
     @apply relative ps-4;
     &:before {
-      @apply absolute inset-0 text-base leading-4 text-[--rand-color] content-["●"] xs:leading-4;
+      @apply pointer-events-none absolute inset-0 text-base leading-4 text-[--rand-color] content-["●"] xs:leading-4;
     }
   }
   .date > * {
