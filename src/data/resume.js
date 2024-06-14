@@ -6,7 +6,7 @@ const resume = {
     photo: null,
     title: "Frontend Web Developer",
     location: "Dohar, Dhaka, Bangladesh",
-    phone: "+880 1305 335088",
+    phone: "+8801601601108",
     email: "webdevz.sk@gmail.com",
     telephone: null,
     github: "https://github.com/webdevsk",
@@ -19,7 +19,16 @@ const resume = {
     skills: [
       {
         heading: "Frontend",
-        data: ["Next JS 14", "React", "Redux", "JavaScript", "Tailwind", "Sass", "Vue JS", "CSS"],
+        data: [
+          "Next JS 14",
+          "React",
+          "Redux",
+          "JavaScript",
+          "Tailwind",
+          "Sass",
+          "Vue JS",
+          "CSS",
+        ],
       },
       {
         heading: "Backend",
@@ -42,7 +51,7 @@ const resume = {
           "Adobe Xd",
           "Figma",
           "Google Search",
-          "Chat GPT"
+          "Chat GPT",
         ],
       },
     ],
@@ -50,7 +59,8 @@ const resume = {
       {
         enabled: true,
         title: "EzamMart Online Store",
-        shortDescription: "Daily online sports shopping mall for all sports shoppers",
+        shortDescription:
+          "Daily online sports shopping mall for all sports shoppers",
         link: "https://www.ezammart.com/",
         repo: "",
         builtWith: [
@@ -70,31 +80,29 @@ const resume = {
           "State management using SearchParams and Cookies without state management libraries.",
           "Simplified data mutations with Server Actions for efficient state management.",
           "Implemented dynamic loading of large components for optimal site speed.",
-          "Utilized my expertise in CSS to create custom layouts on top of headless UI and Radix."
+          "Utilized my expertise in CSS to create custom layouts on top of headless UI and Radix.",
         ],
       },
       {
         enabled: true,
         title: "EzamMart Android App and Website",
-        shortDescription: "Daily online sports shopping mall for all sports shoppers",
+        shortDescription:
+          "Daily online sports shopping mall for all sports shoppers",
         link: "https://m.ezammart.com",
         repo: "",
-        builtWith: [
-          "Vue 2",
-          "SASS",
-          "Uni-App",
-        ],
+        builtWith: ["Vue 2", "SASS", "Uni-App"],
         features: [
           "Utilized my expertise in JavaScript to implement new features and enhancements to the legacy codebase.",
           "Ensured introduced changes were compatible with Vue.js 2 architecture, minimizing disruptions.",
           "Effectively utilized Vue.js 2 lifecycle hooks to manage the application's state and behavior.",
-          "Leveraged automated refactoring tools (ESLint, Prettier) to maintain code quality and best practices."
+          "Leveraged automated refactoring tools (ESLint, Prettier) to maintain code quality and best practices.",
         ],
       },
       {
         enabled: true,
         title: "Ezam Tech Solutions",
-        shortDescription: "Ecommerce, Software, Web, and Erp System development and It Services Provider Company.",
+        shortDescription:
+          "Ecommerce, Software, Web, and Erp System development and It Services Provider Company.",
         link: "https://www.ezam-tech.com/",
         repo: "",
         builtWith: [
@@ -110,7 +118,7 @@ const resume = {
           "Implemented dynamic loading for large components to optimize site speed.",
           "Leveraged CSS expertise to create custom layouts with Headless UI and Radix.",
           "Integrated Framer Motion for smooth and responsive animations.",
-          "Used Swiper.js to create smooth sliders for showcasing important information."
+          "Used Swiper.js to create smooth sliders for showcasing important information.",
         ],
       },
       {
@@ -131,7 +139,7 @@ const resume = {
           "ExpressJS",
           "Prisma",
           "MongoDB",
-          "React-toastify"
+          "React-toastify",
         ],
         features: [
           "User authentication using Auth0. Global State management using Redux Toolkit.",
@@ -139,7 +147,7 @@ const resume = {
           "Prisma library for seamless and efficient execution of Database operations.",
           "Optimistic Updates simulating Cart mutations. Rollback and Toast notify when fails.",
           "Custom built Sticky Header, Search box and Menu which changes layout device-wise.",
-          "(More features to be added upon completion)"
+          "(More features to be added upon completion)",
         ],
       },
 
@@ -180,14 +188,20 @@ const resume = {
       {
         enabled: false,
         title: "Costefficient",
-        shortDescription: "Payment Processor Services (Client Project - Work in Progress)",
+        shortDescription:
+          "Payment Processor Services (Client Project - Work in Progress)",
         link: "https://costefficient.co.uk/",
         repo: "https://costefficient.co.uk/",
-        builtWith: ["WordPress", "Elementor Pro", "Elementor Flexbox", "JavaScript"],
+        builtWith: [
+          "WordPress",
+          "Elementor Pro",
+          "Elementor Flexbox",
+          "JavaScript",
+        ],
         features: [
           "6 pages WordPress website being built from scratch with Elementor Pro.",
           "Improve upon source website design using the latest Flex-box and Elementor Beta features.",
-          "Elementor Form improved with custom logic using hand-written JavaScript script."
+          "Elementor Form improved with custom logic using hand-written JavaScript script.",
         ],
       },
       {
@@ -217,15 +231,12 @@ const resume = {
     experiences: [
       {
         enabled: true,
-        position:
-          "Jr. Frontend Web Developer",
+        position: "Jr. Frontend Web Developer",
         company: "Ezam Tech Solutions Int.",
         location: "Keraniganj, Dhaka, Bangladesh",
         dateFrom: "JAN 2024",
         dateTo: "Present",
-        techStack: [
-          "Next JS 14 (App Router)", "Tailwind CSS", "Redux Toolkit"
-        ],
+        techStack: ["Next JS 14 (App Router)", "Tailwind CSS", "Redux Toolkit"],
         skills: [
           "Proficient in Next.js for building scalable server-side rendered applications.",
           "Proven ability to translate technical requirements into actionable development task.",
@@ -364,6 +375,57 @@ const resume = {
       "Hindi (Fluent)",
       "Urdu (Fluent)",
       "Arabic (Basic)",
+    ],
+    contributions: [
+      {
+        title: "Browser Scripts",
+        description:
+          "Enhance browsing experience or bypass website restrictions",
+        projects: [
+          {
+            title: "FB Mobile - Clean my feeds",
+            description:
+              "Removes Sponsored and Suggested posts from m.facebook.com",
+            url: "https://greasyfork.org/en/scripts/479868-fb-mobile-clean-my-feeds",
+            installs: "260+",
+          },
+          {
+            title: "TorrentBD - Easy mentioning in Shoutbox",
+            description: "Easily Mention others in Chat/Shoutbox",
+            url: "https://greasyfork.org/en/scripts/454697-torrentbd-easy-mentioning-in-shoutbox",
+            installs: "640+",
+          },
+          {
+            title:
+              "TorrentBD - SeedBonus to Upload Credit Converter & Tab to Indent",
+            description:
+              "Take a quick look at how much Upload Credit you would have if converted your SeedBonus amount. Press Tab to indent instead of going to the next input field",
+            url: "https://greasyfork.org/en/scripts/450815-torrentbd-seedbonus-to-upload-credit-converter-tab-to-indent",
+            installs: "260+",
+          },
+          {
+            title: "TorrentBD True Dark CSS - Github Theme",
+            description:
+              "Modifies TorrentBD to use Dark mode inspired by Github.",
+            url: "https://greasyfork.org/en/scripts/430842-torrentbd-true-dark-css-github-theme",
+            installs: "140+",
+          },
+          {
+            title: "Quality filters - torrentgalaxy.to",
+            description:
+              "Removes poor encode/quality rips and highlights best ones",
+            url: "https://greasyfork.org/en/scripts/471752-quality-filters-torrentgalaxy-to",
+            installs: "120+",
+          },
+          {
+            title: "Mobilism - Mobile Easy Searchbar",
+            description:
+              "Adds Search bar directly to the homepage on Mobile view",
+            url: "https://greasyfork.org/en/scripts/462328-mobilism-mobile-easy-searchbar",
+            installs: "60+",
+          },
+        ],
+      },
     ],
   },
 }

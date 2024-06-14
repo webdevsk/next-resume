@@ -3,7 +3,10 @@ import resume from "@/data/resume"
 import doFilter from "@/utils/doFilter"
 import "./page.css"
 import Image from "next/image"
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCircleInfo } from "@fortawesome/free-solid-svg-icons?url"
+import { library } from "@fortawesome/fontawesome-svg-core"
+library.add(faCircleInfo)
 export default function Template1({ searchParams }) {
   const { data } = resume
   const printMode = "print" in searchParams
@@ -220,15 +223,17 @@ export default function Template1({ searchParams }) {
                       <a href={project.link}>
                         <h5>{project.title}</h5>
                       </a>
-                        <p>
-                          {/* <h6 className="inline">Repository: </h6> */}
-                          <a
-                            className="date"
-                            href={project.repo || project.link}
-                          >
-                            <small className="leading-5">{project.repo||project.link}</small>
-                          </a>
-                        </p>
+                      <p>
+                        {/* <h6 className="inline">Repository: </h6> */}
+                        <a
+                          className="date"
+                          href={project.repo || project.link}
+                        >
+                          <small className="leading-5">
+                            {project.repo || project.link}
+                          </small>
+                        </a>
+                      </p>
                       <p className="w-full">
                         {"=>"} {project.shortDescription}
                       </p>
@@ -256,7 +261,7 @@ export default function Template1({ searchParams }) {
                     </div>
 
                     <div className="row">
-                      <h6 className="col">Features:</h6>
+                      {/* <h6 className="col">Features:</h6> */}
                       <ul className="col features">
                         {project.features.map(feature => (
                           <li key={feature}>
@@ -302,6 +307,61 @@ export default function Template1({ searchParams }) {
               </li>
             ))}
           </ul>
+        </div>
+      )}
+
+      {/* Contributions */}
+      {data.contributions && data.contributions.length && (
+        <div id="contributions">
+          <div className="heading">
+            <h5>Contributions</h5>
+          </div>
+          <ul className="content">
+            {data.contributions.map(contribution => (
+              <li
+                key={contribution.title}
+                className="type"
+              >
+                <div className="row">
+                  <h5>{contribution.title}</h5>
+                  <small>{contribution.description}</small>
+                </div>
+                <div className="projects">
+                  {contribution.projects.map(project => (
+                    <div
+                      key={project.title}
+                      className="row"
+                    >
+                      <div className="col title">
+                        <p className="bullet-item">
+                          <a
+                            target="_blank"
+                            href={project.url}
+                          >
+                            {project.title}
+                          </a>
+                        </p>
+                      </div>
+                      <div className="col installs">
+                        <small>{project.installs} installs</small>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <small className="footnote">
+            <FontAwesomeIcon icon="fa-solid fa-circle-info" /> Learn more about
+            them on my{" "}
+            <a
+              target="_blank"
+              href={data.github}
+            >
+              Github Profile
+            </a>
+          </small>
         </div>
       )}
 

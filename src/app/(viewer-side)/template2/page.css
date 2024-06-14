@@ -218,6 +218,35 @@
     }
   }
 
+  #contributions {
+    @apply mb-template;
+
+    .content {
+      @apply mx-1 rounded-lg bg-color1 p-4 shadow-md;
+    }
+
+    .row {
+      @apply flex items-baseline justify-between gap-x-1;
+      .info {
+        @apply shrink;
+      }
+    }
+
+    .installs {
+      @apply w-max leading-5 text-theme;
+    }
+
+    .footnote {
+      @apply mt-template text-center text-theme;
+      svg {
+        @apply mb-0.5 inline aspect-square w-3 align-middle text-theme;
+      }
+      a {
+        @apply font-semibold;
+      }
+    }
+  }
+
   #spoken-languages {
     .content {
       @apply mx-1 rounded-lg bg-color1 p-4 shadow-md;
@@ -233,7 +262,7 @@
   .bullet-item {
     @apply relative ps-4;
     &:before {
-      @apply absolute inset-0 text-base leading-4 text-[--rand-color] content-["●"] xs:leading-4;
+      @apply pointer-events-none absolute inset-0 text-base leading-4 text-[--rand-color] content-["●"] xs:leading-4;
     }
   }
   .date > * {
