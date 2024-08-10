@@ -231,12 +231,14 @@ const resume = {
     experiences: [
       {
         enabled: true,
-        position: "Jr. Frontend Web Developer",
+        position: "Frontend Web Developer",
         company: "Ezam Tech Solutions Int.",
         location: "Keraniganj, Dhaka, Bangladesh",
         dateFrom: "JAN 2024",
-        dateTo: "Present",
-        techStack: ["Next JS 14 (App Router)", "Tailwind CSS", "Redux Toolkit"],
+        dateTo: "JUL 2024",
+        techStack: [
+          "Next JS", "React", "Tailwind", "Redux", "Vue"
+        ],
         skills: [
           "Proficient in Next.js for building scalable server-side rendered applications.",
           "Proven ability to translate technical requirements into actionable development task.",
