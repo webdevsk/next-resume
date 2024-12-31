@@ -47,13 +47,13 @@ const resume = {
         heading: "Tools",
         data: [
           "Git",
-          "GitHub",
+          "Docker",
           "WordPress",
           "Figma",
-          "Google",
+          "Ubuntu",
+          "SSH",
           "Chat GPT",
           "ClaudeAi",
-          "SSH"
         ],
       },
     ],
