@@ -24,7 +24,6 @@ function ViewerSideLayoutComponent({ children }) {
     return (
         <>
             {!printMode && <SideBar />}
-            {!printMode && <div className="container mt-12"></div>}
             <div className={!printMode ? "pdf-container" : ""}>
                 <div
                     id="pdf"

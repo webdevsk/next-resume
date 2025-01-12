@@ -60,6 +60,32 @@ const resume = {
     projects: [
       {
         enabled: true,
+        title: "Artistsweb Clone",
+        shortDescription:
+          "Full Stack Developer Interview Project",
+        link: "https://artistsweb-clone.vercel.app",
+        repo: "https://github.com/webdevsk/artistsweb-clone",
+        builtWith: [
+          "Next JS",
+          "Typescript",
+          "Tailwind",
+          "Motion",
+          "Node",
+          "Express",
+          "Drizzle",
+          "Postgresql",
+          "Zod"
+        ],
+        features: [
+          "Written the whole application using TypeScript. Applied Zod for api validation",
+          "Used Motion for smooth animations and transitions across the site",
+          "Used Drizzle ORM for typesafe database operations to Postgresql",
+          "Developed a JWT secured Admin dashboard for content management",
+          "Implemented file upload capabilities using Multer",
+        ],
+      },
+      {
+        enabled: true,
         title: "EzamMart Online Store",
         shortDescription:
           "Daily online sports shopping mall for all sports shoppers",
@@ -68,14 +94,11 @@ const resume = {
         builtWith: [
           "Next JS",
           "Tailwind",
-          "App Router",
           "Server Side Rendering (SSR)",
           "SWR",
           "Server Actions",
-          "Headless Ui",
           "Radix Ui",
           "Swiper",
-          "React inner image zoom",
         ],
         features: [
           "Utilized Next.js 14's SSR to enhance SEO performance and loading times.",
@@ -85,6 +108,7 @@ const resume = {
           "Utilized my expertise in CSS to create custom layouts on top of headless UI and Radix.",
         ],
       },
+      
       {
         enabled: true,
         title: "EzamMart Android App and Website",
@@ -101,7 +125,7 @@ const resume = {
         ],
       },
       {
-        enabled: true,
+        enabled: false,
         title: "Ezam Tech Solutions",
         shortDescription:
           "Ecommerce, Software, Web, and Erp System development and It Services Provider Company.",
