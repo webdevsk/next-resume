@@ -59,6 +59,12 @@ export default function Template1({ searchParams }) {
               </a>
             </div>
           ))}
+          <div className="col">
+            <p className="title">
+              Location:
+            </p>
+            <p>{data.location}</p>
+          </div>
         </div>
 
         <div className="row">
@@ -154,7 +160,7 @@ export default function Template1({ searchParams }) {
                     </div>
 
                     <div className="tech-stack">
-                      <h6 className="">Tech Stack: </h6>
+                      {/* <h6 className="">Tech Stack: </h6> */}
                       {!!job.techStack?.length &&
                         job.techStack.map(item => (
                           // `${item}${i === arr.length - 1 ? "." : ", "}`,
@@ -240,7 +246,7 @@ export default function Template1({ searchParams }) {
                     </div>
 
                     <div className="builders">
-                      <h6 className="">Built With: </h6>
+                      {/* <h6 className="">Built With: </h6> */}
                       {project.builtWith.map(item => (
                         // `${item}${i === arr.length - 1 ? "." : ", "}`,
                         <a

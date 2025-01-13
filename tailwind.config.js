@@ -43,6 +43,10 @@ const tailwindConfig = {
       spacing: {
         template: "var(--template-gap)",
       },
+      fontSize: {
+        xxs: "0.6875rem",
+        xxxs: "0.625rem",
+      },
     },
   },
   plugins: [],

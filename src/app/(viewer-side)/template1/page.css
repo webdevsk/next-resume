@@ -63,19 +63,19 @@
   }
 
   h6 {
-    @apply text-xs xs:text-sm;
+    @apply text-xxs/4 xs:text-sm;
   }
 
   p {
-    @apply text-xs xs:text-sm;
+    @apply text-xxs/4 xs:text-sm;
   }
 
   small {
-    @apply block text-xs;
+    @apply block text-xxxs xs:text-xxs leading-3;
   }
 
   span {
-    @apply text-xs xs:text-sm;
+    @apply text-xxs/4 xs:text-sm;
   }
 
   /* Avoid breaking into two pages */
@@ -149,7 +149,7 @@
     }
     .builders {
       @apply flex flex-wrap items-center gap-1;
-      & > *:not(:first-child) {
+      & > * {
         @apply rounded-md border border-current px-1 transition-colors hover:border-theme hover:bg-theme hover:text-white hover:no-underline;
       }
     }
@@ -191,7 +191,7 @@
 
     .tech-stack {
       @apply flex w-3/4 flex-wrap items-center gap-1;
-      & > *:not(:first-child) {
+      & > *{
         @apply rounded-md border border-current px-1 transition-colors hover:border-theme hover:bg-theme hover:text-white hover:no-underline;
       }
     }
@@ -244,7 +244,7 @@
   }
 
   /* .bullet-item:before {
-    @apply me-1 text-xs leading-3 text-theme content-["◆"];
+    @apply me-1 text-xxs leading-3 text-theme content-["◆"];
   } */
   .heading {
     @apply mb-template bg-theme py-1 text-center uppercase [&>*]:text-white;
@@ -252,7 +252,7 @@
   .bullet-item {
     @apply relative ps-4;
     &:before {
-      @apply pointer-events-none absolute inset-0 text-xs leading-4 text-theme content-["◆"] xs:leading-5;
+      @apply pointer-events-none absolute inset-0 text-theme content-["◆"] xs:leading-5;
     }
   }
   .date > * {
