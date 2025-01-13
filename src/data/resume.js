@@ -5,7 +5,7 @@ const resume = {
     lastName: "Khan",
     photo: null,
     title: "Frontend Web Developer",
-    location: "Dohar, Dhaka, Bangladesh",
+    location: "Dhaka, Bangladesh",
     phone: "+8801601601108",
     email: "webdevz.sk@gmail.com",
     telephone: null,
@@ -15,7 +15,7 @@ const resume = {
     facebook: null,
     liveLink: "https://resume-webdevsk.vercel.app/",
     about:
-      "I am a Frontend Web Developer skilled in creating interactable solutions and solving technical and design problems using React and Tailwind. I have more than 2 years of experience in creating pixel-perfect and mobile responsive Websites that meet client requirements. I debug design and functional issues with my intermediate knowledge of Dev Tools, Search Engines and Ai tools.",
+      "I’m a Frontend Web Developer with hands-on experience in Next.js, MERN, TypeScript and Tailwind. I specialize in crafting fast, responsive, and visually stunning web applications with clean, efficient, and well-documented code at their core.",
     skills: [
       {
         heading: "Frontend",
@@ -81,7 +81,7 @@ const resume = {
           "Used Motion for smooth animations and transitions across the site",
           "Used Drizzle ORM for typesafe database operations to Postgresql",
           "Developed a JWT secured Admin dashboard for content management",
-          "Implemented file upload capabilities using Multer",
+          // "Implemented file upload capabilities using Multer",
         ],
       },
       {
@@ -108,7 +108,7 @@ const resume = {
           "Utilized my expertise in CSS to create custom layouts on top of headless UI and Radix.",
         ],
       },
-      
+
       {
         enabled: true,
         title: "EzamMart Android App and Website",
