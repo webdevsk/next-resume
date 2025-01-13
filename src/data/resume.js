@@ -15,7 +15,7 @@ const resume = {
     facebook: null,
     liveLink: "https://resume-webdevsk.vercel.app/",
     about:
-      "I’m a Frontend Web Developer with hands-on experience in Next.js, MERN, TypeScript and Tailwind. I specialize in crafting fast, responsive, and visually stunning web applications with clean, efficient, and well-documented code at their core.",
+      "I’m a Frontend Web Developer with hands-on experience in Next.js, MERN, TypeScript and Tailwind. I specialize in crafting fast, responsive, scalable and visually stunning web applications with clean, efficient and well-documented code at their core. Additionally, I have over 2 years of experience working on static and WordPress sites.",
     skills: [
       {
         heading: "Frontend",
