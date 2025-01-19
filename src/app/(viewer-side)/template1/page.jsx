@@ -24,7 +24,7 @@ export default function Template1({ searchParams }) {
           <h5>{data.title}</h5>
         </div>
         {(data.photo || photo) && (
-          <a
+          <a target="_blank"
             className="heading-image"
             href={data.github}
           >
@@ -46,7 +46,7 @@ export default function Template1({ searchParams }) {
               className="col"
             >
               <p className="title">{key}:</p>
-              <a
+              <a target="_blank"
                 href={`${
                   key === "phone" || key === "telephone"
                     ? "tel:"
@@ -81,7 +81,7 @@ export default function Template1({ searchParams }) {
               className="col"
             >
               <p className="title">{key}:</p>
-              <a href={value}>
+              <a target="_blank" href={value}>
                 <p>{value}</p>
               </a>
             </div>
@@ -89,7 +89,7 @@ export default function Template1({ searchParams }) {
         </div>
         <div className="col -ms-2">
           <p className="title">Resume Live Version:</p>
-          <a href={data.liveLink}>
+          <a target="_blank" href={data.liveLink}>
             <p>{data.liveLink}</p>
           </a>
         </div>
@@ -226,12 +226,12 @@ export default function Template1({ searchParams }) {
                     className="sections"
                   >
                     <div className="title-section">
-                      <a href={project.link}>
+                      <a target="_blank" href={project.link}>
                         <h5>{project.title}</h5>
                       </a>
                       <p>
                         {/* <h6 className="inline">Repository: </h6> */}
-                        <a
+                        <a target="_blank"
                           className="date"
                           href={project.repo || project.link}
                         >

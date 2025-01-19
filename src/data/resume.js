@@ -60,11 +60,11 @@ const resume = {
     projects: [
       {
         enabled: true,
-        title: "Artistsweb Clone",
+        title: "Aesthetic Webworks",
         shortDescription:
-          "Full Stack Developer Interview Project",
-        link: "https://artistsweb-clone.vercel.app",
-        repo: "https://github.com/webdevsk/artistsweb-clone",
+          "Full Stack Web Development Agency Landing page",
+        link: "https://aesthetic-webworks.vercel.app/",
+        repo: "https://github.com/webdevsk/aesthetic-webworks",
         builtWith: [
           "Next JS",
           "Typescript",
@@ -81,7 +81,7 @@ const resume = {
           "Used Motion for smooth animations and transitions across the site",
           "Used Drizzle ORM for typesafe database operations to Postgresql",
           "Developed a JWT secured Admin dashboard for content management",
-          // "Implemented file upload capabilities using Multer",
+          "Implemented file upload capabilities using Multer",
         ],
       },
       {
