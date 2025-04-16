@@ -415,13 +415,13 @@ const resume = {
             description:
               "Removes Sponsored and Suggested posts from m.facebook.com",
             url: "https://greasyfork.org/en/scripts/479868-fb-mobile-clean-my-feeds",
-            installs: "260+",
+            installs: "650+",
           },
           {
             title: "TorrentBD - Easy mentioning in Shoutbox",
             description: "Easily Mention others in Chat/Shoutbox",
             url: "https://greasyfork.org/en/scripts/454697-torrentbd-easy-mentioning-in-shoutbox",
-            installs: "640+",
+            installs: "740+",
           },
           {
             title:
@@ -429,28 +429,28 @@ const resume = {
             description:
               "Take a quick look at how much Upload Credit you would have if converted your SeedBonus amount. Press Tab to indent instead of going to the next input field",
             url: "https://greasyfork.org/en/scripts/450815-torrentbd-seedbonus-to-upload-credit-converter-tab-to-indent",
-            installs: "260+",
+            installs: "280+",
           },
           {
             title: "TorrentBD True Dark CSS - Github Theme",
             description:
               "Modifies TorrentBD to use Dark mode inspired by Github.",
             url: "https://greasyfork.org/en/scripts/430842-torrentbd-true-dark-css-github-theme",
-            installs: "140+",
+            installs: "190+",
           },
           {
             title: "Quality filters - torrentgalaxy.to",
             description:
               "Removes poor encode/quality rips and highlights best ones",
             url: "https://greasyfork.org/en/scripts/471752-quality-filters-torrentgalaxy-to",
-            installs: "120+",
+            installs: "160+",
           },
           {
             title: "Mobilism - Mobile Easy Searchbar",
             description:
               "Adds Search bar directly to the homepage on Mobile view",
             url: "https://greasyfork.org/en/scripts/462328-mobilism-mobile-easy-searchbar",
-            installs: "60+",
+            installs: "80+",
           },
         ],
       },
