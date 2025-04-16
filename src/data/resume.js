@@ -362,7 +362,7 @@ const resume = {
     ],
     educations: [
       {
-        title: "Self-taught MERN Stack Developer",
+        title: "Self-taught React/Next.js Developer",
         institute: null,
         location: "Bangladesh",
         dateFrom: "2023",
