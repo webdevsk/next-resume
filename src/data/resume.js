@@ -86,10 +86,10 @@ const resume = {
       },
       {
         enabled: true,
-        title: "EzamMart Online Store",
+        title: "ExoticaMart Online Store",
         shortDescription:
-          "Daily online sports shopping mall for all sports shoppers",
-        link: "https://www.ezammart.com/",
+          "Online Mart for globally Unique, Rare finds, Special quality & Uncommon imported products",
+        link: "https://www.exoticamart.com/",
         repo: "",
         builtWith: [
           "Next JS",
@@ -111,10 +111,10 @@ const resume = {
 
       {
         enabled: true,
-        title: "EzamMart Android App and Website",
+        title: "ExoticaMart Android App and Website",
         shortDescription:
-          "Daily online sports shopping mall for all sports shoppers",
-        link: "https://m.ezammart.com",
+          "Online Mart for globally Unique, Rare finds, Special quality & Uncommon imported products",
+        link: "https://m.exoticamart.com",
         repo: "",
         builtWith: ["Vue 2", "SASS", "Uni-App"],
         features: [
