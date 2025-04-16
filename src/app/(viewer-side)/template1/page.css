@@ -1,8 +1,10 @@
 /* Tailwind has built in Post CSS Nested library which compiles nested styles on build. Linter may show errors here but thats nothing to worry about */
 
 .template1 {
-  --theme: #2a014f;
-  --accent: #340ce4;
+  /* --theme: #2a014f;
+  --accent: #340ce4; */
+  --theme: #121212;
+  --accent: #121212;
   --body: #23192b;
   --color1: #00000;
   --color2: #00000;
@@ -247,7 +249,7 @@
     @apply me-1 text-xxs leading-3 text-theme content-["◆"];
   } */
   .heading {
-    @apply mb-template bg-theme py-1 text-center uppercase [&>*]:text-white;
+    @apply mb-template border-y border-theme py-1 text-center uppercase;
   }
   .bullet-item {
     @apply relative ps-4;
