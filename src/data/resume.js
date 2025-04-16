@@ -52,8 +52,8 @@ const resume = {
           "Figma",
           "Ubuntu",
           "SSH",
-          "Chat GPT",
-          "ClaudeAi",
+          "Cursor",
+          "Extension"
         ],
       },
     ],
