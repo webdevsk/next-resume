@@ -82,7 +82,7 @@
 
   /* Avoid breaking into two pages */
   #experiences {
-    @apply break-inside-avoid;
+    /* @apply break-inside-avoid; */
   }
 
   #heading {

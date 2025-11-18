@@ -257,6 +257,30 @@ const resume = {
     experiences: [
       {
         enabled: true,
+        position: "Chrome Extension and Full Stack Web Developer",
+        company: "Upwork (5.0 Rating)",
+        location: "Remote",
+        dateFrom: "JAN 2025",
+        dateTo: "Ongoing",
+        techStack: [
+          "Chrome Extension MV3", "TypeScript", "Firefox Extension", "React", "Tailwind"
+        ],
+        skills: [
+          "Expertise in developing, debugging, and publishing custom Chrome Extensions.",
+          "Proficient in writing complex Tampermonkey (userscripts) for site modification.",
+          "Deep understanding of Chrome APIs for complex interactions.",
+          "Skilled in DOM manipulation, web scraping, and automating repetitive browser tasks.",
+          "Ability to reverse-engineer website functionalities to inject custom features.",
+          "Strong client communication and requirement analysis for freelance projects."
+        ],
+        responsibilities: [
+          "Develop custom Chrome Extensions for workflow automation, data extraction, and API integration.",
+          "Author Tampermonkey scripts to automate tasks and modify third-party website UI/UX.",
+          "Ensure extension compatibility through ongoing maintenance and updates (Chrome Web Store).",
+        ]
+      },
+      {
+        enabled: true,
         position: "Frontend Web Developer",
         company: "Ezam Tech Solutions Int.",
         location: "Keraniganj, Dhaka, Bangladesh",
@@ -269,7 +293,7 @@ const resume = {
           "Proficient in Next.js for building scalable server-side rendered applications.",
           "Proven ability to translate technical requirements into actionable development task.",
           "Effective communicator with experience in liaising between UI/UX teams and management.",
-          "Demonstrated leadership as the lead developer, guiding project direction and team collaboration.",
+          // "Demonstrated leadership as the lead developer, guiding project direction and team collaboration.",
           "Familiarity with e-commerce platform development, focusing on user experience and performance.",
           "Ability to adapt to changing requirements and prioritize tasks to meet tight deadlines.",
         ],
@@ -398,10 +422,9 @@ const resume = {
       },
     ],
     spokenLanguages: [
-      "English (Fluent)",
-      "Bangla (Fluent)",
+      "English (Fluent/CEFR C1/IELTS 8.0)",
+      "Bangla (Native)",
       "Hindi (Fluent)",
-      "Urdu (Fluent)",
       "Arabic (Basic)",
     ],
     contributions: [
@@ -423,35 +446,35 @@ const resume = {
             url: "https://greasyfork.org/en/scripts/454697-torrentbd-easy-mentioning-in-shoutbox",
             installs: "740+",
           },
-          {
-            title:
-              "TorrentBD - SeedBonus to Upload Credit Converter & Tab to Indent",
-            description:
-              "Take a quick look at how much Upload Credit you would have if converted your SeedBonus amount. Press Tab to indent instead of going to the next input field",
-            url: "https://greasyfork.org/en/scripts/450815-torrentbd-seedbonus-to-upload-credit-converter-tab-to-indent",
-            installs: "280+",
-          },
-          {
-            title: "TorrentBD True Dark CSS - Github Theme",
-            description:
-              "Modifies TorrentBD to use Dark mode inspired by Github.",
-            url: "https://greasyfork.org/en/scripts/430842-torrentbd-true-dark-css-github-theme",
-            installs: "190+",
-          },
-          {
-            title: "Quality filters - torrentgalaxy.to",
-            description:
-              "Removes poor encode/quality rips and highlights best ones",
-            url: "https://greasyfork.org/en/scripts/471752-quality-filters-torrentgalaxy-to",
-            installs: "160+",
-          },
-          {
-            title: "Mobilism - Mobile Easy Searchbar",
-            description:
-              "Adds Search bar directly to the homepage on Mobile view",
-            url: "https://greasyfork.org/en/scripts/462328-mobilism-mobile-easy-searchbar",
-            installs: "80+",
-          },
+          // {
+          //   title:
+          //     "TorrentBD - SeedBonus to Upload Credit Converter & Tab to Indent",
+          //   description:
+          //     "Take a quick look at how much Upload Credit you would have if converted your SeedBonus amount. Press Tab to indent instead of going to the next input field",
+          //   url: "https://greasyfork.org/en/scripts/450815-torrentbd-seedbonus-to-upload-credit-converter-tab-to-indent",
+          //   installs: "280+",
+          // },
+          // {
+          //   title: "TorrentBD True Dark CSS - Github Theme",
+          //   description:
+          //     "Modifies TorrentBD to use Dark mode inspired by Github.",
+          //   url: "https://greasyfork.org/en/scripts/430842-torrentbd-true-dark-css-github-theme",
+          //   installs: "190+",
+          // },
+          // {
+          //   title: "Quality filters - torrentgalaxy.to",
+          //   description:
+          //     "Removes poor encode/quality rips and highlights best ones",
+          //   url: "https://greasyfork.org/en/scripts/471752-quality-filters-torrentgalaxy-to",
+          //   installs: "160+",
+          // },
+          // {
+          //   title: "Mobilism - Mobile Easy Searchbar",
+          //   description:
+          //     "Adds Search bar directly to the homepage on Mobile view",
+          //   url: "https://greasyfork.org/en/scripts/462328-mobilism-mobile-easy-searchbar",
+          //   installs: "80+",
+          // },
         ],
       },
     ],
