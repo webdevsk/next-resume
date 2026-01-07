@@ -15,7 +15,7 @@ const resume = {
     facebook: null,
     liveLink: "https://resume-webdevsk.vercel.app/",
     about:
-      "I’m a Frontend Web Developer with hands-on experience in Next.js, MERN, TypeScript and Tailwind. I specialize in crafting fast, responsive, scalable and visually stunning web applications with clean, efficient and well-documented code at their core. Additionally, I have over 2 years of experience working on static and WordPress sites.",
+      "I'm a Frontend Web Developer with hands-on experience in Next.js, MERN, TypeScript and Tailwind. I specialize in crafting fast, responsive, scalable and visually stunning web applications with clean, efficient and well-documented code at their core. Additionally, I develop Chrome and Firefox Extensions to automate workflows and improve productivity.",
     skills: [
       {
         heading: "Frontend",
@@ -24,23 +24,23 @@ const resume = {
           "TypeScript",
           "React",
           "Tailwind",
+          "Chrome Extension",
+          "Shadcn",
           "Redux",
           "JavaScript",
-          "Tenstack",
-          "Vue",
         ],
       },
       {
         heading: "Backend",
         data: [
           "Node.js",
+          "Bun.js",
           "Express.js",
           "Drizzle",
           "Prisma",
           "Postgresql",
           "MongoDB",
           "Serverless",
-          "Rest Api",
         ],
       },
       {
@@ -48,12 +48,12 @@ const resume = {
         data: [
           "Git",
           "Docker",
-          "WordPress",
           "Figma",
           "Ubuntu",
           "SSH",
-          "Cursor",
-          "Extension"
+          "Antigravity",
+          "Puppeteer",
+          "Wxt framework"
         ],
       },
     ],
@@ -258,7 +258,7 @@ const resume = {
       {
         enabled: true,
         position: "Chrome Extension and Full Stack Web Developer",
-        company: "Upwork (5.0 Rating)",
+        company: "Upwork (5.0 | 100% | Rising Talent)",
         location: "Remote",
         dateFrom: "JAN 2025",
         dateTo: "Ongoing",
@@ -434,17 +434,24 @@ const resume = {
           "Enhance browsing experience or bypass website restrictions",
         projects: [
           {
-            title: "FB Mobile - Clean my feeds",
+            title: "FB Mobile - Clean my feeds (Chrome Extension)",
             description:
               "Removes Sponsored and Suggested posts from m.facebook.com",
-            url: "https://greasyfork.org/en/scripts/479868-fb-mobile-clean-my-feeds",
-            installs: "650+",
+            url: "https://chromewebstore.google.com/detail/oipbhmdodiafhpfglkeomlldnbahdlfd?utm_source=item-share-cb",
+            installs: "760+ Userscript & 20+ Extension",
           },
           {
-            title: "TorrentBD - Easy mentioning in Shoutbox",
+            title: "TorrentBD - Easy mentioning in Shoutbox (Browser UserScript)",
             description: "Easily Mention others in Chat/Shoutbox",
             url: "https://greasyfork.org/en/scripts/454697-torrentbd-easy-mentioning-in-shoutbox",
-            installs: "740+",
+            installs: "770+",
+          },
+          {
+            title: "FeedJobs - Find Jobs from LinkedIn Feeds (Chrome Extension)",
+            description:
+              "Extracts job posts from LinkedIn Feed. Catch startup & local roles that never hit job boards.",
+            url: "https://chromewebstore.google.com/detail/afdaeankhmmpkdljifpgpifcddcegijo?utm_source=item-share-cb",
+            installs: "30",
           },
           // {
           //   title:

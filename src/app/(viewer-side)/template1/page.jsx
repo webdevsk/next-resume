@@ -328,10 +328,10 @@ export default function Template1({ searchParams }) {
                 key={contribution.title}
                 className="type"
               >
-                <div className="row">
+                {/* <div className="row">
                   <h5>{contribution.title}</h5>
                   <small>{contribution.description}</small>
-                </div>
+                </div> */}
                 <div className="projects">
                   {contribution.projects.map(project => (
                     <div
@@ -358,7 +358,7 @@ export default function Template1({ searchParams }) {
             ))}
           </ul>
 
-          <small className="footnote">
+          {/* <small className="footnote">
             <FontAwesomeIcon icon="fa-solid fa-circle-info" /> Learn more about
             them on my{" "}
             <a
@@ -367,7 +367,7 @@ export default function Template1({ searchParams }) {
             >
               Github Profile
             </a>
-          </small>
+          </small> */}
         </div>
       )}
 
