@@ -1,4 +1,4 @@
-import photo from "@/assets/photo.png"
+import photoFormal from "@/assets/photo-formal.jpg"
 import resume from "@/data/resume"
 import doFilter from "@/utils/doFilter"
 import "./page.css"
@@ -23,14 +23,14 @@ export default function Template1({ searchParams }) {
           <h1>{data.lastName}</h1>
           <h5>{data.title}</h5>
         </div>
-        {(data.photo || photo) && (
+        {(data.photo || photoFormal) && (
           <a target="_blank"
             className="heading-image"
             href={data.github}
           >
             <Image
               id="photo"
-              src={data.photo || photo}
+              src={data.photo || photoFormal}
               alt="photo"
             />
           </a>

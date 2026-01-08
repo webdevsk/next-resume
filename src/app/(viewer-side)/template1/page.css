@@ -96,7 +96,7 @@
   }
 
   #photo {
-    @apply aspect-square max-w-full rounded-full object-cover;
+    @apply max-w-full object-contain;
   }
 
   #contact-info {

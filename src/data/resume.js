@@ -49,11 +49,11 @@ const resume = {
           "Git",
           "Docker",
           "Figma",
+          "Linux",
           "Ubuntu",
           "SSH",
           "Antigravity",
           "Puppeteer",
-          "Wxt framework"
         ],
       },
     ],
